@@ -1,0 +1,50 @@
+<component src="layout/index.html" title="八块钱网商城" header></component>
+<div id="seller_layout" class="layout-view">
+    <div class="myCoupons">
+        <!-- 优惠券 -->
+        <div class="mycoupons_header">
+            <div class="mycoupons_header_arrows">
+                <img src="../images/login-left-arrows.png" alt="">
+            </div>
+            <div class="mycoupons_header_text">
+                我的优惠券
+            </div>
+        </div>
+        <div class="mycoupons_content">
+            <div class="mycoupons_title">
+                <ul class="clearfix">
+                    <li>
+                        未使用
+                    </li>
+                    <li>
+                        已使用
+                    </li>
+                    <li>
+                        已过期
+                    </li>
+                    <li class="active">
+                        全部
+                    </li>
+                </ul>
+            </div>
+            <div class="mycoupons_cons">
+                <div class="con">
+                    全部订单
+                </div>
+                <div class="con">
+                    订单1
+
+                </div>
+                <div class="con">
+                    订单2
+                </div>
+                <div class="con" style="display: block;">
+                    <div class="mycoupons_con">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<component src="footer/index.html"></component>

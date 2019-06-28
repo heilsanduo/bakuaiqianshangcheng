@@ -1,0 +1,42 @@
+@@include('layout/layout/index.html', {
+    "title": "在线支付",
+    "header": true
+})
+
+<div id="pay_layout" class="layout-view">
+
+    <div class="pay-message-box">
+        <div class="pay-message-title"><span>收款客户</span></div>
+        <div class="pay-seller-box">
+            <a class="pay-seller-icon">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/de220b867e860e82c372a31dec1e9e80.JPG" alt="">
+            </a>
+            <a class="pay-seller-message">
+                <div class="pay-seller-name">诺贝尔瓷砖东莞有限公司</div>
+                <div class="pay-seller-address">东莞市莞城光辉大厦8楼B06室</div>
+            </a>
+        </div>
+        <div class="pay-amount-box">
+            <input type="text" maxlength="12" name="money" >
+            <span>元</span>
+        </div>
+        <div class="pay-amount-tip-box">
+            <span></span>
+        </div>
+    </div>
+    <div class="pay-submit button-default">确认支付</div>
+
+</div>
+
+<script>
+    ((w, d) => {
+    	$(".pay-amount-box input").on('keyup', function(e){
+            let _val = e.target.value.replace(/[^0-9]+/gi,'');
+		    $(".pay-amount-box input").val(w.TOOL.$money(_val, 3));
+            $(".pay-amount-tip-box span").text(_val === '' ? '' : `大写金额：${w.TOOL.$moneyForm(_val)}`);
+        });
+    })(window, document)
+</script>
+
+
+@@include('layout/footer/index.html')

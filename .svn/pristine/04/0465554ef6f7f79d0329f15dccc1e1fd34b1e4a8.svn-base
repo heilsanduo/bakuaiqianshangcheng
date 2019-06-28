@@ -1,0 +1,19 @@
+
+
+<div class="search-header">
+    <div class="search-header-box">
+        <input type="search" name="search" >
+        <span class="search-placeholder">苏宁易购</span>
+    </div>
+</div>
+
+<script>
+    ((w, d) => {
+	    $(".search-header-box input").focus(function(){
+            $(".search-placeholder").hide();
+	    });
+	    $(".search-header-box input").blur(function(){
+		    $(".search-placeholder").show();
+	    });
+    })(window, document)
+</script>

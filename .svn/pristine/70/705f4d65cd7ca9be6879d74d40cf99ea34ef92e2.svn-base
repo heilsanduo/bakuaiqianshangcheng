@@ -1,0 +1,52 @@
+$(function () {
+    $('#phone_num').blur(function () { //手机号校验
+        let val = $(this).val().trim();
+        if (val && (/^1[34578]\d{9}$/.test(val))) { //正则是否通过
+            $('.phone_wrong_msg').css('display', 'none');
+            $.ajax({
+                type: 'POST',
+                url: '',
+                data: `inter=checkphone&phone=${val}`,
+                success: function (data) {
+                    let json = JSON.parse(data);
+                    if (json.msg = 0) { //手机号存在
+
+                        // console.log('用户名验证成功', isokarr);
+                        // $('#send_code').css('background', '#FFDE45');
+                    } else { //手机号不存在
+                        $('.phone_wrong_msg').css({ 'display': 'block' });
+                        $('.phone_wrong_msg').html('该用户不存在，请先注册');
+                    }
+                }
+            })
+        } else {
+            $('.phone_wrong_msg').css({ 'display': 'block' });
+            $('.phone_wrong_msg').html('请输入正确的手机号');
+        }
+    });
+
+    $('#btn').click(function () {
+        let phone = $('#phone_num').val().trim();
+        let psw = $('#psw').val().trim();
+        if (phone && psw) {
+            $.ajax({
+                type: 'POST',
+                url: '../api/user.php',
+                data: `m=register&name=${phone}&password=${psw}`,
+                success: function (res) {
+                    if (res == 'yes') { //匹配成功
+                        location.href = '../index.html'
+
+                    } else {//手机或密码不对
+                        $('.password_wrong_msg').css({ 'display': 'block' });
+                        $('.password_wrong_msg').html('手机或密码不对');
+                    }
+                }
+            })
+        } else {
+            alert('请输入完整内容');
+        }
+
+    })
+
+})

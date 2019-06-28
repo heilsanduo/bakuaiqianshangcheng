@@ -1,0 +1,184 @@
+
+@@include('layout/layout/index.html', {
+"title": "我的积分订单",
+"header": true
+})
+
+
+<div class="myintegral-box">
+	<div class="myintegral-box-top" id="myintegral-box-top">
+		<div class="myintegral-active">全部订单</div>
+		<div>待付款</div>
+		<div>待发货</div>
+		<div>待收货</div>
+		<div>退款/售后</div>
+	</div>
+	<div class="myintegral-box-bottom" id="myintegral-box-bottom">
+		<div class="option" style="display: block">
+			<div class="option-box">
+				<div class="option-content">
+					<div class="option-content-top">
+						<div class="option-content-top-left">
+							<img src="../../../images/option-ioc.png" alt="" />
+						</div>
+						<div class="option-content-top-title">
+							顾家家具旗舰店
+						</div>
+						<div class="option-content-top-arrows">
+							<img src="../../../images/option-ioc2.png" alt="" />
+						</div>
+						<div class="option-content-top-obligation">待兑换</div>
+					</div>
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								灰色
+							</div>
+							<div class="option-content-middle-right-bottom">
+								3000积分<span>×1</span>
+							</div>
+						</div>
+					</div>
+					<div class="option-content-bottom">
+						<div class="option-cancel">取消订单</div>
+						<div class="option-payment">立即兑换</div>
+					</div>
+				</div>
+				<div class="option-content">
+					<div class="option-content-top">
+						<div class="option-content-top-left">
+							<img src="../../../images/option-ioc.png" alt="" />
+						</div>
+						<div class="option-content-top-title">
+							顾家家具旗舰店
+						</div>
+						<div class="option-content-top-arrows">
+							<img src="../../../images/option-ioc2.png" alt="" />
+						</div>
+						<div class="option-content-top-obligation">待发货</div>
+					</div>
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								灰色
+							</div>
+							<div class="option-content-middle-right-bottom">
+								2500积分<span>×1</span>
+							</div>
+						</div>
+					</div>
+					<div class="option-content-bottom">
+						<div class="option-cancel">取消订单</div>
+						<div class="option-payment">立即兑换</div>
+					</div>
+				</div>
+				<div class="option-content">
+					<div class="option-content-top">
+						<div class="option-content-top-left">
+							<img src="../../../images/option-ioc.png" alt="" />
+						</div>
+						<div class="option-content-top-title">
+							顾家家具旗舰店
+						</div>
+						<div class="option-content-top-arrows">
+							<img src="../../../images/option-ioc2.png" alt="" />
+						</div>
+						<div class="option-content-top-obligation">待收货</div>
+					</div>
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								灰色
+							</div>
+							<div class="option-content-middle-right-bottom">
+								4000积分<span>×1</span>
+							</div>
+						</div>
+					</div>
+					<div class="option-content-bottom">
+						<div class="option-cancel">取消订单</div>
+						<div class="option-payment">立即兑换</div>
+					</div>
+				</div>
+				<div class="option-content">
+					<div class="option-content-top">
+						<div class="option-content-top-left">
+							<img src="../../../images/option-ioc.png" alt="" />
+						</div>
+						<div class="option-content-top-title">
+							顾家家具旗舰店
+						</div>
+						<div class="option-content-top-arrows">
+							<img src="../../../images/option-ioc2.png" alt="" />
+						</div>
+						<div class="option-content-top-obligation">已完成</div>
+					</div>
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								灰色
+							</div>
+							<div class="option-content-middle-right-bottom">
+								4000积分<span>×1</span>
+							</div>
+						</div>
+					</div>
+					<div class="option-content-bottom">
+						<div class="option-cancel">取消订单</div>
+						<div class="option-payment">立即兑换</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="option">2</div>
+		<div class="option">3</div>
+		<div class="option">4</div>
+		<div class="option">5</div>
+	</div>
+</div>
+
+<script>
+	$(function () {
+		//选项卡
+		$("#myintegral-box-top div").click(function () {
+			//点击当前的变高亮+排他
+			$(this)
+				.addClass("myintegral-active")
+				.siblings("div")
+				.removeClass("myintegral-active");
+			//内容跟着出来
+			$("#myintegral-box-bottom .option")
+				.eq($(this).index())
+				.css("display", "block")
+				.siblings()
+				.css("display", "none");
+		});
+	});
+
+</script>
+
+@@include('layout/footer/index.html')

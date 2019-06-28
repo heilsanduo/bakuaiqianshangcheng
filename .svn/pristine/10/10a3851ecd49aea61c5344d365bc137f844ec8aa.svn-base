@@ -1,0 +1,117 @@
+@import "../../../styles/common.less";
+.address_manager{
+    width:100%;
+    height:100%;
+    // address_manager内容区
+        .address_manager_list{
+            width:100%;
+            height:auto;
+            display:flex;
+            flex-direction: column;
+            align-items:center;
+            margin-bottom:1.4rem;
+            >li{
+                width:6.86rem;
+                height:1.94rem;
+                background:rgba(255,255,255,1);
+                box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+                border-radius:0.2rem;
+                margin-top:0.32rem;
+                padding:0.32rem 0.32rem 0.32rem 0.26rem;
+                box-sizing:border-box;
+                display:flex;
+            }          
+        }
+        // 图标
+        .address_manager_icon{
+            width:0.4rem;
+            height:0.4rem;
+            background-image:url("../images/address_icon.png");
+            .bgSet();
+        }
+        // 中间内容区
+        .address_manager_text{
+            width:100%;
+            height:100%;
+            margin-left:0.18rem;
+        }
+        .address_manager_textT{
+            width:100%;
+            height:0.56rem;
+            display:flex;
+            align-items: center;
+            padding-bottom:0.16rem;
+            box-sizing:border-box;
+            .address_manager_name{
+                width:1rem;
+                height:0.4rem;  
+                padding-right:0.16rem;
+                box-sizing:border-box;
+                font-size:0.28rem;
+                font-weight:800;
+                color:rgba(51,51,51,1);
+          }
+          .address_manager_phone{
+                width:1.78rem;
+                height:0.34rem;
+                line-height:0.36rem;
+                font-size:0.24rem;
+                font-weight:400;
+                color:rgba(51,51,51,1);
+                justify-content: flex-start;
+          }
+        .address_manager_first{
+                width:0.48rem;
+                height:0.28rem;
+                background-image:url("../images/address_manager_default.png");
+                .bgSet();
+          }
+        }
+        // 地址
+        .address_manager_textB{
+            width:3.86rem;
+            height:0.72rem;
+            font-size:0.24rem;
+            font-weight:400;
+            line-height:0.36rem;
+            color:rgba(51,51,51,1);
+            .more-ellipsis;          
+        }
+       
+        // 编辑地址
+        .address_manager_edit{
+            width:1.52rem;
+            height:0.66rem;
+            background:@bgC;
+            border-radius:0.08rem;
+            font-size:0.24rem;
+            font-weight:800;
+            line-height:0.66rem;
+            color:rgba(51,51,51,1);
+            text-align:center;    
+        }
+      
+    // address_manager_footer
+    .address_manager_footer{
+        width:100%;
+        height:1.08rem;
+        background:rgba(255,255,255,1);
+        box-shadow:0 -0.04rem 0.08rem rgba(0,0,0,0.04);
+        position: fixed;
+        bottom:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .address_manager_btn{
+        width:6.86rem;
+        height:0.84rem;
+        background:@bgC;
+        border-radius:0.12rem;
+        font-size: 0.26rem;
+        font-weight: 800;
+        text-align:center;
+        line-height:0.84rem;
+       
+    }
+}

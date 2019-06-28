@@ -1,0 +1,47 @@
+
+@@include('layout/layout/index.html', {
+"title": "助力列表",
+"header": true
+})
+
+<div id="assistance_layout" class="layout-view">
+
+    @@for (var i = 0; i < 10; i++) {
+        @@include('common/assistance_item/index.html')
+    }
+
+</div>
+
+
+@@include('layout/footer/index.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

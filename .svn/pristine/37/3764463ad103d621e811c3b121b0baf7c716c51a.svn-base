@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Title</title>
+    <script>
+		((w, d) => {
+			let dw = d.documentElement.clientWidth || d.body.clientWidth || w.innerWidth;
+			let ratio = 7.5;
+			d.documentElement.style.fontSize = dw / ratio + 'px';
+			w.onresize = () => {
+				d.documentElement.style.fontSize = d.documentElement.clientWidth / ratio + 'px'
+			};
+		})(window, document)
+
+    </script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            outline: none;
+            user-select: none;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        ul li, ol li {
+            list-style: none;
+        }
+
+        .layout-view {
+            flex: auto;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .luck-view {
+            background-position: left top;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-image: url("./images/luck-bg.png");
+        }
+
+        .luck-footer {
+            width: 100%;
+            height: 0.98rem;
+            display: flex;
+            border: 1px solid rgba(239, 239, 239, 1)
+        }
+
+        .luck-footer > div {
+            width: 50%;
+            flex: none;
+            height: 0.98rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all linear 0.2s;
+        }
+
+        .luck-footer > div:active {
+            opacity: 0.8;
+        }
+
+        .luck-footer-home {
+            background-color: #fff;
+        }
+
+        .luck-footer-home span {
+            color: rgba(197, 39, 242, 1);
+        }
+
+        .luck-footer-home span::before {
+            background-image: url("../images/luck-footer-home-icon.png");
+        }
+
+        .luck-footer-coupon {
+            background: linear-gradient(270deg, rgba(192, 106, 255, 1) 0%, rgba(200, 2, 235, 1) 100%);
+        }
+
+        .luck-footer-coupon span {
+            color: rgba(255, 207, 60, 1);
+        }
+
+        .luck-footer-coupon span::before {
+            background-image: url("../images/luck-footer-coupon-icon.png");
+        }
+
+        .luck-footer span {
+            display: flex;
+            align-items: center;
+            font-size: 0.28rem;
+            font-weight: 800;
+        }
+
+        .luck-footer span::before {
+            content: "";
+            width: 0.4rem;
+            height: 0.4rem;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 60% 60%;
+        }
+
+        .wrapper {
+            flex: none;
+            position: absolute;
+            left: 50%;
+            top: 3.08rem;
+            transform: translateX(-50%);
+            overflow: hidden;
+            width: 7rem;
+            height: 7rem;
+            border-radius: 50%;
+            padding: 0.52rem;
+            background-color: #FFE03F;
+            box-shadow: 0 0 0.16rem #FEB756;
+        }
+
+        .panel {
+            position: relative;
+            height: 5.98rem;
+            width: 5.98rem;
+            background-color: #FFF1F1;
+            border-radius: 50%;
+            z-index: 100;
+        }
+
+        .sector {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            font-size: 14px;
+            border-radius: 0 2.99rem 2.99rem 0;
+            overflow: hidden;
+            transform-origin: left center;
+        }
+
+        .sector:nth-child(2n+1) .sector-inner {
+            background: #FFEABA;
+        }
+
+        .sector:nth-child(2n) .sector-inner {
+            background: #FFF1F1;
+        }
+
+        .sector-inner {
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            transform: translateX(-100%) rotate(180deg);
+            transform-origin: right center;
+            border-radius: 1rem 0 0 1rem;
+        }
+
+        .sector span {
+            display: inline-block;
+            width: 0.8rem;
+            height: 0.8rem;
+            background-color: transparent;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: translateY(40%) rotate(22.5deg);
+            position: absolute;
+            left: 10%;
+            color: #d46854;
+            z-index: 10;
+            transform-origin: right bottom;
+        }
+
+
+        .wrapper .pointer {
+            box-sizing: border-box;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1.96rem;
+            height: 2.42rem;
+            background-image: url("../images/luck-pointer-icon.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            cursor: pointer;
+            z-index: 500;
+        }
+
+        .wrapper .light {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: rotate 5s linear infinite;
+            z-index: 2;
+            border-radius: 50%;
+        }
+
+        .wrapper .light span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 0.24rem;
+            height: 100%;
+            z-index: 20;
+            transform-origin: center center;
+        }
+
+        .wrapper .light span:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0.12rem;
+            left: 0;
+            width: 0.24rem;
+            height: 0.24rem;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: all linear 0.2s;
+            background: linear-gradient(to bottom, #FFB76B, #FF5048);
+        }
+
+        .wrapper .light span:nth-of-type(even):before {
+            border-radius: 50%;
+            animation: white-to-yellow 1s linear infinite;
+        }
+
+        .wrapper .light span:nth-of-type(odd):before {
+            border-radius: 50%;
+            animation: white-to-yellow 1s linear reverse infinite;
+        }
+
+        @keyframes white-to-yellow {
+            0% {
+                background: linear-gradient(to bottom, #FFB76B, #FF5048);
+            }
+            100% {
+                background: linear-gradient(to bottom, #FFFBCC, #FFEC87);
+            }
+        }
+
+        #__bs_notify__ {
+            display: none !important;
+        }
+        .luck-rule{
+            width: 1.42rem;
+            height: 0.48rem;
+            position:absolute;
+            right: 0.24rem;
+            top: 0.24rem;
+            background:rgba(0,0,0,0.3);
+            border-radius: 0.24rem;
+            font-size: 0.24rem;
+            color:rgba(255,255,255,1);
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .action-lucky{
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1000;
+            -webkit-transition: all linear 0.2s;
+            transition: all linear 0.2s;
+            opacity: 0;
+        }
+        .action-lucky-active {
+            z-index: 1000;
+            opacity: 1;
+        }
+        .action-lucky-box{
+            width:5.3rem;
+            height:3.4rem;
+            background-color:rgba(0,0,0,0.6);
+            border-radius: 0.2rem;
+            position:absolute;
+            left:50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0.48rem;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .action-lucky-box-header{
+            width: 100%;
+            height: 0.5rem;
+            font-size: 0.32rem;
+            font-weight:800;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            color:rgba(255,207,60,1);
+        }
+        .action-lucky-box-body{
+            width: 100%;
+            height:1.68rem;
+            font-size: 0.28rem;
+            font-weight:400;
+            color:rgba(255,255,255,1);
+            line-height:0.42rem;
+            letter-spacing:2px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+<div class="layout-view luck-view">
+    <div class="luck-rule">抽奖规则</div>
+    <div class="wrapper">
+        <div class="light" id="turntable_light"></div>
+        <div class="panel" id="turntable">
+
+        </div>
+        <div class="pointer" id="turntable_pointer"></div>
+    </div>
+</div>
+<div class="luck-footer">
+    <div class="luck-footer-home">
+        <span>首页</span>
+    </div>
+    <div class="luck-footer-coupon">
+        <span>我的优惠券</span>
+    </div>
+</div>
+
+<div class="action-lucky">
+    <div class="action-lucky-box">
+        <div class="action-lucky-box-header">抽奖规则</div>
+        <div class="action-lucky-box-body">
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    document.getElementsByClassName('luck-rule')[0].addEventListener("click", function (e) {
+        document.getElementsByClassName('action-lucky')[0].className = 'action-lucky action-lucky-active'
+    })
+
+    document.getElementsByClassName('action-lucky')[0].addEventListener("click", function (e) {
+        if(e.target.className.indexOf('action-lucky-active') !== -1){
+	        document.getElementsByClassName('action-lucky')[0].className = 'action-lucky'
+        }
+    })
+
+	let turntable = {
+		itemNum: 8, // 转盘平均分几块
+		lightNum: 16, // 转盘上的灯
+		light: null, // 转盘旋转灯容器
+		turntable: null, // 转盘
+		bg: null, // 转盘背景
+		gift: null, // 转盘上的中奖结果图
+		pointer: null, // 转盘指针
+		lottery: [], // 中奖数据
+		typeMap: {1: '¥', 2: '谢谢参与'},
+		typeClassMap: {1: '', 2: 'no-gift'},
+		giftConfig: {       // 配置不同奖品数量的奖品位置
+			4: {y: '140%', l: '27%'},
+			5: {y: '120%', l: '22%'},
+			6: {y: '100%', l: '15%'},
+			7: {y: '80%', l: '13.25%'},
+			8: {y: '60%', l: '11.5%'},
+			9: {y: '60%', l: '9.25%'},
+			10: {y: '60%', l: '7%'},
+			11: {y: '60%', l: '5%'},
+			12: {y: '60%', l: '2.5%'}
+		},
+		isGoing: false,
+		init() {
+			if((this.itemNum > 12 || this.itemNum < 4) || (this.lottery.length > 12 || this.lottery.length < 4)){
+				this.pointer.style.display = 'none';
+				throw new Error('奖品数量在 4 ~ 12之间');
+            }
+			if (!this.lottery.length) {
+				this.pointer.style.display = 'none';
+				throw new Error('请设置中奖结果数据');
+			}
+			// 初始化灯
+			let lightFragment = document.createDocumentFragment();
+			for (let i = 0; i < this.lightNum; i++) {
+				let lightItem = document.createElement('span');
+				let deg = (360 / this.lightNum) * i
+				lightItem.style.transform = `rotate(${deg}deg)`;
+				lightFragment.appendChild(lightItem);
+			}
+			this.light.appendChild(lightFragment);
+			let bgFragment = document.createDocumentFragment();
+			for (let i = 0; i < this.itemNum; i++) {
+				let bgItem = document.createElement('div');
+				bgItem.className = 'sector'
+				let deg = (360 / this.itemNum) * i
+				bgItem.style.transform = `rotate(${deg}deg)`;
+				let sectorInner = document.createElement('div')
+				sectorInner.className = 'sector-inner'
+				sectorInner.style.transform = 'translateX(-100%) rotate(' + deg / i + 'deg)'
+				let _span = document.createElement('span')
+				_span.style.transform = 'translateY(' + this.giftConfig[this.itemNum]['y'] + ') rotate(' + 360 / this.itemNum / 2 + 'deg)';
+				_span.style.left = this.giftConfig[this.itemNum]['l'] || '15%'            //  8
+				_span.style.backgroundImage = 'url("' + this.lottery[i].icon + '")'            //  8
+				// _span.innerText = '奖品AAA' + i
+				bgItem.appendChild(sectorInner)
+				bgItem.appendChild(_span)
+				bgFragment.appendChild(bgItem);
+				bgFragment.appendChild(bgItem)
+			}
+			this.turntable.appendChild(bgFragment)
+			this.pointer.onclick = this.gameStart.bind(this)
+		},
+		gameStart() {
+			if (this.isGoing) {
+				return
+			}
+			this.isGoing = true;
+			let randomRate = ~~(Math.random() * 100)
+			let num = 0
+			this.lottery.forEach(item => {
+				item.min = num;
+				num += item.rate;
+				item.max = num;
+			})
+			let res = this.lottery.filter(item => {
+				return randomRate >= item.min && randomRate < item.max;
+			})[0];
+			let rotateItemDeg = 360 / this.lottery.length / 2 + (res.location - 1) * (360 / this.lottery.length);
+			let rotate = rotateItemDeg + 5 * 360;
+			let rotateSpeed = (rotateItemDeg / 360 * 1 + 5).toFixed(2);
+			this.turntable.removeAttribute('style');
+			setTimeout(() => {
+				this.turntable.style.transform = `rotate(${rotate}deg)`;
+				this.turntable.style.transition = `transform ${rotateSpeed}s ease-out`;
+			}, 10)
+			setTimeout(() => {
+				this.isGoing = false;
+				console.log('中奖结果：', randomRate, res, this.typeMap[res.type]);
+			}, rotateSpeed * 1000);
+		}
+	}
+
+	let lottery = [
+		{
+			id: 1,
+			name: '原味板烧鸡腿堡配中薯套餐',
+			price: '￥32.00 ',
+			icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/e65877796b6cede677d7d17af78a3a20png.png',
+			location: 1, // 位置
+			type: 1, // 中奖
+			rate: 30,
+		},
+		{
+			id: 2,
+			name: '不素之霸双层牛肉堡',
+			price: '￥888',
+			icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/82d287bd38d8418aa49fc75684cd6a17jpeg.jpeg',
+			location: 2,
+			type: 2, // 未中奖
+			rate: 20
+		},
+		{
+			id: 3,
+			name: '巨无霸',
+			price: '￥888',
+			icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/69bd67ce3f9d12acda4f44822cf9f2c6png.png',
+			location: 3,
+			type: 1,
+			rate: 10
+		},
+		{
+			id: 4,
+			name: '培根蔬萃双层牛堡',
+			price: '￥888',
+			icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/da549861ef2e96dce7b2b413fd493d15png.png',
+			location: 4,
+			type: 2,
+			rate: 20
+		},
+		{
+			id: 5,
+			name: '法式柠香鸡腿汉堡',
+			price: '￥888',
+			icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/bd08dffa3c8c51dcb44dda22a6a49e76jpeg.jpeg',
+			location: 5,
+			type: 1,
+			rate: 10
+		},
+		{
+			id: 6,
+			name: '培根蔬萃双层牛堡配大薯套餐',
+			price: '￥888',
+			icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/9a37da29b672bb22313249de1724dbf9png.png',
+			location: 6,
+			type: 2,
+			rate: 10
+		},
+		{
+			id: 7,
+			name: '猪柳蛋麦满分',
+			price: '￥888',
+			icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/1305badafbb5d5a215ddfbdf37846541jpeg.jpeg',
+			location: 7,
+			type: 2,
+			rate: 10
+		},
+		{
+			id: 8,
+			name: '麦乐送皮蛋粥专享套餐',
+			price: '￥888',
+			icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/fcc3f60f013ec383fecb5682ac48b56ajpeg.jpeg',
+			location: 8,
+			type: 2,
+			rate: 10
+		}
+	];
+	turntable.turntable = document.querySelector('#turntable');
+	turntable.light = document.querySelector('#turntable_light');
+	turntable.pointer = document.querySelector('#turntable_pointer');
+	turntable.lottery = lottery;
+	turntable.itemNum = lottery.length
+	turntable.init();
+</script>
+
+</body>
+</html>

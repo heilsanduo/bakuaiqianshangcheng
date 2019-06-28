@@ -1,0 +1,13 @@
+
+
+#assemble_layout, #spike_layout, #assistance_layout{
+  padding: 0 0.32rem;
+  &> div{
+    padding: 0.32rem;
+    margin: 0.32rem auto;
+    background-color:rgba(255,255,255,1);
+    box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+    border-radius: 0.2rem;
+    overflow: hidden;
+  }
+}

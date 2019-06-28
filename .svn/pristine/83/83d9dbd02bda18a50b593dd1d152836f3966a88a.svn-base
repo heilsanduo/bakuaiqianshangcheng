@@ -1,0 +1,186 @@
+.set {
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+	.set-top {
+		position: absolute;
+		top: 0.32rem;
+		left: 0.32rem;
+		width: 6.86rem;
+		height: auto;
+		background: rgba(255, 255, 255, 1);
+		box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+		border-radius: 20px;
+	}
+
+	.set-head {
+		width: 100%;
+		height: 1.84rem;
+		border-radius: 20px 20px 0 0;
+		display: flex;
+	}
+
+	.set-head-left {
+		border-radius: 20px 0 0 0;
+		flex: 2;
+		font-size: 0.28rem;
+		font-family: PingFang SC;
+		font-weight: 800;
+		line-height: 1.84rem;
+		text-align: center;
+		color: rgba(51, 51, 51, 1);
+	}
+
+	.set-head-cen {
+		flex: 5;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.set-head-cen-head {
+		width: 1.2rem;
+		height: 1.2rem;
+		align-self: center;
+		background: rgba(0, 0, 0, 0);
+		border-radius: 50%;
+	}
+
+	.set-head-cen-head img {
+		border-radius: 50%;
+		width: 100%;
+		height: 100%;
+
+	}
+
+	.set-head-right {
+		border-radius: 0 20px 0 0;
+		flex: 1;
+		background: url(../../../images/jiantou.png)no-repeat center center;
+		background-size: .32rem .32rem;
+
+	}
+
+	.set-nickname {
+		width: 100%;
+		height: 1.02rem;
+		display: flex;
+
+		.set-nickname-left {
+			flex: 2;
+			font-size: 0.28rem;
+			font-weight: 800;
+			line-height: 1.02rem;
+			text-align: center;
+			color: rgba(51, 51, 51, 1);
+		}
+
+		.set-nickname-cen {
+			flex: 5;
+			text-align: right;
+			font-size: .28rem;
+			line-height: 1.02rem;
+			font-weight: 400;
+			color: rgba(51, 51, 51, 1);
+			opacity: 1;
+		}
+
+		.set-nickname-right {
+			flex: 1;
+			background: url(../../../images/jiantou.png)no-repeat center center;
+			background-size: .32rem .32rem;
+		}
+	}
+
+	.set-site {
+		width: 100%;
+		height: 1.02rem;
+		border-radius: 0 0 20px 20px;
+		display: flex;
+
+		.set-site-left {
+			border-radius: 0 0 0 20px;
+			flex: 2;
+			font-size: 0.28rem;
+			font-family: PingFang SC;
+			font-weight: 800;
+			line-height: 1.02rem;
+			text-align: center;
+			color: rgba(51, 51, 51, 1);
+		}
+
+		.set-site-cen {
+			flex: 5;
+			text-align: right;
+			font-size: .28rem;
+			line-height: 1.02rem;
+			font-weight: 400;
+			color: rgba(51, 51, 51, 1);
+			opacity: 1;
+		}
+
+		.set-site-right {
+			border-radius: 0 0 20px 0;
+			flex: 1;
+			background: url(../../../images/jiantou.png)no-repeat center center;
+			background-size: .32rem .32rem;
+		}
+	}
+
+	.set-bottom {
+		position: absolute;
+		top: 5.52rem;
+		left: 0.32rem;
+		width: 6.68rem;
+		height: 1.02rem;
+		display: flex;
+		background: rgba(255, 255, 255, 1);
+		box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+		opacity: 1;
+		border-radius: 16px;
+
+		.set-bottom-left {
+			border-radius: 0 0 0 20px;
+			flex: 2;
+			font-size: 0.28rem;
+			font-family: PingFang SC;
+			font-weight: 800;
+			line-height: 1.02rem;
+			text-align: center;
+			color: rgba(51, 51, 51, 1);
+		}
+
+		.set-bottom-cen {
+			flex: 5;
+			text-align: right;
+			font-size: .28rem;
+			line-height: 1.02rem;
+			font-weight: 400;
+			color: rgba(51, 51, 51, 1);
+			opacity: 1;
+		}
+
+		.set-bottom-right {
+			border-radius: 0 0 20px 0;
+			flex: 1;
+			background: url(../../../images/jiantou.png)no-repeat center center;
+			background-size: .32rem .32rem;
+		}
+
+	}
+
+	.set-logout {
+		position: absolute;
+		top: 10.54rem;
+		left: 0.32rem;
+		width: 6.86rem;
+		height: 0.88rem;
+		background: rgba(255, 222, 69, 1);
+		border-radius: 12px;
+		font-size: 0.28rem;
+		text-align: center;
+		font-weight: 800;
+		line-height: 0.88rem;
+		color: rgba(51, 51, 51, 1);
+	}
+}

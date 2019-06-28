@@ -1,0 +1,12 @@
+<component src="layout/index.html" title="设置" header></component>
+<div id="seller_layout" class="layout-view">
+	<div class="set">
+		<div class="set-top">
+			<div class="set-head "></div>
+			<div class="set-nickname"></div>
+			<div class="set-site"></div>
+		</div>
+		<div class="set-bottom"></div>
+	</div>
+</div>
+<component src="footer/index.html"></component>

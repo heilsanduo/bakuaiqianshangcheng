@@ -1,0 +1,98 @@
+@import "../../../styles/common.less";
+/* 首页装修设计 */
+.home-warp-box{
+  width: 100%;
+  padding: @HomePadding;
+}
+.home-warp-box-header{
+  padding: 0.24rem 0;
+  display:flex;
+  flex-direction: column;
+}
+.home-warp-box-title{
+  width: 100%;
+  height: 0.74rem;
+  flex:none;
+  font-size: 0.36rem;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+  .fontBreak(1, 0.74rem);
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  position:relative;
+  padding-left:0.44rem;
+}
+.home-warp-box-more{
+  padding-right: 0.3rem;
+  position:relative;
+  font-size: 0.24rem;
+  font-weight:400;
+  display:flex;
+  align-items: center;
+  color:rgba(153,153,153,1);
+}
+.home-warp-box-more::before{
+  content:"";
+  width: 0.24rem;
+  height: 0.24rem;
+  display:inline-block;
+  .bgSet();
+  background-image: url("../images/more-icon.png");
+  position:absolute;
+  right:0;
+  top:50%;
+  transform: translateY(-50%);
+}
+.home-warp-box-des{
+  width: 100%;
+  flex:none;
+  height: 0.34rem;
+  font-size: 0.24rem;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  .fontBreak(1, 0.34rem);
+  padding-left:0.44rem;
+}
+.home-design-icon,.home-material-icon,.home-product-icon,.home-vip-icon{
+  width: 0.36rem;
+  height: 0.36rem;
+  position:absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display:inline-block;
+  margin-right: 0.08rem;
+  .bgSet();
+}
+.home-design-icon{
+  background-image: url("../images/home-module-design.png");
+}
+.home-material-icon{
+  background-image: url("../images/home-module-material.png");
+}
+.home-product-icon{
+  background-image: url("../images/home-module-recommend.png");
+}
+.home-vip-icon{
+  background-image: url("../images/home-module-vip.png");
+}
+.home-warp-box-body{
+  width: 100%;
+  background-color:rgba(255,255,255,1);
+  box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+  border-radius: 0.2rem;
+  padding: 0.32rem 0 0 0.32rem;
+  overflow: hidden;
+}
+.home-seller-item{
+  margin:0 0.32rem 0.32rem 0;
+  width: 1.86rem;
+  height: 1.24rem;
+  border: 0.02rem solid rgba(239,239,239,1);
+  border-radius: 0.04rem;
+  float:left;
+  overflow: hidden;
+  .imgAll;
+}
+/* 首页装修设计 - end */

@@ -1,0 +1,17 @@
+<component src="layout/index.html" title="八块钱商城" header></component>
+<div id="seller_layout" class="layout-view">
+    <div class="register">
+        <div class="register_header">
+            <div class="register_text">
+                <div class="register-text-h2">注册</div>
+                <p class="register-text-h2">新用户欢迎您</p>
+            </div>
+        <div class="register_main"></div>
+
+        </div>
+        <div class="register_footer">
+        </div>
+    </div>
+</div>
+
+<component src="footer/index.html"></component>

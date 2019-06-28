@@ -1,0 +1,42 @@
+<div class="tabbar-layout">
+    <a href="./index.html" class="tabbar-item">
+        {{if index}}
+        <div class="tabbar-icon tabbar-home tabbar-home-active"></div>
+        {{else}}
+        <div class="tabbar-icon tabbar-home"></div>
+        {{/if}}
+        <span>首页</span>
+    </a>
+    <a href="./classify.html" class="tabbar-item">
+        {{if classify}}
+        <div class="tabbar-icon tabbar-classify tabbar-classify-active"></div>
+        {{else}}
+        <div class="tabbar-icon tabbar-classify"></div>
+        {{/if}}
+        <span>分类</span>
+    </a>
+    <a href="./seller_list.html" class="tabbar-item">
+        {{if seller}}
+        <div class="tabbar-icon tabbar-seller tabbar-seller-active"></div>
+        {{else}}
+        <div class="tabbar-icon tabbar-seller"></div>
+        {{/if}}
+        <span>商家</span>
+    </a>
+    <a href="./cart.html" class="tabbar-item">
+        {{if cart}}
+        <div class="tabbar-icon tabbar-cart tabbar-cart-active"></div>
+        {{else}}
+        <div class="tabbar-icon tabbar-cart"></div>
+        {{/if}}
+        <span>购物车</span>
+    </a>
+    <a href="./my.html" class="tabbar-item">
+        {{if personal}}
+        <div class="tabbar-icon tabbar-personal tabbar-personal-active"></div>
+        {{else}}
+        <div class="tabbar-icon tabbar-personal"></div>
+        {{/if}}
+        <span>我的</span>
+    </a>
+</div>

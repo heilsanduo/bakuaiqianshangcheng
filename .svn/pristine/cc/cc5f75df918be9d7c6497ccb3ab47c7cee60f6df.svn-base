@@ -1,0 +1,127 @@
+@@include('layout/layout/index.html', {
+"title": "我的订单",
+"header": true
+})
+<div class="myorder-box">
+    <div class="myorder-box-top" id="myorder-box-top">
+        <div class="divs myorder-active">全部订单</div>
+        <div class="divs">待付款</div>
+        <div class="divs">待发货</div>
+        <div class="divs">待收货</div>
+        <div class="divs">退款/售后</div>
+    </div>
+    <div class="myorder-box-bottom" id="myorder-box-bottom">
+        <div class="option" style="display: block">
+            <div class="option-box">
+                <div class="option-content">
+                    <div class="option-content-top">
+                        <div class="option-content-top-left">
+                            <img src="../../../images/option-ioc.png" alt="" />
+                        </div>
+                        <div class="option-content-top-title">
+                            顾家家具旗舰店
+                        </div>
+                        <div class="option-content-top-arrows">
+                            <img src="../../../images/option-ioc2.png" alt="" />
+                        </div>
+                        <div class="option-content-top-obligation">待付款</div>
+                    </div>
+                    <div class="option-content-middle">
+                        <div class="option-content-middle-left">
+                            <img src="../../../images/ceshi.jpg" alt="" />
+                        </div>
+                        <div class="option-content-middle-right">
+                            <div class="option-content-middle-right-top">
+                                顾家家具 定制家具椅子高端大气上档次
+                            </div>
+                            <div class="option-content-middle-right-middle">
+                                灰色
+                            </div>
+                            <div class="option-content-middle-right-bottom">
+                                ￥523<span>×1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-content-bottom">
+                        <div class="option-cancel">取消订单</div>
+                        <div class="option-payment">付款</div>
+                    </div>
+                </div>
+                <div class="option-content">
+                    <div class="option-content-top">
+                        <div class="option-content-top-left">
+                            <img src="../../../images/option-ioc.png" alt="" />
+                        </div>
+                        <div class="option-content-top-title">
+                            顾家家具旗舰店
+                        </div>
+                        <div class="option-content-top-arrows">
+                            <img src="../../../images/option-ioc2.png" alt="" />
+                        </div>
+                        <div class="option-content-top-obligation">待付款</div>
+                    </div>
+                    <div class="option-content-middle">
+                        <div class="option-content-middle-left">
+                            <img src="../../../images/ceshi.jpg" alt="" />
+                        </div>
+                        <div class="option-content-middle-right">
+                            <div class="option-content-middle-right-top">
+                                顾家家具 定制家具椅子高端大气上档次
+                            </div>
+                            <div class="option-content-middle-right-middle">
+                                灰色
+                            </div>
+                            <div class="option-content-middle-right-bottom">
+                                ￥523<span>×1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-content-bottom">
+                        <div class="option-cancel">取消订单</div>
+                        <div class="option-payment">付款</div>
+                    </div>
+                </div>
+                <div class="option-content">
+                    <div class="option-content-top">
+                        <div class="option-content-top-left">
+                            <img src="../../../images/option-ioc.png" alt="" />
+                        </div>
+                        <div class="option-content-top-title">
+                            顾家家具旗舰店
+                        </div>
+                        <div class="option-content-top-arrows">
+                            <img src="../../../images/option-ioc2.png" alt="" />
+                        </div>
+                        <div class="option-content-top-obligation">待付款</div>
+                    </div>
+                    <div class="option-content-middle">
+                        <div class="option-content-middle-left">
+                            <img src="../../../images/ceshi.jpg" alt="" />
+                        </div>
+                        <div class="option-content-middle-right">
+                            <div class="option-content-middle-right-top">
+                                顾家家具 定制家具椅子高端大气上档次
+                            </div>
+                            <div class="option-content-middle-right-middle">
+                                灰色
+                            </div>
+                            <div class="option-content-middle-right-bottom">
+                                ￥523<span>×1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-content-bottom">
+                        <div class="option-cancel">取消订单</div>
+                        <div class="option-payment">付款</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="option">2</div>
+        <div class="option">3</div>
+        <div class="option">4</div>
+        <div class="option">5</div>
+    </div>
+</div>
+
+@@include('layout/footer/index.html')

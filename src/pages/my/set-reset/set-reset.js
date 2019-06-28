@@ -1,0 +1,119 @@
+$(function () {
+	function former() {
+		// 需要ajax请求，former2为假数据
+		// $.ajax({
+		//     data: "phone=" + phone + "&code=" + code,
+		//     error: function (XMLHttpRequest, textStatus, errorThrown) { },
+		//     success: function (msg) { }
+		// });
+		let former = $("#former").val();
+		let former2 = $("#former").val();
+		if (former) {
+			if (former == former2) {
+				$("#former1 .reset-hint").css("display", "none").html("").removeClass('error');
+
+			} else {
+				$("#former1 .reset-hint").css("display", "block").html("密码错误").addClass('error');
+				return false;
+
+			}
+		} else {
+			$("#former1 .reset-hint").css("display", "block").html("").addClass('error');
+			return false;
+		}
+
+	};
+
+	function fresh() {
+		let former = $("#former").val();
+		let fresh = $("#fresh").val();
+		// 非空
+		if (fresh) {
+			let reg = /^[a-zA-Z0-9]{8,20}$/;
+			// 正则通过
+			if (reg.test(fresh)) {
+				if (former == fresh) {
+					$("#fresh1 .reset-hint").css("display", "block").html("新密码不能与旧密码相同").addClass('error');
+				} else {
+					$("#fresh1 .reset-hint").css("display", "none").html("").removeClass('error');
+				}
+			} else {
+				$("#fresh1 .reset-hint").css("display", "block").html("密码为至少8个字母和数字的组合").addClass('error');
+			}
+
+		} else {
+			$("#fresh1 .reset-hint").css("display", "block").html("").addClass('error');
+		}
+	}
+	// 获取输入框数字
+	function affirm() {
+		let affirm = $("#affirm").val();
+		let num = affirm.length;
+		// console.log(num);
+		if (affirm) {
+			if (num >= 8) {
+				$("#reset-box-bottom").css("background", "#FFDE45");
+			} else {
+				$("#reset-box-bottom").css("background", "rgba(239, 239, 239, 1)");
+			}
+
+		} else {
+			$("#affirm .reset-hint").css("display", "block").html("").addClass('error');
+		}
+
+	}
+	// 确认密码
+	function pas() {
+		let fresh = $("#fresh").val();
+		let affirm = $("#affirm").val();
+		if (affirm == fresh) {
+			$("#affirm1 .reset-hint").css("display", "none").html("").removeClass('error');
+		} else {
+			$("#affirm1 .reset-hint").css("display", "block").html("两次密码不一致").addClass('error');
+		}
+	}
+
+	// 旧密码
+	$("#former").blur(function () {
+		former();
+	});
+	// 新密码
+	$("#fresh").blur(function () {
+		fresh();
+	});
+	// 确认密码
+	$("#affirm").keyup(function () {
+		affirm();
+	});
+	$("#affirm").blur(function () {
+		pas();
+	});
+
+	// 确认点击
+	$("#reset-box-bottom").click(function () {
+		former();
+		fresh();
+		affirm();
+		pas();
+		let num = $('#reset-box-top .error').length;
+		if (num == 0) {
+			$("#pop").addClass('pop-act').show().delay(3000).fadeOut();
+		} else {
+
+		}
+	});
+	$("#reset-boxs input").focus(function () {
+		let boxbody = $("#reset-box").height();
+		// alert(boxbody);
+		let reset_boxs = $("#reset-boxs").height();
+		// alert(reset_boxs);
+		let num = boxbody - reset_boxs;
+		// alert(num);
+		if (boxbody - reset_boxs == num) {
+			// alert(1);
+			$("#reset-boxs").css("margin-top", "1rem");
+		}
+	}).blur(function () {
+		$("#reset-boxs").css("margin-top", "0");
+	});
+})

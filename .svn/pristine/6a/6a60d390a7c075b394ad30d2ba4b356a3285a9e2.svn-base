@@ -1,0 +1,74 @@
+$(function () {
+    // let isokarr = []; //校验状态
+    $('#login_phone_num').blur(function () { //手机号校验
+        let val = $(this).val();
+        if (val && (/^1[34578]\d{9}$/.test(val))) { //正则是否通过
+            $('.login_phone_wrong_msg').css('display', 'none');
+            $.ajax({
+                type: 'POST',
+                url: '',
+                data: `inter=checkphone&phone=${val}`,
+                success: function (data) {
+                    let json = JSON.parse(data);
+                    if (json.msg = 0) { //手机号存在
+                        // isokarr[0] = true;
+
+                        // console.log('用户名验证成功', isokarr);
+                        // $('#send_code').css('background', '#FFDE45');
+                    } else { //手机号不存在
+                        $('.login_phone_wrong_msg').css({ 'display': 'block' });
+                        $('.login_phone_wrong_msg').html('该用户不存在，请先注册');
+                        // isokarr[0] = false;
+                    }
+                }
+            })
+        } else {
+            $('.login_phone_wrong_msg').css({ 'display': 'block' });
+            $('.login_phone_wrong_msg').html('请输入正确的手机号');
+            // isokarr[0] = false;
+        }
+    });
+    $('#login_psw').blur(function () {
+        let val = $(this).val();
+        let pswReg = /^(?![\d]+$)(?![a-zA-Z]+$)(?![!#$%^&*]+$)[\da-zA-Z!#$%^&*]{6,20}$/g;
+        if (pswReg.test(val)) { //密码校验通过
+            $('#login_btn').css('background', '#FFDE45');
+            $('.login_password_wrong_msg').css('display', 'none');
+            // isokarr[1] = true;
+        } else {
+            $(this).val('');
+            $('.login_password_wrong_msg').css({ 'display': 'block' });
+            $('.login_password_wrong_msg').html('手机或密码不正确');
+            $('#login_btn').css('background', '#EFEFEF');
+            // isokarr[1] = false;
+        }
+    })
+    $('#login_btn').click(function () {
+        let phone = $('#login_phone_num').val();
+        let psw = $('#login_psw').val();
+        if (phone && psw) {
+            $.ajax({
+                type: 'POST',
+                url: '../api/user.php',
+                data: `m=register&name=${phone}&password=${psw}`,
+                success: function (res) {
+                    if (res == 'yes') { //匹配成功
+                        location.href = '../index.html'
+
+                    } else {//手机或密码不对
+                        $('#psw').val('');
+                        $('.login_password_wrong_msg').css({ 'display': 'block' });
+                        $('.login_password_wrong_msg').html('手机或密码不对');
+                        $('#login_btn').css('background', '#EFEFEF');
+                    }
+                }
+            })
+        } else {
+            $('.login_password_wrong_msg').css({ 'display': 'block' });
+            $('.login_password_wrong_msg').html('请输入完整内容');
+            $('#login_btn').css('background', '#EFEFEF');
+        }
+
+    })
+
+})

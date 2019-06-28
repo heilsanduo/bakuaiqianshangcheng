@@ -1,0 +1,65 @@
+
+<div class="seller-product-list-menu">
+    <div class="seller-product-list-nav seller-product-list-nav-active" data-target="else">综合</div>
+    <div class="seller-product-list-nav" data-target="volume">销量</div>
+    <div class="seller-product-list-nav" data-target="screen">筛选</div>
+    <div class="seller-product-menu-search"></div>
+</div>
+
+<div class="action-scroll action-scroll-else">
+    <div class="seller-list-menu-mask"></div>
+    <div class="seller-product-menu-scroll">
+        <div class="seller-menu-classify">
+            <div class="seller-list-menu-item"><span>热门商家</span></div>
+            <div class="seller-list-menu-item"><span>装修设计</span></div>
+            <div class="seller-list-menu-item"><span>卫浴</span></div>
+            <div class="seller-list-menu-item"><span>建材城</span></div>
+            <div class="seller-list-menu-item"><span>净水器</span></div>
+            <div class="seller-list-menu-item"><span>热门商家</span></div>
+            <div class="seller-list-menu-item"><span>装修设计</span></div>
+            <div class="seller-list-menu-item"><span>卫浴</span></div>
+            <div class="seller-list-menu-item"><span>建材城</span></div>
+            <div class="seller-list-menu-item"><span>净水器</span></div>
+            <div class="seller-list-menu-item"><span>热门商家</span></div>
+            <div class="seller-list-menu-item"><span>装修设计</span></div>
+            <div class="seller-list-menu-item"><span>卫浴</span></div>
+            <div class="seller-list-menu-item"><span>建材城</span></div>
+            <div class="seller-list-menu-item"><span>净水器</span></div>
+        </div>
+    </div>
+</div>
+<div class="action-scroll action-scroll-volume">
+    <div class="seller-list-menu-mask"></div>
+    <div class="seller-product-menu-scroll">
+        <div class="seller-menu-classify">
+            <div class="seller-list-menu-item"><span>从高到低</span></div>
+            <div class="seller-list-menu-item"><span>从低到高</span></div>
+        </div>
+    </div>
+</div>
+<div class="action-scroll action-scroll-screen">
+    <div class="seller-list-menu-mask"></div>
+    <div class="seller-product-menu-scroll">
+        <div class="seller-menu-classify">
+            <div class="seller-list-menu-item"><span>价格最优</span></div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    ((w, d) => {
+	    $(".seller-product-list-nav").on("click", function(e){
+		    $(".action-scroll").removeClass("action-scroll-active")
+		    $(this).addClass("seller-list-menu-nav-active").siblings().removeClass("seller-list-menu-nav-active")
+		    $(`.action-scroll-${e.target.dataset.target}`).addClass("action-scroll-active")
+	    })
+	    $(".seller-list-menu-mask").on("click", function(){
+		    $(".action-scroll").removeClass("action-scroll-active")
+	    })
+	    $(".seller-list-menu-item").on("click", function(){
+		    $(this).addClass("seller-list-menu-item-active").siblings().removeClass("seller-list-menu-item-active")
+	    });
+    })(window, document)
+
+</script>

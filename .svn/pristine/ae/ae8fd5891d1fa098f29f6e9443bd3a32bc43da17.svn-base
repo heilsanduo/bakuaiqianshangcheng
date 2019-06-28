@@ -1,0 +1,170 @@
+$(function () {
+
+    //数据校验
+    let isokarr = []; //校验状态
+    $('#phone_num').blur(function () { //手机号校验
+        let val = $(this).val().trim();
+        if (val && (/^1[34578]\d{9}$/.test(val))) { //正则是否通过
+            $('.phone_wrong_msg').css('display', 'none');
+            $('#send_code').css('background', '#FFDE45');
+            $.ajax({
+                type: 'POST',
+                url: '',
+                data: `inter=checkphone&phone=${val}`,
+                success: function (data) {
+                    let json = JSON.parse(data);
+                    if (json.msg != 0) { //手机号可用
+                        isokarr[0] = true;
+                        // console.log('用户名验证成功', isokarr);
+                        // $('#send_code').css('background', '#FFDE45');
+                    } else { //手机号已注册
+                        $('.phone_wrong_msg').css({ 'display': 'block' });
+                        $('.phone_wrong_msg').html('手机号已注册');
+                        // isokarr[0] = false;
+                    }
+                }
+            })
+        } else {
+            $('.phone_wrong_msg').css({ 'display': 'block' });
+            $('.phone_wrong_msg').html('请输入正确的手机号');
+            isokarr[0] = false;
+        }
+    });
+    // 验证码 倒计时
+    var code = ""; //接收验证码   
+    $('#send_code').click(function () {
+        var count = 5;
+        var phone = $("#phone_num").val();//手机号码  
+        var reg_phone = /^1[34578]\d{9}$/;
+        if (!reg_phone.test(phone)) {   //验证手机是否符合格式
+            $('.phone_wrong_msg').html('请输入正确的手机号');
+            isokarr[1] = false;
+        }
+        //开始计时  
+        $('#send_code').css('background', '#EFEFEF');
+        $("#send_code").attr('disabled', 'disabled');
+        $("#send_code").html("倒计时" + count + "秒");
+        var timer = setInterval(function () {
+            count--;
+            $("#send_code").html("倒计时" + count + "秒");
+            if (count == 0) {
+                clearInterval(timer);
+                $("#send_code").attr("disabled", false);//启用按钮  
+                $('#send_code').css('background', '#FFDE45');
+                $("#send_code").html("重新发送验证码");
+
+                code = "";//清除验证码。如果不清除，过时间后，输入收到的验证码依然有效 
+            }
+        }, 1000);
+
+        //向后台发送处理数据  
+        $.ajax({
+            type: "POST", //用POST方式传输  
+            dataType: "text", //数据格式:JSON  
+            url: '', //目标地址  
+            data: "phone=" + phone + "&code=" + code,
+            error: function (XMLHttpRequest, textStatus, errorThrown) { },
+            success: function (msg) { }
+        });
+    });
+
+    $('#phone_code').blur(function () { //验证码验证
+        let val = $(this).val();
+        if (val) {
+            $('.code_wrong_msg').css('display', 'none');
+            $.ajax({ //验证验证码
+                type: 'POST',
+                url: '../api/user.php',
+                data: `m=checkcode&captcha=${val}`,
+                success: function (data) {
+                    let json = JSON.parse(data);
+                    if (json.code) { //验证码正确
+                        isokarr[2] = true;
+                        // console.log('验证码验证成功', isokarr);
+                        $('.code_wrong_msg').css('display', 'none');
+                    } else {
+                        $('.code_wrong_msg').css({ 'display': 'block' });
+                        $('.code_wrong_msg').html('验证码不正确');
+                        // isokarr[2] = false;
+                    }
+                }
+
+            })
+        } else {
+            $(this).val('');
+            $('.code_wrong_msg').css({ 'display': 'block' });
+            $('.code_wrong_msg').html('验证码不能为空');
+            isokarr[2] = false;
+        }
+    })
+
+    $('#password_num').blur(function () {
+        let val = $(this).val();
+        let pswReg = /^(?![\d]+$)(?![a-zA-Z]+$)(?![!#$%^&*]+$)[\da-zA-Z!#$%^&*]{6,20}$/g;
+        if (pswReg.test(val)) { //密码校验通过
+            isokarr[3] = true;
+            $('.password_wrong_msg').css('display', 'none');
+            // console.log('密码验证成功', isokarr);
+        } else {
+            $(this).val('');
+            $('.password_wrong_msg').css({ 'display': 'block' });
+            $('.password_wrong_msg').html('请设置密码长度6-20位,英文字母组合');
+            isokarr[3] = false;
+        }
+    })
+    $('#dbPassword').blur(function () {
+        let val = $(this).val();
+        let val1 = $('#password_num').val();
+        if (val == val1) { //密码一致
+            isokarr[4] = true;
+            // console.log('密码验证成功', isokarr);
+            $('.dbpsw_wrong_msg').css('display', 'none');
+        } else {
+            $(this).val('');
+            $('.dbpsw_wrong_msg').css({ 'display': 'block' });
+            $('.dbpsw_wrong_msg').html('密码不一致');
+            isokarr[4] = false;
+        }
+    })
+    // 选择协议
+    $('#change_img').click(function () {
+        if (isokarr[5]) {
+            $('#change_img').attr('src', '../../images/register_selected.png');
+            isokarr[5] = true;
+        } else {
+            $('#change_img').attr('src', '../../images/register_unselected.png');
+            isokarr[5] = false;
+        }
+        isokarr[5] = !isokarr[5];
+    });
+
+    $('#btn').click(function () {
+        if (isokarr.indexOf(false) < 0) { //如果通过验证
+            console.log(isokarr);
+            let phone_num = $('#phone_num').val();
+            let psw = $('#password_num').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '../api/user.php',
+                data: `m=register&name=${phone_num}&password=${psw}`,
+                success: function (data) {
+                    if (JSON.parse(data).code) { //注册成功
+                        location.href = '../index.html'
+                    } else {//注册失败
+                        $('#phone_num').val('');
+                        $('#phone_code').val('');
+                        $('#password_num').val('');
+                        $('#dbPassword').val('');
+                    }
+                }
+            })
+        } else {
+            alert('请完成信息输入');
+        }
+
+    })
+
+
+
+})

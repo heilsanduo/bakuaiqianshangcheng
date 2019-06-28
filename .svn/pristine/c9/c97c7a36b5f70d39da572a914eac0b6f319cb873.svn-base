@@ -1,0 +1,69 @@
+$(function () {
+    //设置开关初始值
+    let isok = false;
+    $('#phone_num').blur(function () {
+        var phone = $("#phone_num").val().trim();//手机号码 
+        if (phone) {
+            var reg_phone = /^1[3-9]\d{9}$/;
+            if (!reg_phone.test(phone)) {   //正则是否通过
+                alert("请输入正确的手机号");
+                return false;
+            } else {
+                //向后台发送处理数据 验证该手机是否注册
+                // $.ajax({
+                //     type: "POST",
+                //     dataType: "text", //数据格式:JSON  
+                //     url: '', //目标地址  
+                //     data: "phone=" + phone,
+                //     error: function (XMLHttpRequest, textStatus, errorThrown) { },
+                //     success: function (msg) {
+                //         if (msg == 'yes') {
+                //             //可以注册
+                //             isok = true;
+
+                //         } else {
+                //             //提示 可以直接登录/跳转到登录页面
+                //             isok = false;
+                //         }
+
+                //     }
+                // });
+            }
+
+        } else {
+            alert("手机号不能为空");
+            return false;
+        }
+
+
+    });
+    var code = ""; //接收验证码   
+    $('#send_code').click(function () {
+        var count = 59;
+        //开始计时  
+        $("#send_code").attr('disabled', 'disabled');
+        $("#send_code").html("倒计时" + count + "秒");
+        var timer = setInterval(function () {
+            count--;
+            $("#send_code").html("倒计时" + count + "秒");
+            if (count == 0) {
+                clearInterval(timer);
+                $("#send_code").attr("disabled", false);//启用按钮  
+                $("#send_code").html("重新发送验证码");
+                code = "";//清除验证码。如果不清除，过时间后，输入收到的验证码依然有效 
+            }
+        }, 1000);
+
+        //向后台发送处理数据  
+        // $.ajax({
+        //     type: "POST",  
+        //     dataType: "text", //数据格式:JSON  
+        //     url: '', //目标地址  
+        //     data: "phone=" + phone + "&code=" + code,
+        //     error: function (XMLHttpRequest, textStatus, errorThrown) { },
+        //     success: function (msg) { }
+        // });
+    });
+
+
+}) 

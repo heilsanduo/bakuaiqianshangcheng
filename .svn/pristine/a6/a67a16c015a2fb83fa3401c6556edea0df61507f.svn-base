@@ -1,0 +1,424 @@
+@import "../../../styles/common.less";
+
+// 确认订单页面
+.orderDetail {
+    width: 100%;
+    height: 100%;
+    background: url("../images/order_detailBG.png") no-repeat;
+    background-size: 100% 2.94rem;
+
+    // 注册页面头部
+    .orderDetail_text {
+        width: 100%;
+        height: 1.78rem;
+        padding-top: 0.64rem;
+        padding-left: 0.64rem;
+        box-sizing: border-box;
+        font-size: 0.36rem;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 1);
+        display: flex;
+    }
+
+    .orderDetail_text::before {
+        content: "";
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        .bgSet();
+        background-image: url("../images/orderDetail_arrows.png");
+        margin-right: 0.08rem;
+    }
+
+    // 物流信息
+    .orderDetail_address {
+        width: 6.86rem;
+        height: auto;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 0.08rem 0.32rem rgba(0, 0, 0, 0.08);
+        border-radius: 0.2rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: .22rem .24rem;
+        margin: 0 auto;
+    }
+
+    .orderDetail_address_top {
+        width: 100%;
+        height: .60rem;
+        display: flex;
+    }
+
+    .orderDetail_address_left {
+        width: 95%;
+        height: 100%;
+        display: flex;
+        font-size: .24rem;
+        font-weight: 400;
+        line-height: .34rem;
+        color: rgba(51, 51, 51, 1);
+    }
+
+    .orderDetail_address_right {
+        width: 5%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        >span {
+            width: .24rem;
+            height: .24rem;
+            background: url(../../../images/orderDetail-jiantou.png)no-repeat;
+            .bgSet();
+        }
+    }
+
+
+    .orderDetail_address_left::before {
+        content: "";
+        display: inline-block;
+        width: 0.36rem;
+        height: 0.36rem;
+        .bgSet();
+        background-image: url("../images/orderDetail_address_top.png");
+        margin-right: .24rem;
+    }
+
+
+    .orderDetail_address_null {
+        width: 5.7rem;
+        height: .02rem;
+        background: rgba(245, 245, 245, 1);
+    }
+
+    .orderDetail_address_message {
+        width: 100%;
+        height: .80rem;
+        display: flex;
+        box-sizing: border-box;
+        padding: .24rem 0 0 0;
+    }
+
+    .orderDetail_address_message_left {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        font-size: .28rem;
+        font-weight: 800;
+        line-height: .36rem;
+        color: rgba(51, 51, 51, 1);
+    }
+
+    .orderDetail_address_message_left::before {
+        content: "";
+        display: inline-block;
+        width: 0.36rem;
+        height: 0.36rem;
+        .bgSet();
+        background-image: url("../images/x_dizhi.png");
+        margin-right: .24rem;
+    }
+
+    .orderDetail_address_message_right {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        font-size: .24rem;
+        font-weight: 400;
+        line-height: .36rem;
+        color: rgba(51, 51, 51, 1);
+    }
+
+    .orderDetail_address_site {
+        width: 100%;
+        flex: auto;
+        font-size: .24rem;
+        font-weight: 400;
+        line-height: .36rem;
+        color: rgba(51, 51, 51, 1);
+        text-align: left;
+        padding-left: .62rem;
+        .one-ellipsis;
+    }
+
+    // 待结算商品 
+    .readyPay {
+        width: 100%;
+        height: 0.44rem;
+        font-size: 0.32rem;
+        font-weight: 800;
+        color: rgba(51, 51, 51, 1);
+        margin-top: 0.64rem;
+        margin-bottom: 0.36rem;
+        padding-left: 0.32rem;
+        box-sizing: border-box;
+
+        span {
+            .yellowBottom();
+        }
+    }
+
+    // orderConfirm_items
+    .orderDetail_items {
+        width: 6.86rem;
+        height: auto;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 0.08rem 0.32rem rgba(0, 0, 0, 0.08);
+        border-radius: 0.2rem;
+        padding: 0.32rem 0 0.32rem 0.32rem;
+        box-sizing: border-box;
+        margin: 0.32rem auto;
+        overflow: hidden;
+    }
+
+    .orderDetail_items_store {
+        width: 100%;
+        height: 0.36rem;
+        font-size: 0.24rem;
+        font-weight: 800;
+    }
+
+    .orderDetail_items_store::before {
+        content: "";
+        display: inline-block;
+        width: 0.36rem;
+        height: 0.36rem;
+        background-image: url("../images/option-ioc.png");
+        .bgSet();
+        background-position-y: 0.05rem;
+    }
+
+    .orderDetail_items_store::after {
+        content: "";
+        display: inline-block;
+        width: 0.32rem;
+        height: 0.32rem;
+        background-image: url("../images/option-ioc2.png");
+        .bgSet();
+        background-position-y: 0.08rem;
+    }
+
+    .orderDetail_items_main {
+        width: 100%;
+        height: 2.32rem;
+        display: flex;
+        padding: 0.32rem 0.32rem 0 0;
+        box-sizing: border-box;
+    }
+
+    .items_main_img {
+        width: 2rem;
+        height: 2rem;
+        background: rgba(245, 125, 125, 0);
+        border-radius: 0.12rem;
+
+        >img {
+            width: 2rem;
+            height: 2rem;
+            border-radius:0.12rem;
+        }
+    }
+
+    .items_main_text {
+        flex: auto;
+        padding-left: 0.36rem;
+        box-sizing: border-box;
+    }
+
+    .items_main_title {
+        width: 100%;
+        height: 0.72rem;
+        font-size: 0.26rem;
+        font-weight: 400;
+        line-height: 0.36rem;
+        color: rgba(51, 51, 51, 1);
+    }
+
+    .items_main_color {
+        width: 100%;
+        height: 0.34rem;
+        font-size: 0.24rem;
+        font-weight: 400;
+        line-height: 0.34rem;
+        color: rgba(153, 153, 153, 1);
+        margin-top: 0.16rem;
+        margin-bottom: 0.16rem;
+    }
+
+    .items_main_price {
+        width: 100%;
+        height: 0.44rem;
+        font-size: 0.32rem;
+        font-weight: 800;
+        line-height: 0.36rem;
+        color: rgba(241, 90, 83, 1);
+    }
+
+    // 订单总价
+    .orderDetail_items_main_price {
+        width: 100%;
+        height: 2.76rem;
+        padding: 0.32rem 0.32rem 0 0;
+        box-sizing: border-box;
+        position: relative;
+
+        >ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        >ul li {
+            font-size: 0.24rem;
+            font-weight: 400;
+            color: rgba(153, 153, 153, 1);
+        }
+    }
+
+    .orderDetail_price_total {
+        width: 100%;
+        height: 0.66rem;
+        padding-top: 0.32rem;
+        box-sizing: border-box;
+        border-top: 0.04rem dashed rgba(239, 239, 239, 1);
+    }
+
+    .orderDetail_coupons_use {
+        width: 100%;
+        height: 0.5rem;
+        padding-top: 0.16rem;
+        box-sizing: border-box;
+    }
+
+    .orderDetail_shipping_fee {
+        width: 100%;
+        height: 0.5rem;
+        padding-top: 0.16rem;
+        box-sizing: border-box;
+    }
+
+    .orderDetail_order_total {
+        width: 100%;
+        height: 1.06rem;
+        padding-top: 0.34rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.28rem;
+        font-weight: 800;
+        color: rgba(51, 51, 51, 1);
+    }
+
+    .sideDot_left {
+        position: absolute;
+        top: 0.16rem;
+        left: -0.48rem;
+        width: 0.32rem;
+        height: 0.32rem;
+        border-radius: 50%;
+        background: linear-gradient(to left, rgb(238, 237, 237) 50%, rgba(255, 255, 255, 1) 50%);
+        // box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+    }
+
+    .sideDot_right {
+        position: absolute;
+        top: 0.16rem;
+        right: -0.16rem;
+        width: 0.32rem;
+        height: 0.32rem;
+        border-radius: 50%;
+        background: linear-gradient(to right, rgb(238, 237, 237) 50%, rgba(255, 255, 255, 1) 50%);
+        // box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+    }
+
+    // 订单信息
+    .orderDetail_more {
+        width: 6.86rem;
+        height: 2.7rem;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0 0.08rem 0.32rem rgba(0, 0, 0, 0.08);
+        border-radius: 0.16rem;
+        margin: 0.32rem auto;
+        padding: 0 0.32rem;
+        box-sizing: border-box;
+        margin-bottom: 1.3rem;
+
+        >ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        >ul li {
+            font-size: 0.24rem;
+            font-weight: 400;
+            color: rgba(153, 153, 153, 1);
+        }
+    }
+
+    .orderDetail_more_title {
+        width: 100%;
+        height: 0.72rem;
+        padding-top: 0.32rem;
+        box-sizing: border-box;
+        font-size: 0.28rem;
+        font-weight: 800;
+        color: rgba(51, 51, 51, 1);
+    }
+
+    .orderDetail_more_orderNum {
+        width: 100%;
+        height: 0.66rem;
+        padding-top: 0.32rem;
+        box-sizing: border-box;
+    }
+
+    .orderDetail_payment {
+        width: 100%;
+        height: 0.5rem;
+        padding-top: 0.16rem;
+        box-sizing: border-box;
+    }
+
+    .orderDetail_orderTime {
+        width: 100%;
+        height: 0.82rem;
+        padding-top: 0.16rem;
+        box-sizing: border-box;
+    }
+
+    // 底部
+    .orderDetail-footer {
+        width: 100%;
+        height: .98rem;
+        background: #ffffff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        >div {
+            width: 2.10rem;
+            height: .74rem;
+            background: rgba(239, 239, 239, 1);
+            border-radius: .08rem;
+            margin-right: 0.16rem;
+            font-size: .26rem;
+            font-weight: 800;
+            line-height: .36rem;
+            color: rgba(51, 51, 51, 1);
+            opacity: 1;
+            text-align: center;
+            line-height: .74rem;
+        }
+
+        >div:nth-child(2) {
+            background: rgba(255, 222, 69, 1);
+        }
+
+    }
+
+}

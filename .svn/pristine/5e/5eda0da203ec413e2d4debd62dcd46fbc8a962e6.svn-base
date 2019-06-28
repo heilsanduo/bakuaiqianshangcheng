@@ -1,0 +1,198 @@
+@import "../../../styles/common.less";
+@import "../../../styles/main.less";
+// 优惠券
+.coupon-item-available{
+  .coupon-item-left{
+    background-color:#fff;
+  }
+  .coupon-item-right{
+    background-color:rgba(255,222,69,1);
+    .hover-yellow-class;
+  }
+}
+.coupon-item-disabled{
+  .coupon-item-left{
+    background-color:#fff;
+    background-image: url("../images/coupin-state-getfull.png");
+    background-repeat: no-repeat;
+    background-position: 3.5rem 0.78rem;
+    background-size: 1.6rem auto;
+  }
+  .coupon-item-right{
+    background-color:rgba(239,239,239,1);
+  }
+}
+.coupon-item-passtime{
+  .coupon-item-left{
+    background-color:#fff;
+    background-image: url("../images/coupin-state-passtime.png");
+    background-repeat: no-repeat;
+    background-position: 3.5rem 0.78rem;
+    background-size: 1.6rem auto;
+  }
+  .coupon-item-right{
+    background-color:rgba(239,239,239,1);
+  }
+}
+.coupon-item{
+  width: 6.86rem;
+  position:relative;
+  height: 2.02rem;
+  display:flex;
+  margin: 0.32rem auto;
+  box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+  border-radius: 0.2rem;
+  overflow: hidden;
+  align-items: stretch;
+  &::before,&::after{
+    content:"";
+    width: 0.32rem;
+    height: 0.32rem;
+    position:absolute;
+    border-radius: 50%;
+    right: 1.28rem;
+    z-index: 10;
+  }
+  &::after{
+    top: -0.16rem;
+    background:linear-gradient(to bottom, #FEFEFE, #F6F6F6);
+  }
+  &::before{
+    bottom: -0.16rem;
+    background:linear-gradient(to bottom, #EFEFEE, #F6F6F6);
+  }
+  .coupon-item-left{
+    flex:auto;
+    display:flex;
+    flex-direction: column;
+    padding: 0.32rem;
+    justify-content: space-between;
+  }
+  .coupon-item-right{
+    flex:none;
+    width:1.44rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.24rem;
+    font-weight:800;
+    color:rgba(51,51,51,1);
+  }
+}
+.coupon-item-header{
+  width: 100%;
+  height: 0.4rem;
+  display:flex;
+  align-items: center;
+  font-size: 0.36rem;
+  font-weight:800;
+  color:rgba(241,90,83,1);
+  overflow: hidden;
+  span{
+    font-size: 0.24rem;
+    font-weight:400;
+    margin-left: 0.2rem;
+    color:rgba(51,51,51,1);
+    .fontBreak(1, 0.4rem);
+  }
+}
+.coupon-item-date{
+  width: 100%;
+  height: 0.34rem;
+  display:flex;
+  align-items: center;
+  font-size: 0.24rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.coupon-item-des{
+  width: 100%;
+  height: 0.32rem;
+  display:flex;
+  align-items: center;
+  span{
+    position:relative;
+    display:flex;
+    align-items: center;
+    padding-right: 0.32rem;
+    font-size: 0.24rem;
+    font-weight:400;
+    color:rgba(153,153,153,1);
+    &::before{
+      .bgSet();
+      width: 0.26rem;
+      height: 0.26rem;
+      content:"";
+      position:absolute;
+      right:0;
+      top:50%;
+      transform: translateY(-50%);
+      background-image:url("../images/more-icon.png");
+    }
+  }
+}
+
+.coupon-message-layout{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1000;
+  -webkit-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+  opacity: 0;
+}
+.coupon-message-layout-active{
+  z-index: 1000;
+  opacity: 1;
+  .coupon-message-box{
+    opacity: 1;
+    z-index: 100;
+  }
+}
+.coupon-message-box{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  width: 4.96rem;
+  height: 3.5rem;
+  background-color:rgba(0,0,0,0.6);
+  opacity: 0;
+  transition:  all linear 0.2s;
+  border-radius: 0.12rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.48rem;
+  .coupon-message-box-close{
+    width: 0.92rem;
+    height: 0.92rem;
+    position:absolute;
+    right: 0;
+    top:0;
+    .bgSet(0.28rem 0.28rem);
+    background-image: url("../images/xx.png");
+  }
+  .coupon-message-box-header{
+    width: 100%;
+    height: 0.4rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.28rem;
+    font-weight:800;
+    color:rgba(255,255,255,1);
+    margin-bottom: 0.32rem;
+    flex:none;
+  }
+  .coupon-message-box-body{
+    flex:auto;
+    overflow-y: scroll;
+    font-size: 0.24rem;
+    font-weight:400;
+    line-height: 0.36rem;
+    color:rgba(255,255,255,1);
+  }
+}

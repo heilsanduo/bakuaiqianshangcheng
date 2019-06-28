@@ -1,0 +1,139 @@
+@@include('layout/layout/index.html', {
+"title": "八块钱商城",
+"header": true
+})
+<div id="seller_layout" class="layout-view">
+    <div class="groupBuy_order">
+        <div class="groupBuy_order_text">
+            <div class="groupBuy_order_textT">待付款</div>
+            <div class="groupBuy_order_time"></div>
+        </div>
+
+        <!-- 物流信息 -->
+        <div class="groupBuyOrder_address">
+            <div class="groupBuyOrder_address_top">
+                <div class="groupBuyOrder_address_left">暂无物流信息</div>
+                <div class="groupBuyOrder_address_right">
+                    <span></span>
+                </div>
+            </div>
+            <div class="groupBuyOrder_address_null"></div>
+            <div class="groupBuyOrder_address_message">
+                <div class="groupBuyOrder_address_message_left">罗育咋</div>
+                <div class="groupBuyOrder_address_message_right">
+                    18666862338
+                </div>
+            </div>
+            <div class="groupBuyOrder_address_site">东莞市莞城区东纵路111号威尼斯广场写字楼一、二层</div>
+        </div>
+        <!-- 物流信息 --end-->
+
+        <!-- 待结算商品 -->
+        <div class="groupBuyOrder_readyPay">
+            <span>待拼团商品</span>
+        </div>
+        <div class="groupBuyOrder_items">
+            <div class="groupBuyOrder_items_store">
+                顾家家具旗舰店
+            </div>
+            <div class="groupBuyOrder_items_main">
+                <div class="groupBuyOrder_main_img">
+                    <img src="../../../images/jiaju.PNG" alt="">
+                </div>
+                <div class="groupBuyOrder_main_text">
+                    <div class="groupBuyOrder_main_title">顾家家具 定制家具椅子高端大气上档次</div>
+                    <div class="groupBuyOrder_main_color">灰色</div>
+                    <div class="groupBuyOrder_main_price">¥ 0.01</div>
+                </div>
+            </div>
+
+            <!-- 订单总价 -->
+            <div class="groupBuyOrder_items_main_price">
+                <ul class="groupBuyOrder_price_total">
+                    <li>拼团优惠价</li>
+                    <li>￥0.01</li>
+                </ul>
+                <ul class="groupBuyOrder_coupons_use">
+                    <li>运费（快递）</li>
+                    <li>￥10</li>
+                </ul>
+                <div class="groupBuyOrder_order_total">
+                    <div>订单总价</div>
+                    <div style="color:rgba(241,90,83,1);">￥10.01</div>
+                </div>
+                <!-- 侧边半圆 -->
+                <div class="groupBuyOrder_sideDot_left"></div>
+                <div class="groupBuyOrder_sideDot_right"></div>
+            </div>
+            <!-- 订单总价 --end -->
+        </div>
+        <!-- 待结算商品 --end -->
+
+        <!-- 订单信息 -->
+        <div class="groupBuyOrder_more">
+            <p class="groupBuyOrder_more_title">订单信息</p>
+            <ul class="groupBuyOrder_more_numNeeded" style="margin-top:.16rem;">
+                <li>拼团所需人数</li>
+                <li>5人</li>
+            </ul>
+            <ul class="groupBuyOrder_more_numNow">
+                <li>目前拼团人数</li>
+                <li>0人</li>
+            </ul>
+            <ul class="groupBuyOrder_more_orderNum">
+                <li>订单号码</li>
+                <li>201906162479700114</li>
+            </ul>
+            <ul class="groupBuyOrder_payment">
+                <li>支付方式</li>
+                <li>东莞银行快捷支付</li>
+            </ul>
+            <ul class="groupBuyOrder_orderTime">
+                <li>下单时间</li>
+                <li>2019-06-13 12:05:39</li>
+            </ul>
+        </div>
+        <!-- 订单信息 --end -->
+        <!-- 底部 -->
+        <div class="groupBuyOrder-footer">
+            <div>取消拼团</div>
+            <div>付款</div>
+        </div>
+        <!-- 底部 --end -->
+    </div>
+</div>
+
+@@include('layout/footer/index.html')
+
+<script>
+    $(function () {
+        // 倒计时 
+        /*补零 toDb(num)*/
+        function toDb(num) {
+            if (num < 10) {
+                return "0" + num;
+            } else {
+                return "" + num;
+            }
+        }
+        var now = new Date();
+        var end = new Date(2019, 5, 20, 09, 24, 00);//结束的时间：年，月，日，分，秒（月的索引是0~11）
+        var result = Math.floor(end - now) / 1000;//变成秒数
+        var Timer = setInterval(sub, 1000);
+        function sub() {
+            if (result > 1) {
+                result = result - 1;
+                var second = toDb(Math.floor(result % 60)); //秒
+                var min = toDb(Math.floor(result / 60) % 60); //分
+                var hour = toDb(Math.floor(result / 60 / 60) % 24); //时
+                var day = Math.floor(result / 60 / 60 / 24); //天
+                $(".groupBuy_order_time").html("距结束" + day + "天" + hour + "小时" + min + "分" + second + "秒");
+            } else {
+                window.clearInterval(Timer);
+                $(".groupBuy_order_time").html("剩余8天8小时8分00秒失效");
+            }
+        }
+    })
+
+
+</script>

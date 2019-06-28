@@ -1,0 +1,9 @@
+@@include('layout/layout/index.html', {
+"title": "团购列表",
+"header": true
+})
+
+<div id="assemble_layout" class="layout-view">
+
+    @@for (var i = 0; i < 10; i++) { @@include('common/assemble_item/index.html') } </div>
+        @@include('layout/footer/index.html')

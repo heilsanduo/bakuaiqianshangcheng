@@ -1,0 +1,23 @@
+<component src="layout/index.html" title="首页 - 东莞银行" swiper></component>
+
+<div id="home_layout" class="layout-view">
+
+    <component src="home/home_search/index.html"></component>
+
+    <component src="home/home_swiper/index.html"></component>
+
+
+    <component src="home/home_menu/index.html"></component>
+
+    <component src="home/home_headlines/index.html"></component>
+
+    <component src="home/home_vip_seller/index.html"></component>
+
+    <component src="home/home_activity/index.html"></component>
+
+    <component src="home/home_product_list/index.html"></component>
+
+</div>
+
+<component src="common/tabbar/index.html"></component>
+<component src="footer/index.html" swiper></component>

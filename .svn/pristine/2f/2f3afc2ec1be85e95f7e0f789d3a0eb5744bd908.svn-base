@@ -1,0 +1,195 @@
+@import "../../../styles/common.less";
+@import "../../../styles/main.less";
+
+.seller-footer{
+  width: 100%;
+  height: 1.08rem;
+  //position:fixed;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0 0.16rem;
+  background-color:#fff;
+  flex:none;
+  border-top:1px solid rgba(239,239,239,1);
+  //bottom:0;
+  //left:0;
+  //z-index: 500;
+}
+.seller-footer-nav{
+  width: 1.08rem;
+  height: 1.08rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.seller-footer-nav div{
+  width: 0.48rem;
+  height: 0.48rem;
+  .bgSet();
+}
+.seller-footer-tell{
+  background-image: url("../images/seller_home_footer_tell_icon.png");
+}
+.seller-footer-collect{
+  background-image: url("../images/seller_home_footer_collect_icon.png");
+}
+.seller-footer-collect-active{
+  background-image: url("../images/seller_home_footer_collect_active_icon.png");
+}
+.seller-footer-nav span{
+  font-size: 0.24rem;
+  font-weight:800;
+  line-height: 0.28rem;
+  color:rgba(51,51,51,1);
+  transform: scale(0.8, 0.8);
+}
+.seller-footer-menu{
+  width: 4.64rem;
+  height: 0.84rem;
+  border-radius: 0.12rem;
+  overflow: hidden;
+}
+.seller-footer-menu > div{
+  width: 50%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  float:left;
+  .hover-class;
+}
+.seller-footer-menu span{
+  font-size: 0.26rem;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+}
+.seller-footer-item-dg-right{
+  background-color:#F15A53;
+}
+.seller-footer-item-dg-left,.seller-footer-item-right{
+  background-color:#FFDE45;
+}
+.seller-footer-item-left{
+  background-color:#FFEA5C;
+}
+.seller-footer-appointment,
+.seller-footer-navigation{
+  display:flex;
+  align-items: center;
+}
+.seller-footer-appointment::before{
+  background-image: url("../images/seller_home_footer_shop_icon.png");
+}
+.seller-footer-navigation::before,
+.seller-footer-appointment::before{
+  content:"";
+  width: 0.36rem;
+  height: 0.36rem;
+  display:inline-block;
+  .bgSet();
+}
+.seller-footer-navigation::before{
+  background-image: url("../images/seller_home_footer_address_icon.png");
+}
+.seller-footer-item-dg-right .seller-footer-pay{
+  color:#fff;
+}
+
+// action-sheet
+.action-sheet{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left:0;
+  top:0;
+  z-index: -1000;
+  opacity: 0;
+  transition: all linear 0.4s;
+}
+.action-sheet-active{
+  z-index: 1000;
+  opacity: 1;
+  transition: all linear 0.1s;
+}
+.action-sheet-mask{
+  position:absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0);
+  z-index: -100;
+  transition: all linear 0.2s;
+}
+.seller-home-appointment{
+  width: 100%;
+  height:9rem;
+  background:rgba(255,255,255,1);
+  border-radius:0.2rem 0.2rem 0 0;
+  position:absolute;
+  left:0;
+  bottom:-10rem;
+  transition: all linear 0.2s;
+  z-index: 200;
+  padding: 0.32rem 0.64rem;
+}
+.action-sheet-active .seller-home-appointment{
+  bottom: 0;
+}
+.seller-home-appointment-close{
+  position:absolute;
+  right:0;
+  top:0;
+  width: 1.08rem;
+  height: 1.08rem;
+  .bgSet(0.44rem 0.44rem);
+  background-image: url("../images/close_black_icon.png");
+  .hover-class;
+}
+.seller-home-appointment-header,
+.seller-home-appointment-item{
+  width: 100%;
+  display:flex;
+  align-items: center;
+  height: 1.08rem;
+}
+.seller-home-appointment-header span{
+  .yellowBottom();
+}
+.seller-home-appointment-item{
+  border-bottom: 1px solid rgba(245,245,245,1);
+}
+.seller-home-appointment-item input{
+  -webkit-appearance: none;
+  border:0;
+  width: 100%;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  outline: none;
+  padding:0 0.12rem;
+}
+.seller-home-appointment-item input::placeholder{
+  font-size: 0.28rem;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}
+.seller-home-appointment-footer{
+  width: 100%;
+  height:1.08rem;
+  border:1px solid rgba(239,239,239,1);
+  position:absolute;
+  left:0;
+  bottom:0;
+  padding: 0.12rem 0.32rem;
+}
+.seller-home-appointment-footer div{
+  .button-default;
+  height: 100%;
+}
+
+
+
+
+

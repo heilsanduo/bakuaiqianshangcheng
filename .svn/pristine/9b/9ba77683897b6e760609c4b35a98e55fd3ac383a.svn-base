@@ -1,0 +1,412 @@
+@import "../../../styles/common.less";
+.orderConfirm{
+    width:100%;
+    height:100%;
+     // orderConfirm
+     .orderConfirm_fixed{
+        width:100%;
+        height:1rem;
+     }
+     .orderConfirm_header{
+        width:100%;
+        height:1rem;
+        background:rgba(255,255,255,1);
+        box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+        display:flex;
+        padding-left:0.32rem;
+        box-sizing:border-box;
+        align-items: center;
+        position: fixed;
+        top:0;
+        .orderConfirm_back{
+            width:0.32rem;
+            height: 0.32rem;
+            background-image:url("../images/header_back_black_icon.png");
+            .bgSet();
+        }
+        .orderConfirm_title{
+            flex:1;
+            font-size:0.32rem;
+            font-weight:800;
+            line-height:0.44rem;
+            color:rgba(51,51,51,1);
+            text-align:center;
+        }
+    }
+    // orderConfirm内容区
+    .orderConfirm_content{
+        width:100%;
+        height:100%; 
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        padding-top:0.32rem;
+        box-sizing:border-box;     
+    }
+    // orderConfirm_detail
+    .orderConfirm_detail{
+        width:6.86rem;
+        height:2.92rem;
+        background:rgba(255,255,255,1);
+        box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+        border-radius:0.2rem 0.2rem 0 0; 
+    }
+    .orderConfirm_consignee{
+        width:100%;
+        height:0.72rem;
+        font-size:0.32rem;
+        font-weight:800;
+        color:rgba(51,51,51,1);
+        padding-top:0.32rem;
+        padding-left:0.84rem;
+        box-sizing:border-box;
+    }
+    .orderConfirm_address{
+        display:flex;
+        height:1.12rem;
+       
+        padding:0.32rem 0.32rem 0 0.32rem;
+        box-sizing:border-box;
+    }
+    .orderConfirm_address_text{
+        flex:auto;
+        font-size:0.28rem;
+        font-weight:400;
+        line-height:0.36rem;
+        color:rgba(51,51,51,1);
+        padding-left:0.16rem;
+        box-sizing:border-box;
+    }
+    .orderConfirm_address::before{
+        content: "";
+        display: inline-block;
+        width: 0.36rem;
+        height: 0.36rem;
+        .bgSet();
+        background-image: url("../images/address_2x.png");
+        background-position-y: 0.03rem;
+    }
+    .orderConfirm_others{
+        display:flex;
+        height:0.66rem;
+        margin-top:0.16rem;
+        // margin-bottom: 0.32rem;
+        padding:0 0.32rem;
+        box-sizing:border-box;
+        position: relative; 
+        .orderConfirm_phone{
+            flex:auto;
+            font-size: 0.28rem;
+            font-weight:400;
+            padding-left:0.16rem;
+            box-sizing:border-box;
+        }
+        .orderConfirm_edit{
+            width:1.52rem;
+            height:0.66rem;
+            background:rgba(255,222,69,1);
+            border-radius:0.08rem;
+            line-height:0.66rem;
+            text-align:center;
+            font-size: 0.24rem;
+            font-weight:800;
+        }
+    }
+ // 下划线
+    .orderConfirm_dashed{
+        width: 100%;
+        height: 0.2rem;
+        background-image: linear-gradient(to right, #FFDE45 0%, #FFDE45 60%, transparent 60%);
+        background-size: 0.8rem 0.08rem;
+        background-repeat: repeat-x;
+        position: absolute;
+        bottom:-0.39rem;
+        left:0;
+    }   
+    .orderConfirm_others::before{
+        content: "";
+        display: inline-block;
+        width: 0.36rem;
+        height: 0.36rem;
+        .bgSet();
+        background-image: url("../images/phone_2x.png");
+        background-position-y: 0.03rem;
+    }
+    // 待结算商品 
+    .readyPay{
+        width:100%;
+        height:0.44rem;
+        font-size:0.32rem;
+        font-weight:800;
+        color:rgba(51,51,51,1);
+        margin-top:0.64rem;
+        margin-bottom:0.36rem;
+        padding-left:0.32rem;
+        box-sizing:border-box;
+        span{
+            .yellowBottom();
+        }
+    }
+    // orderConfirm_items
+    .orderConfirm_items{
+        width:6.86rem;
+        height:auto;
+        background:rgba(255,255,255,1);
+        box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+        border-radius:0.2rem;
+        padding:0.32rem 0 0 0.32rem;
+        box-sizing:border-box;
+        margin-bottom:0.32rem;
+    }
+    .orderConfirm_items_store{
+        width:100%;
+        height:0.36rem;
+        font-size: 0.24rem;
+        font-weight: 800;     
+    }
+    .orderConfirm_items_store::before{
+        content: "";
+        display: inline-block;
+        width: 0.36rem;
+        height: 0.36rem;
+        background-image:url("../images/option-ioc.png");
+        .bgSet();
+        background-position-y: 0.05rem;
+    }
+    .orderConfirm_items_store::after{
+        content: "";
+        display: inline-block;
+        width: 0.32rem;
+        height: 0.32rem;
+        background-image:url("../images/option-ioc2.png");
+        .bgSet();
+        background-position-y: 0.08rem;
+    }
+    .orderConfirm_items_main{
+        width:100%;
+        height:2.32rem;
+        display:flex;
+        padding:0.32rem 0.32rem 0.32rem 0;
+        margin-bottom:0.32rem;
+        box-sizing:border-box;      
+    }
+    .items_main_img{
+        width:2rem;
+        height:2rem;
+        background:rgba(245, 125, 125, 0);
+        border-radius:0.12rem;
+        >img{
+            width:2rem;
+            height:2rem;
+        }
+    }
+    .items_main_text{
+        flex:auto; 
+        padding-left:0.36rem;
+        box-sizing:border-box;   
+    }
+    .items_main_title{
+        width:100%;
+        height:0.72rem;
+        font-size:0.26rem;
+        font-weight:400;
+        line-height:0.36rem;
+        color:rgba(51,51,51,1);
+    }
+    .items_main_color{
+        width:100%;
+        height:0.34rem;
+        font-size:0.24rem;
+        font-weight:400;
+        line-height:0.34rem;
+        color:rgba(153,153,153,1);
+        margin-top:0.16rem;
+        margin-bottom: 0.16rem;
+    }
+    .items_main_price{
+        width:100%;
+        height:0.44rem;
+        font-size:0.32rem;
+        font-weight:800;
+        line-height:0.36rem;
+        color:rgba(241,90,83,1);
+    }
+    // 优惠券领取
+    .orderConfirm_items_coupons{
+        width:100%;
+        height:0.84rem;   
+        border-top: 0.01rem solid #e7e5e5; 
+        display:flex;
+        // justify-content: center;
+        align-items: center;
+        padding-right:0.26rem;
+        box-sizing: border-box;
+    }
+    .items_coupons_title{
+        flex:auto;
+         font-size:0.26rem;
+         font-weight:800;
+         color:rgba(241,90,83,1);
+     }
+     .items_coupons_arrows{
+        text-align: right;
+        width: 0.32rem;
+        height: 0.32rem;
+        background-image:url("../images/coupons_arrows_red.png");
+        .bgSet();
+        // background-position-y: 0.08rem;
+     }
+    //  leave massage
+    .leave_massage{
+        width:6.86rem;
+        height:1.82rem;
+        background:rgba(255,255,255,1);
+        box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+        border-radius:0.16rem;
+        display:flex;
+        // align-items: center;
+        padding:0 0.32rem;
+        box-sizing:border-box;
+    }
+    .massage_leaver{
+        flex:auto;
+        font-size:0.28rem;
+        font-weight:800;
+        color:rgba(51,51,51,1);
+        margin-right:0.32rem;
+        padding-top:0.32rem;
+        box-sizing:border-box;
+    }
+    .massage_detail{
+        width:4.78rem;
+        height:100%;
+    }
+    .massage_text{
+        width:4.78rem;
+        height:auto;
+        position: relative;
+        padding-top:0.32rem;
+        box-sizing:border-box;
+        .wishContent{
+            resize:none;
+            width:4.78rem;
+            min-height:1.23rem;
+            font-size:0.28rem;
+            font-weight:400;
+            line-height:0.42rem;
+            color:rgba(153,153,153,1);
+            outline: none;
+            border: 0px;
+        }
+        .wordsNum { 
+            position: absolute; 
+            bottom: 0.12rem; 
+            right: 0rem; 
+            color: #B3B3B3; 
+            font-size: 0.1rem; 
+        }
+    }
+
+ 
+    // orderConfirm_footer
+    .orderConfirm_footer{
+        width:100%;
+        height:0.98rem;
+        background:rgba(255,255,255,1);
+        box-shadow:0 -0.04rem 0.08rem rgba(0,0,0,0.04);
+        position: fixed;
+        bottom:0;
+        display:flex;
+        align-items: center;
+        padding-right:0.16rem;
+        box-sizing:border-box;
+    }
+    .orderConfirm_total{
+        flex:auto;
+        font-size:0.26rem;
+        font-weight:400;
+        color:rgba(51,51,51,1);
+        text-align:right;
+        padding-right:0.48rem;
+        box-sizing:border-box;
+    }
+    .orderConfirm_btn{
+        width:2.1rem;
+        height:0.74rem;
+        font-size:0.26rem;
+        font-weight:800;
+        color:rgba(51,51,51,1);
+        text-align:center;
+        background:rgba(255,222,69,1);
+        border-radius:0.08rem;
+        line-height:0.74rem;
+       
+    }
+ 
+}
+// 弹窗内容区
+.coupons_popup{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display:none;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index:2;
+    .coupons_popup-mask{
+        width:100%;
+        height:8.14rem;
+    }
+    .coupons_popup_content{
+        width:100%;
+        height:3.92rem;
+        background:rgba(255,255,255,1);
+        border-radius:0.2rem 0.2rem 0 0;
+        z-index: 1;
+        position: absolute;
+        bottom:0;
+        padding:0.76rem 0.46rem 0 0.32rem;
+        box-sizing: border-box;
+    }
+    .coupons_popup_content-close{
+        width:0.44rem;
+        height:0.44rem;
+        .bgSet();
+        background-image: url("../images/close_black_icon.png");
+        position: absolute;
+        top:0.32rem;
+        right:0.32rem;
+    } 
+    .coupons_popup_list{
+        width:100%;
+        height:100%;
+        >li{
+            width:100%;
+            height:1.02rem;
+            font-weight:400;
+            line-height:1.02rem;
+            font-size: 0.28rem;
+            border-bottom: 0.01rem solid rgb(238, 236, 236);
+        }
+    }
+    .coupons_popup_unused{
+        width:100%;
+        height:1.02rem;
+        display: flex;
+        align-items: center;
+    }
+    .coupons_popup_text{
+        flex:auto;
+        font-weight:400;
+        font-size: 0.28rem;
+        color:rgba(241,90,83,1);
+    }
+    .coupons_popup_btn{
+        width:0.36rem;
+        height: 0.36rem;
+        border: 0.01rem dashed #ccc;
+    }
+}
+
+ 

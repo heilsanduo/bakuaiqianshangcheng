@@ -1,0 +1,9 @@
+<!-- 搜索框 -->
+
+<div class="search_bar">
+    <div class="search_bar_back"></div>
+    <div class="search_bar_content">
+        <div class="search_bar_icon"></div>
+        <input type="text" placeholder="请输入商品关键词">
+    </div>
+</div>

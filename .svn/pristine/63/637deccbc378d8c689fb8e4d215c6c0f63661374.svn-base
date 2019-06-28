@@ -1,0 +1,83 @@
+@@include('layout/layout/index.html', {
+"title": "八块钱商城",
+"header": false
+})
+
+<div id="seller_layout" class="layout-view">
+    <div class="loginClick">
+        <div class="loginClick_register">
+            注册
+        </div>
+        <div class="loginClick_login">
+            登录
+        </div>
+        <!-- 商品list -->
+        <div class="loginClick_items">
+            <div class="loginClick_items_list">
+                <div class="loginClick_items_list_img">
+                    <img src="../../../images/ceshi.jpg" alt="">
+                </div>
+                <div class="loginClick_items_text">
+                    <div class="loginClick_items_list_title">顾家家居 定制家具椅子高端大气上档次</div>
+                    <div class="loginClick_item_address">东莞</div>
+                    <div class="loginClick_item_others">
+                        <div class="loginClick_item_price">¥ 523</div>
+                        <div class="loginClick_item_buy">12人购买</div>
+                    </div>
+                </div>
+            </div>
+            <div class="loginClick_items_list">
+                <div class="loginClick_items_list_img">
+                    <img src="../../../images/ceshi.jpg" alt="">
+                </div>
+                <div class="loginClick_items_text">
+                    <div class="loginClick_items_list_title">顾家家居 定制家具椅子高端大气上档次</div>
+                    <div class="loginClick_item_address">东莞</div>
+                    <div class="loginClick_item_others">
+                        <div class="loginClick_item_price">¥ 523</div>
+                        <div class="loginClick_item_buy">12人购买</div>
+                    </div>
+                </div>
+            </div>
+            <div class="loginClick_items_list">
+                <div class="loginClick_items_list_img">
+                    <img src="../../../images/ceshi.jpg" alt="">
+                </div>
+                <div class="loginClick_items_text">
+                    <div class="loginClick_items_list_title">顾家家居 定制家具椅子高端大气上档次</div>
+                    <div class="loginClick_item_address">东莞</div>
+                    <div class="loginClick_item_others">
+                        <div class="loginClick_item_price">¥ 523</div>
+                        <div class="loginClick_item_buy">12人购买</div>
+                    </div>
+                </div>
+            </div>
+            <div class="loginClick_items_list">
+                <div class="loginClick_items_list_img">
+                    <img src="../../../images/ceshi.jpg" alt="">
+                </div>
+                <div class="loginClick_items_text">
+                    <div class="loginClick_items_list_title">顾家家居 定制家具椅子高端大气上档次</div>
+                    <div class="loginClick_item_address">东莞</div>
+                    <div class="loginClick_item_others">
+                        <div class="loginClick_item_price">¥ 523</div>
+                        <div class="loginClick_item_buy">12人购买</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('layout/footer/index.html')
+<script>
+    $(function () {
+        $('.register_click').click(function () {
+            $(window).attr('location', './register.html');
+        })
+        $('.login_click').click(function () {
+            $(window).attr('location', './login.html');
+        })
+    })
+
+</script>

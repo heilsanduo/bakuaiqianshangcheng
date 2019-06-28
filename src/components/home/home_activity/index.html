@@ -1,0 +1,44 @@
+
+<!-- 首页 功能入口 -->
+<div class="home-hot-box">
+    <div class="home-main-box-header">
+        <div class="home-main-box-header-active">限时秒杀</div>
+        <div>团购更省</div>
+        <div>助力有理</div>
+        <span class="home-main-box-header-current"></span>
+    </div>
+    <div class="home-main-box-body home-main-box-body-active">
+        @@for (var i = 0; i < 3; i++) {
+        @@include('common/spike_item/index.html')
+        }
+        <div class="home-main-box-body-more">
+            <span>更多秒杀</span>
+        </div>
+    </div>
+    <div class="home-main-box-body">
+        @@for (var i = 0; i < 3; i++) {
+        @@include('common/assemble_item/index.html')
+        }
+        <div class="home-main-box-body-more">
+            <span>更多秒杀</span>
+        </div>
+    </div>
+    <div class="home-main-box-body">
+        @@for (var i = 0; i < 3; i++) {
+        @@include('common/assistance_item/index.html')
+        }
+        <div class="home-main-box-body-more">
+            <span>更多秒杀</span>
+        </div>
+    </div>
+</div>
+<script>
+	((w, d) => {
+		$(".home-main-box-header > div").on('click', function (e) {
+			$(this).addClass("home-main-box-header-active").siblings().removeClass("home-main-box-header-active");
+			$(".home-main-box-header-current").css({left: `${$(this).index() * 33.333333}%`})
+            $(".home-main-box-body").eq($(this).index()).addClass("home-main-box-body-active").siblings().removeClass("home-main-box-body-active")
+		})
+	})(window, document)
+</script>
+<!-- 首页 功能入口 - end -->

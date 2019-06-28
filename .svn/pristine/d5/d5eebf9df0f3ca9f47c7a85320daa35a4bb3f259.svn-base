@@ -1,0 +1,180 @@
+@import "../../../styles/common.less";
+/* 首页功能模块入口*/
+.home-main-box-header{
+  width: 100%;
+  height: 0.82rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  position:relative;
+}
+.home-main-box-header div{
+  position:relative;
+  font-size: 0.32rem;
+  line-height: 0.82rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  width: 33.333333%;
+  flex:none;
+  text-align: center;
+  height: 100%;
+  transition: all linear 0.2s;
+}
+.home-main-box-header-current{
+  width: 33.333333%;
+  height: 0.08rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  left:0;
+  bottom:0;
+  transition: all linear 0.2s;
+}
+.home-main-box-header-current::before{
+  content:"";
+  width: 0.68rem;
+  height: 0.08rem;
+  display:inline-block;
+  background-color: #FFDE45;
+  border-radius: 0.04rem;
+}
+.home-main-box-header .home-main-box-header-active{
+  font-size: 0.36rem;
+  font-weight:800;
+}
+.home-main-box-body{
+  width:6.86rem;
+  background:rgba(255,255,255,1);
+  box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+  border-radius: 0.2rem;
+  overflow: hidden;
+  padding-top: 0.32rem;
+  display:none;
+}
+.home-hot-box .home-main-box-body-active{
+  display:inline-block;
+}
+.home-main-box-body-more{
+  border-top: 1px solid rgba(239,239,239,1);
+  height: 0.82rem;
+  width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  .hover-class;
+}
+.home-main-box-body-more span{
+  font-size: 0.24rem;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  padding-right: 0.3rem;
+  position:relative;
+}
+.home-main-box-body-more span::before{
+  content:"";
+  width: 0.24rem;
+  height: 0.24rem;
+  background-image: url("../images/more-icon.png");
+  display:inline-block;
+  position:absolute;
+  top:50%;
+  right: 0;
+  transform: translateY(-50%);
+  .bgSet();
+}
+.home-main-box-item{
+  width: 100%;
+  padding: 0 0.32rem 0.32rem 0.32rem;
+  display:flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+.home-main-box-item-icon{
+  flex: none;
+  margin-right: 0.32rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.08rem;
+  overflow: hidden;
+}
+.home-main-box-item-content{
+  flex:auto;
+  padding-top: 0.16rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.home-main-box-item-name{
+  width: 100%;
+  height: 0.72rem;
+  font-size: 0.26rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  .fontBreak(2, 0.36rem);
+}
+.home-main-box-item-tab{
+  width: 100%;
+  height: 0.32rem;
+  display:flex;
+  margin-top: 0.1rem;
+}
+.home-main-box-item-tab span{
+  width: 0.68rem;
+  height: 0.32rem;
+  display:flex;
+  .bgSet();
+}
+.home-main-box-item-tab .tab-spike{
+  background-image: url("../images/tab-spike.png");
+}
+.home-main-box-item-tab .tab-quota{
+  background-image: url("../images/tab-quota.png");
+}
+.home-main-box-item-tab .tab-assemble{
+  width: 0.88rem;
+  background-image: url("../images/tab-assemble.png");
+}
+.home-main-box-item-price{
+  width: 100%;
+  height: 0.58rem;
+  display:flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.home-main-box-item-price .price{
+  font-size: 0.4rem;
+  font-weight:800;
+  color:rgba(241,90,83,1);
+  display:flex;
+  align-items: center;
+  line-height: 0.5rem;
+}
+.home-main-box-item-price .price i{
+  font-size: 0.28rem;
+  font-style: normal;
+}
+.home-main-box-item-price .old-price{
+  font-size: 0.24rem;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  margin-left: 0.16rem;
+  margin-right: auto;
+  text-decoration: line-through;
+  line-height: 0.5rem;
+}
+.home-main-box-item-price .buy{
+  width:1.6rem;
+  height: 0.58rem;
+  background:rgba(241,90,83,1);
+  border-radius: 0.3rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.24rem;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  .hover-class;
+}
+/* 首页功能模块入口 - end*/

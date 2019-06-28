@@ -1,0 +1,35 @@
+$(function () {
+    var code = ""; //接收验证码   
+    $('#code_btn').click(function () {
+        var count = 5;
+        var phone = $("#phone_num").val();//手机号码  
+        var reg_phone = /1\d{10}/;
+        if (!reg_phone.test(phone)) {   //验证手机是否符合格式
+            alert("填写手机号");
+            return false;
+        }
+        //开始计时  
+        $("#code_btn").attr('disabled', 'disabled');
+        $("#code_btn").html("倒计时" + count + "秒");
+        var timer = setInterval(function () {
+            count--;
+            $("#code_btn").html("倒计时" + count + "秒");
+            if (count == 0) {
+                clearInterval(timer);
+                $("#code_btn").attr("disabled", false);//启用按钮  
+                $("#code_btn").html("重新发送验证码");
+                code = "";//清除验证码。如果不清除，过时间后，输入收到的验证码依然有效 
+            }
+        }, 1000);
+
+        //向后台发送处理数据  
+        // $.ajax({
+        //     type: "POST", //用POST方式传输  
+        //     dataType: "text", //数据格式:JSON  
+        //     url: '', //目标地址  
+        //     data: "phone=" + phone + "&code=" + code,
+        //     error: function (XMLHttpRequest, textStatus, errorThrown) { },
+        //     success: function (msg) { }
+        // });
+    });
+})

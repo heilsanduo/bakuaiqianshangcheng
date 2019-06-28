@@ -1,0 +1,42 @@
+@@include('layout/layout/index.html', { "title": "设置", "header": true })
+<div class="reset-box" id="reset-box">
+	<div class="reset-boxs">
+		<div class="reset-box-top" id="reset-box-top">
+			<div class="reset-input" id="reset-input1">
+				<div class="reset-input-text">旧密码</div>
+				<div class="reset-input-input" id="former1">
+					<input type="password" placeholder="请输入您的旧密码" id="former">
+					<div class="reset-hint"></div>
+				</div>
+			</div>
+			<div class="reset-input">
+				<div class="reset-input-text">新密码</div>
+				<div class="reset-input-input" id="fresh1">
+					<input type="password" placeholder="请输入您的新密码" id="fresh">
+					<div class="reset-hint"></div>
+				</div>
+			</div>
+			<div class="reset-input">
+				<div class="reset-input-text" style="width:1.3rem ;">确认密码</div>
+				<div class="reset-input-input" id="affirm1">
+					<input type="password" placeholder="请再次确认您的新密码" id="affirm">
+					<div class="reset-hint"></div>
+				</div>
+			</div>
+			<div class="pop" id="pop">
+				<div class="pop-top">
+					<div><img src="../../../images/set-reset-img.png" alt=""></div>
+				</div>
+				<div class="pop-bottom">您已设置成功！</div>
+			</div>
+		</div>
+		<div class="reset-box-bottom" id="reset-box-bottom">确认</div>
+	</div>
+</div>
+
+
+
+
+
+
+@@include('layout/footer/index.html')

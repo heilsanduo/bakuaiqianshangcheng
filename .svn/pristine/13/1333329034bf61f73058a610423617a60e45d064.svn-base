@@ -1,0 +1,30 @@
+
+<!-- 通用尾部 -->
+<footer id="footer" class="footer">
+
+</footer>
+
+<!-- 环境变量 -->
+<!--<script type="text/html" id="node_env">{{env}}</script>-->
+
+<!-- 页面构造函数 -->
+<script>
+	// function Page(param) {
+	// 	console.log(param, 'param')
+	// 	if (param.el && $('#' + param.el).length === 0) return
+	// 	param.init();
+	// 	(typeof param.event === 'function') && param.event()
+	// 	return param
+	// }
+</script>
+
+
+@@if(swiper){
+<script src="js/swiper.min.js"></script>
+}
+@@if(weui){
+<script src="js/jquery-weui.min.js"></script>
+}
+
+</body>
+</html>

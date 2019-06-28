@@ -1,0 +1,148 @@
+@import "../../../styles/common.less";
+
+.reset-box {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+.reset-boxs {
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.reset-box-top {
+	width: 6.86rem;
+	height: auto;
+	padding: 0 0 .50rem 0;
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0px .08rem .32rem rgba(0, 0, 0, 0.08);
+	border-radius: .20rem;
+	margin-bottom: .64rem;
+	margin-top: .34rem;
+	position: relative;
+
+	.reset-input {
+		width: 100%;
+		height: 1.64rem;
+		padding: .48rem .34rem 0 .32rem;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.reset-input-text {
+		height: .44rem;
+		width: .96rem;
+		font-size: .32rem;
+		font-weight: 800;
+		line-height: .42rem;
+		color: rgba(51, 51, 51, 1);
+		.yellowBottom();
+
+	}
+
+	.reset-input-input {
+		flex: auto;
+		background: rgba(255, 255, 255, 1);
+		border-bottom: 2px solid rgba(245, 245, 245, 1);
+		display: flex;
+		align-items: center;
+		position: relative;
+
+
+		>input {
+			// flex: auto;
+			flex: auto;
+			border: none;
+			outline: none;
+			text-align: left;
+			-webkit-appearance: none;
+			font-size: .28rem;
+			font-weight: 400;
+			line-height: .42rem;
+			color: rgba(153, 153, 153, 1);
+		}
+
+		.reset-hint {
+			position: absolute;
+			top: .20rem;
+			right: 0;
+			width: auto;
+			height: .34rem;
+			font-size: .24rem;
+			font-weight: 400;
+			color: rgba(241, 90, 83, 1);
+			display: none;
+		}
+
+	}
+}
+
+.reset-box-bottom {
+	width: 6.86rem;
+	height: .88rem;
+	background: rgba(239, 239, 239, 1);
+	border-radius: .12rem;
+	font-size: .28rem;
+	font-weight: 800;
+	line-height: .88rem;
+	color: rgba(51, 51, 51, 1);
+	text-align: center;
+}
+
+.bottom-avt {
+	background: #FFDE45;
+}
+
+.pop {
+	width: 4.30rem;
+	height: 2.60rem;
+	position: absolute;
+	bottom: 0.08rem;
+	left: 1.3rem;
+	background: #000;
+	z-index: 33;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: .12rem;
+	// display: flex;
+	// flex-direction: column;
+	display: none;
+}
+
+.pop-act {
+	display: block;
+}
+
+.pop-top {
+	width: 100%;
+	height: 1.56rem;
+	box-sizing: border-box;
+	padding: 0.64rem 0 0 0;
+	display: flex;
+	justify-content: center;
+
+	>div {
+		width: .64rem;
+		height: .64rem;
+	}
+}
+
+.pop-bottom {
+	display: flex;
+	flex: auto;
+	font-size: .28rem;
+	font-weight: 400;
+	line-height: .42rem;
+	color: rgba(255, 255, 255, 1);
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}

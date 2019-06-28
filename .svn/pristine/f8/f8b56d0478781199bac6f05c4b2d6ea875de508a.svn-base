@@ -1,0 +1,241 @@
+@import "../../../styles/common.less";
+
+.background {
+	width: 100%;
+	height: 100%;
+
+	.my_mine {
+		width: 100%;
+		height: 5.52rem;
+		background-image: url(../../../images/bg_1.png);
+		position: relative;
+		.bgSet();
+
+		.my {
+			width: 100%;
+			height: auto;
+			padding: 0.48rem 0.32rem 0 0.32rem;
+			display: flex;
+			justify-content: space-between;
+			box-sizing: border-box;
+
+			.my_left {
+				width: auto;
+				height: auto;
+				font-size: 0.4rem;
+				font-weight: 800;
+				line-height: 0.56rem;
+				color: rgba(51, 51, 51, 1);
+				opacity: 1;
+			}
+
+			.my_right {
+				width: 0.44rem;
+				height: 0.44rem;
+				background: url(../../../images/set.png) no-repeat;
+				.bgSet();
+			}
+		}
+
+		.my_head {
+			position: absolute;
+			top: 1.48rem;
+			left: 3.04rem;
+			width: 1.44rem;
+			height: 1.44rem;
+			background: #fff;
+			border-radius: 50%;
+		}
+
+		.my_head img {
+			width: 100%;
+			height: 100%;
+			background: #fff;
+			border-radius: 50%;
+		}
+
+		.my_nickname {
+			position: absolute;
+			width: auto;
+			height: 0.4rem;
+			top: 3.08rem;
+			left: 3.04rem;
+			font-size: 0.28rem;
+			font-weight: 800;
+			line-height: 0.4rem;
+			color: rgba(51, 51, 51, 1);
+		}
+
+		.my_order {
+			position: absolute;
+			top: 4rem;
+			left: 0.32rem;
+			width: 6.86rem;
+			height: 2.35rem;
+			background: rgba(255, 255, 255, 1);
+			box-shadow: 0px 0.08rem 0.32rem rgba(0, 0, 0, 0.08);
+			opacity: 1;
+			border-radius: 20px;
+			display: flex;
+			flex-direction: column;
+			box-sizing: border-box;
+
+			.my_order_top {
+				width: 100%;
+				height: .74rem;
+				background: rgba(255, 255, 255, 1);
+				border-radius: 20px 20px 0px 0px;
+				box-sizing: border-box;
+				display: flex;
+				box-sizing: border-box;
+
+				.my_order_top_left {
+					width: 3.44rem;
+					height: 0.74rem;
+					text-align: center;
+					background: rgba(255, 255, 255, 1);
+					border-radius: 20px 20px 0px 0px;
+					font-size: .32rem;
+					font-weight: 800;
+					line-height: .74rem;
+					color: rgba(51, 51, 51, 1);
+					position: relative;
+
+				}
+
+				.my_order_top_right {
+					width: 3.42rem;
+					height: 0.74rem;
+					text-align: center;
+					background: rgba(239, 239, 239, 1);
+					border-radius: 0 20px 0px 20px;
+					font-size: .28rem;
+					font-weight: 400;
+					line-height: .74rem;
+					color: rgba(51, 51, 51, 1);
+					position: relative;
+
+					.shut {
+						position: absolute;
+						width: 0;
+						height: 0;
+						border-top: 0.15rem solid rgba(239, 239, 239, 1);
+						border-left: 0.2rem solid transparent;
+						top: 0;
+						left: -0.1rem;
+					}
+				}
+
+
+
+			}
+
+			.my_order_bottom {
+				flex: 1;
+				height: auto;
+				display: flex;
+
+				.my_order_bottom_dl {
+					width: 1.38rem;
+					height: 1.60rem;
+					display: flex;
+					position: relative;
+
+					.my_order_bottom_dt {
+						width: 0.48rem;
+						height: 0.48rem;
+						position: absolute;
+						top: 0.32rem;
+						left: 0.46rem;
+					}
+
+					.my_order_bottom_dd {
+						position: absolute;
+						width: auto;
+						height: .34rem;
+						text-align: center;
+						font-size: 0.24rem;
+						top: .96rem;
+						left: .22rem;
+						font-weight: 400;
+						line-height: .36rem;
+						color: rgba(51, 51, 51, 1);
+						opacity: 1;
+					}
+				}
+			}
+
+		}
+
+		.my_order2 {
+			position: absolute;
+			top: 6.98rem;
+			left: 0.36rem;
+			width: 6.78rem;
+			height: 2.94rem;
+			background: rgba(255, 255, 255, 1);
+			box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+			opacity: 1;
+			border-radius: 20px;
+			display: flex;
+			flex-direction: column;
+
+			.my_order2_box {
+				width: 100%;
+				height: .98rem;
+				background: rgba(255, 255, 255, 1);
+				display: flex;
+
+				.my_order2_box1 {
+					flex: 1;
+					width: .64rem;
+					height: 100%;
+					position: relative;
+
+					.my_order2_box1_inc {
+						position: absolute;
+						top: .32rem;
+						left: .32rem;
+						width: .34rem;
+						height: .34rem;
+
+						.my_order2_box1_inc img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+
+				.my_order2_box2 {
+					flex: 5;
+					width: .64rem;
+					height: 100%;
+					font-size: .26rem;
+					font-weight: 400;
+					line-height: .36rem;
+					color: rgba(51, 51, 51, 1);
+					box-sizing: border-box;
+					padding: .32rem 0 0 0;
+
+				}
+
+				.my_order2_box3 {
+					flex: 1;
+					width: .64rem;
+					height: 100%;
+					position: relative;
+
+					.my_order2_box3_inc {
+						position: absolute;
+						top: .32rem;
+						left: .32rem;
+						width: .34rem;
+						height: .34rem;
+						background: url(../../../images/jiantou.png)no-repeat;
+						.bgSet();
+					}
+				}
+			}
+		}
+	}
+}

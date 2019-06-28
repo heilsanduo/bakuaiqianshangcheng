@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>Title</title>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script>
+		((w, d) => {
+			let dw = d.documentElement.clientWidth || d.body.clientWidth || w.innerWidth;
+			let ratio = 7.5;
+			d.documentElement.style.fontSize = dw / ratio + 'px';
+			w.onresize = () => {
+				d.documentElement.style.fontSize = d.documentElement.clientWidth / ratio + 'px'
+			};
+		})(window, document)
+
+    </script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        ul li, ol li {
+            list-style: none;
+        }
+
+        .layout-view {
+            flex: auto;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .luck-view {
+            background-position: left top;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-image: url("./images/luck-bg.png");
+        }
+
+        .luck-footer {
+            width: 100%;
+            height: 0.98rem;
+            display: flex;
+            border:1px solid rgba(239,239,239,1)
+        }
+
+        .luck-footer > div {
+            width: 50%;
+            flex: none;
+            height: 0.98rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all linear 0.2s;
+        }
+        .luck-footer > div:active{
+            opacity: 0.8;
+        }
+
+        .luck-footer-home {
+            background-color: #fff;
+        }
+
+        .luck-footer-home span {
+            color: rgba(197, 39, 242, 1);
+        }
+
+        .luck-footer-home span::before {
+            background-image: url("../images/luck-footer-home-icon.png");
+        }
+
+        .luck-footer-coupon {
+            background: linear-gradient(270deg, rgba(192, 106, 255, 1) 0%, rgba(200, 2, 235, 1) 100%);
+        }
+
+        .luck-footer-coupon span {
+            color: rgba(255, 207, 60, 1);
+        }
+
+        .luck-footer-coupon span::before {
+            background-image: url("../images/luck-footer-coupon-icon.png");
+        }
+
+        .luck-footer span {
+            display: flex;
+            align-items: center;
+            font-size: 0.28rem;
+            font-weight: 800;
+        }
+
+        .luck-footer span::before {
+            content: "";
+            width: 0.4rem;
+            height: 0.4rem;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 60% 60%;
+        }
+    </style>
+</head>
+<body>
+<div class="layout-view luck-view">
+
+    <style>
+        .turntable-wrap {
+            flex: none;
+            position: absolute;
+            left: 50%;
+            top: 3.08rem;
+            transform: translateX(-50%);
+            overflow: hidden;
+            width: 7rem;
+            height: 7rem;
+            border-radius: 50%;
+            box-shadow: 0 0 0.16rem #FEB756;
+        }
+
+        @keyframes white-to-yellow {
+            0% {
+                background: linear-gradient(to bottom, #FFB76B, #FF5048);
+            }
+            100% {
+                background: linear-gradient(to bottom, #FFFBCC, #FFEC87);
+            }
+        }
+
+        #turntable_light::before {
+            content: "";
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0.52rem solid #FFE23E;
+            z-index: 1;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+
+        .turntable-wrap .light {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: rotate 5s linear infinite;
+            z-index: 2;
+            border-radius: 50%;
+        }
+
+        .turntable-wrap .light span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 0.24rem;
+            height: 100%;
+            z-index: 20;
+            transform-origin: center center;
+        }
+
+        .turntable-wrap .light span:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0.12rem;
+            left: 0;
+            width: 0.24rem;
+            height: 0.24rem;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .turntable-wrap .light span:nth-of-type(even):before {
+            animation: white-to-yellow 1s linear infinite;
+        }
+
+        .turntable-wrap .light span:nth-of-type(odd):before {
+            animation: white-to-yellow 1s linear reverse infinite;
+        }
+
+        /*github*/
+        .turntable-wrap .turntable {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #FFF1F1;
+        }
+
+        .turntable-wrap .turntable .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            border: 1px solid #dfd8be;
+            border-radius: 50%;
+            transform: rotate(90deg);
+        }
+
+        .turntable-wrap .turntable .bg li {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 1px;
+            height: 100%;
+            background: #dfd8be;
+            transform-origin: center center;
+        }
+
+        .turntable-wrap .turntable .gift {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: rotate(45deg);
+        }
+
+        .turntable-wrap .turntable .gift li {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            width: 45%;
+            height: 45%;
+            transform-origin: right bottom;
+            /*z-index: 10;*/
+        }
+
+        .turntable-wrap .turntable .gift li:nth-child(odd){
+            background-color:#FFEABA;
+        }
+        .turntable-wrap .turntable .gift li:nth-child(even){
+            background-color:#FFF1F1;
+        }
+        .turntable-wrap .turntable .gift li span {
+            position: absolute;
+            top: 1.99rem;
+            left: 0.9rem;
+            display: block;
+            width: 0.8rem;
+            height: 0.8rem;
+            transform: rotate(-70deg)translateY(-0.2rem);
+            z-index: 100;
+        }
+        .turntable-wrap .turntable .gift li .gitt-icon-span{
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .turntable-wrap .pointer {
+            box-sizing: border-box;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1.96rem;
+            height: 2.42rem;
+            background-image: url("../images/luck-pointer-icon.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            cursor: pointer;
+            z-index: 500;
+        }
+    </style>
+    <div class="turntable-wrap">
+        <div class="light" id="turntable_light"></div>
+        <div class="turntable" id="turntable">
+            <ul class="bg" id="turntable_bg"></ul>
+            <ul class="gift" id="turntable_gift"></ul>
+        </div>
+        <div class="pointer disabled" id="turntable_pointer"></div>
+    </div>
+
+    <script>
+		// 单例模式，转盘唯一，用对象字面量方式表示
+		let turntable = {
+			itemNum: 8, // 转盘平均分几块
+
+			lightNum: 16, // 转盘上的灯
+			light: null, // 转盘旋转灯容器
+
+			turntable: null, // 转盘
+			bg: null, // 转盘背景
+			gift: null, // 转盘上的中奖结果图
+
+			pointer: null, // 转盘指针
+
+			lottery: [], // 中奖数据
+			typeMap: {1: '¥', 2: '谢谢参与'},
+			typeClassMap: {1: '', 2: 'no-gift'},
+
+			isGoing: false, // 游戏是否开始
+			init() {
+				if (!this.lottery.length) {
+					this.pointer.style.display = 'none';
+					throw new Error('请设置中奖结果数据');
+				}
+				// 初始化灯
+				let lightFragment = document.createDocumentFragment();
+				for (let i = 0; i < this.lightNum; i++) {
+					let lightItem = document.createElement('span');
+					let deg = (360 / this.lightNum) * i
+					lightItem.style.transform = `rotate(${deg}deg)`;
+					lightFragment.appendChild(lightItem);
+				}
+				this.light.appendChild(lightFragment);
+				// 初始化转盘背景、转盘上的中奖图（用不同背景色代替）
+				let bgFragment = document.createDocumentFragment();
+				let bgItemWidth = this.bg.offsetWidth / this.num;
+				let giftFragment = document.createDocumentFragment();
+				for (let i = 0; i < this.itemNum; i++) {
+					let bgItem = document.createElement('li');
+					let deg = (360 / this.itemNum) * i
+					bgItem.style.transform = `rotate(${deg}deg)`;
+					bgFragment.appendChild(bgItem);
+					let giftItem = document.createElement('li');
+					giftItem.style.transform = `rotate(${deg}deg)`;
+					// giftItem.className = this.typeClassMap[this.lottery[i].type];
+					let span = document.createElement('span');
+					span.className = 'gitt-icon-span'
+					span.style.backgroundImage = 'url("' + lottery[i].icon + '")'
+					// span.innerHTML = this.typeMap[this.lottery[i].type];
+					giftItem.appendChild(span);
+					giftFragment.appendChild(giftItem)
+				}
+				this.bg.appendChild(bgFragment);
+				this.gift.appendChild(giftFragment);
+				// 给点击抽奖按钮添加点击事件
+				this.pointer.onclick = this.gameStart.bind(this)
+			},
+			gameStart() {
+				if (this.isGoing) {
+					return
+				}
+				this.isGoing = true;
+				// 1. 随机中奖结果
+				// 从1-100之间得到一个随机数，看这个随机数在中奖设置的范围，得到最终中奖的项
+				let randomRate = ~~(Math.random() * 100) // ~~ == Math.floor()
+				// 设置中奖数据的概率范围
+				let num = 0
+				this.lottery.forEach(item => {
+					item.min = num;
+					num += item.rate;
+					item.max = num;
+				})
+				// 根据随机数，得到中奖结果
+				let res = this.lottery.filter(item => {
+					return randomRate >= item.min && randomRate < item.max;
+				})[0];
+				// 这儿可以根据实际情况，可重置中奖结果
+
+				// 2. 计算旋转角度, 需要多转5圈，达转1圈用时1s, 到旋转的效果
+				let rotateItemDeg = 360 / this.lottery.length / 2 + (res.location - 1) * (360 / this.lottery.length); // 每个item旋转角度, 第一个不用旋转
+				let rotate = rotateItemDeg + 5 * 360;
+				let rotateSpeed = (rotateItemDeg / 360 * 1 + 5).toFixed(2);
+				// 重置转盘样式
+				this.turntable.removeAttribute('style');
+				// 保证下一次旋转动画生效
+				setTimeout(() => {
+					this.turntable.style.transform = `rotate(${rotate}deg)`;
+					this.turntable.style.transition = `transform ${rotateSpeed}s ease-out`;
+				}, 10)
+				// 3. 动画结束，显示中奖结果，中奖结果如何显示，视实际情况而定
+				setTimeout(() => {
+					this.isGoing = false;
+					console.log('中奖结果：', randomRate, res, this.typeMap[res.type]);
+				}, rotateSpeed * 1000);
+			}
+		}
+
+		let lottery = [
+			{
+				id: 1,
+				name: '原味板烧鸡腿堡配中薯套餐',
+				price: '￥32.00 ',
+				icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/e65877796b6cede677d7d17af78a3a20png.png',
+				location: 1, // 位置
+				type: 1, // 中奖
+				rate: 30,
+			},
+			{
+				id: 2,
+				name: '不素之霸双层牛肉堡',
+				price: '￥888',
+				icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/82d287bd38d8418aa49fc75684cd6a17jpeg.jpeg',
+				location: 2,
+				type: 2, // 未中奖
+				rate: 20
+			},
+			{
+				id: 3,
+				name: '巨无霸',
+				price: '￥888',
+				icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/69bd67ce3f9d12acda4f44822cf9f2c6png.png',
+				location: 3,
+				type: 1,
+				rate: 10
+			},
+			{
+				id: 4,
+				name: '培根蔬萃双层牛堡',
+				price: '￥888',
+				icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/da549861ef2e96dce7b2b413fd493d15png.png',
+				location: 4,
+				type: 2,
+				rate: 20
+			},
+			{
+				id: 5,
+				name: '法式柠香鸡腿汉堡',
+				price: '￥888',
+				icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/bd08dffa3c8c51dcb44dda22a6a49e76jpeg.jpeg',
+				location: 5,
+				type: 1,
+				rate: 10
+			},
+			{
+				id: 6,
+				name: '培根蔬萃双层牛堡配大薯套餐',
+				price: '￥888',
+				icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/9a37da29b672bb22313249de1724dbf9png.png',
+				location: 6,
+				type: 2,
+				rate: 10
+			},
+			{
+				id: 7,
+				name: '猪柳蛋麦满分',
+				price: '￥888',
+				icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/1305badafbb5d5a215ddfbdf37846541jpeg.jpeg',
+				location: 7,
+				type: 2,
+				rate: 10
+			},
+			{
+				id: 8,
+				name: '麦乐送皮蛋粥专享套餐',
+				price: '￥888',
+				icon: 'https://billson.oss-cn-shenzhen.aliyuncs.com/eleme/production/fcc3f60f013ec383fecb5682ac48b56ajpeg.jpeg',
+				location: 8,
+				type: 2,
+				rate: 10
+			}
+		];
+		turntable.turntable = document.querySelector('#turntable');
+		turntable.light = document.querySelector('#turntable_light');
+		turntable.bg = document.querySelector('#turntable_bg');
+		turntable.gift = document.querySelector('#turntable_gift');
+		turntable.pointer = document.querySelector('#turntable_pointer');
+		turntable.lottery = lottery;
+		turntable.itemNum = lottery.length
+		turntable.init();
+    </script>
+
+</div>
+<div class="luck-footer">
+    <div class="luck-footer-home">
+        <span>首页</span>
+    </div>
+    <div class="luck-footer-coupon">
+        <span>我的优惠券</span>
+    </div>
+</div>
+</body>
+</html>

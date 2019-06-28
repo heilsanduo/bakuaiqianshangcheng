@@ -1,0 +1,34 @@
+<component src="layout/index.html" title="八块钱商城" header></component>
+
+<div id="seller_layout" class="layout-view">
+    <div class="phone_bind">
+        <div class="phone_bind_header">
+            <div class="phone_bind_text">
+                <div class="phone_bind-text-now">绑定手机</div>
+                <p class="phone_bind-text-new">新用户欢迎您~</p>
+            </div>
+            <div class="phone_bind_main">
+                <div class="phone_bind_main_phone">
+                    <h5 class="phone_bind_phone">手机号码</h5>
+                    <div class="phone_bind_phone_num"><input type="tel" placeholder="请输入手机号码"></div>
+
+                </div>
+                <div class="phone_bind_main_code">
+                    <h5 class="phone_bind_code">验证码</h5>
+                    <div class="phone_bind_code_num">
+                        <input type="number" placeholder="请输入验证码">
+                        <div class="phone_bind_send_code">获取验证码</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="phone_bind_footer">
+            <div class="phone_bind_footer_now">
+                保存
+            </div>
+        </div>
+    </div>
+</div>
+
+<component src="footer/index.html"></component>

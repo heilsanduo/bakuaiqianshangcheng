@@ -1,0 +1,120 @@
+<div class="product-detail-footer">
+    <div class="product-detail-footer-nav">
+        <div class="product-detail-footer-store"></div>
+        <span>店铺</span>
+    </div>
+    <div class="product-detail-footer-nav">
+        <div class="product-detail-footer-collect"></div>
+        <span>收藏</span>
+    </div>
+    <div class="product-detail-footer-menu">
+        <div class="product-detail-footer-item groupBuy-footer-item-left">
+            <div class="groupBuy_item_left_price">¥1000</div>
+            <div class="groupBuy-footer-appointment">单独购买</div>
+        </div>
+        <div class="product-detail-footer-item groupBuy-footer-item-right">
+            <div class="groupBuy_item_right_price">¥523</div>
+            <div class="product-detail-footer-pay">拼团购买</div>
+        </div>
+    </div>
+</div>
+
+<!-- seller 预约时间 -->
+<div class="action-sheet">
+    <div class="action-sheet-mask"></div>
+    <div class="product-detail-attr-box">
+        <div class="product-detail-home-appointment-close"></div>
+        <div class="prodet-box">
+            <div class="prodet-icon">
+                <img src="http://www.xiehome.com/uploads/images/201904/15563617006HSyJu.jpeg"
+                    class="product-detail-imgbox" />
+            </div>
+            <div class="prodet-content">
+                <div class="prodet-price">￥523</div>
+                <div class="prodet-stock">库存20件</div>
+                <div class="prodet-attr">请选择：<span>颜色分类</span><span>大小</span></div>
+            </div>
+        </div>
+        <div class="prodet-scroll">
+            <div class="prodet-attr-item">
+                <div class="prodet-attr-header"><span>颜色</span></div>
+                <div class="prodet-attr-body">
+                    <span class="prodet-attr-nav">红色</span>
+                    <span class="prodet-attr-nav">浅蓝色</span>
+                    <span class="prodet-attr-nav">粉红色</span>
+                    <span class="prodet-attr-nav">黑色</span>
+                    <span class="prodet-attr-nav">白色</span>
+                    <span class="prodet-attr-nav">紫色</span>
+                </div>
+            </div>
+            <div class="prodet-attr-item">
+                <div class="prodet-attr-header"><span>大小</span></div>
+                <div class="prodet-attr-body">
+                    <span class="prodet-attr-nav">大号 80cm*50cm*45cm</span>
+                    <span class="prodet-attr-nav">中国号 70cm*46cm*45cm</span>
+                    <span class="prodet-attr-nav">小号 60cm*46cm*40cm</span>
+                </div>
+            </div>
+            <div class="prodet-amount-item">
+                <span>购买数量</span>
+                <div class="weui-count">
+                    <a class="weui-count__btn weui-count__decrease"></a>
+                    <input class="weui-count__number" type="number" value="1" />
+                    <a class="weui-count__btn weui-count__increase"></a>
+                </div>
+            </div>
+        </div>
+        <div class="product-detail-home-appointment-footer">
+            <div class="prodet-tocart">加入购物车</div>
+            <div class="prodet-tobuy">立即购买</div>
+        </div>
+    </div>
+</div>
+
+<!-- seller 预约时间 - end -->
+
+<script>
+    ((w, d) => {
+        var MAX = 99, MIN = 1;
+        $('.weui-count__decrease').click(function (e) {
+            var $input = $(e.currentTarget).parent().find('.weui-count__number');
+            var number = parseInt($input.val() || "0") - 1
+            if (number < MIN) number = MIN;
+            $input.val(number)
+        });
+        $('.weui-count__increase').click(function (e) {
+            var $input = $(e.currentTarget).parent().find('.weui-count__number');
+            var number = parseInt($input.val() || "0") + 1
+            if (number > MAX) number = MAX;
+            $input.val(number)
+        });
+        $(".product-detail-attr-box").on("click", ".prodet-attr-nav", function (e) {
+            console.log(124)
+            $(this).addClass("prodet-attr-active").siblings().removeClass("prodet-attr-active")
+            // $(this).parents(".prodet-attr-item").find(".prodet-attr-nav").removeClass("prodet-attr-active")
+        });
+        w.onload = e => {
+            $(".product-detail-footer-collect").on("click", function (e) {
+                w.util.toast('触发收藏')
+                $(this).toggleClass("product-detail-footer-collect-active")
+            });
+            $(".product-detail-attr").on("click", function (e) {
+                $(".action-sheet").addClass("action-sheet-active")
+            });
+            $(".groupBuy-footer-item-left").on("click", function (e) {
+                $(".action-sheet").addClass("action-sheet-active")
+            });
+            $(".groupBuy-footer-item-right").on("click", function (e) {
+                $(".action-sheet").addClass("action-sheet-active")
+            });
+            $(".product-detail-home-appointment-close").on("click", function (e) {
+                $(".action-sheet").removeClass("action-sheet-active")
+            });
+            $(".action-sheet-mask").on("click", function (e) {
+                $(".action-sheet").removeClass("action-sheet-active")
+            });
+        }
+    })(window, document)
+
+
+</script>

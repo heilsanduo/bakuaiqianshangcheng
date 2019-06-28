@@ -1,0 +1,29 @@
+.myorder-box {
+	width: 100%;
+	height: 100%;
+
+	.myorder-box-top {
+		width: 100%;
+		height: 1.24rem;
+		display: flex;
+		// justify-content: space-around;
+		align-items: center;
+		// box-sizing: border-box;
+		overflow-x: auto;
+	}
+
+	.myorder-box-top div {
+		white-space: nowrap;
+		height: .40rem;
+		padding: 0 0.32rem;
+		font-size: .32rem;
+		font-weight: 800;
+		line-height: .40rem;
+		float: left;
+		color: rgba(51, 51, 51, 1);
+	}
+
+	.active {
+		background: pink;
+	}
+}

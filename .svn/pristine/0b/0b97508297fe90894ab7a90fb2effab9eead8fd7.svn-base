@@ -1,0 +1,56 @@
+@@include('layout/layout/index.html', {
+    "title": "首页",
+    "weui": true,
+    "swiper": true
+})
+
+<div id="home_layout" class="layout-view">
+
+
+    @@include('home/home_search/index.html')
+
+    @@include('home/home_swiper/index.html')
+
+    @@include('home/home_menu/index.html')
+
+    @@include('home/home_headlines/index.html')
+
+    @@include('home/home_warp_box/index.html', {
+        "title": "装修设计",
+        "des": "专业商家为您提供创意房屋装修设计方案",
+        "icon": "home-design-icon"
+    })
+
+    @@include('home/home_warp_box/index.html', {
+        "title": "家居建材",
+        "des": "海量本土商家为您提供优质家居建材",
+        "icon": "home-material-icon"
+    })
+
+    @@include('home/home_activity/index.html')
+
+    @@include('home/home_product_list/index.html')
+
+    <div class="company-box">
+        <a href="###">粤ICP备15073814号-2</a>
+        <a href="###">Copyright © 八块钱网商城. All rights reserved.</a>
+    </div>
+</div>
+
+<script>
+    setTimeout(() => {
+    	$.messageBox({time: 999999})
+    }, 3000)
+</script>
+
+
+
+@@include('layout/tabbar/index.html', {
+    "page": "index"
+})
+@@include('layout/footer/index.html', {
+    "weui": true,
+    "swiper": true
+})
+
+

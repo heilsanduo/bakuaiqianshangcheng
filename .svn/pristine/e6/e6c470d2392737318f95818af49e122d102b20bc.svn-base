@@ -1,0 +1,91 @@
+@@include('layout/layout/index.html', {
+"title": "确认订单",
+"header": true,
+"weui":true
+})
+<div id="seller_layout" class="layout-view">
+    <div class="orderConfirm">
+        <!-- orderConfirm内容区 -->
+        <div class="orderConfirm_content">
+            <!-- 收货人 -->
+            <div class="orderConfirm_detail">
+                <div class="orderConfirm_consignee">收货人: 罗运佳</div>
+                <div class="orderConfirm_address">
+                    <p class="orderConfirm_address_text">地址：东莞市莞城区东纵路111号威尼斯广场写字楼一、二层</p>
+                </div>
+                <div class="orderConfirm_others">
+                    <div class="orderConfirm_phone">电话：18666862338</div>
+                    <div class="orderConfirm_edit">编辑地址</div>
+                </div>
+                <div class="orderConfirm_dashed"></div>
+            </div>
+
+            <!-- 收货人 --end -->
+
+            <!-- 待结算商品 -->
+            <div class="readyPay">
+                <span>待结算商品</span>
+            </div>
+            <div class="orderConfirm_items">
+                <div class="orderConfirm_items_store">
+                    顾家家具旗舰店
+                </div>
+                <div class="orderConfirm_items_main">
+                    <div class="items_main_img">
+                        <img src="../../../images/jiaju.PNG" alt="">
+                    </div>
+                    <div class="items_main_text">
+                        <div class="items_main_title">顾家家具 定制家具椅子高端大气上档次</div>
+                        <div class="items_main_color">灰色</div>
+                        <div class="items_main_price">¥ 523<span
+                                style="font-size: 0.24rem;font-weight: 400;color:#999999;margin-left:0.12rem;">×1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="orderConfirm_items_main">
+                    <div class="items_main_img">
+                        <img src="../../../images/jiaju.PNG" alt="">
+                    </div>
+                    <div class="items_main_text">
+                        <div class="items_main_title">顾家家具 定制家具椅子高端大气上档次</div>
+                        <div class="items_main_color">灰色</div>
+                        <div class="items_main_price">¥ 523<span
+                                style="font-size: 0.24rem;font-weight: 400;color:#999999;margin-left:0.12rem;">×1</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 有优惠券 -->
+                <div class="orderConfirm_items_coupons">
+                    <div class="items_coupons_title">优惠券领取</div>
+                    <div class="items_coupons_arrows"></div>
+                </div>
+                <!-- 有优惠券 --end-->
+            </div>
+            <!-- 待结算商品 --end -->
+
+            <!-- 留言板 -->
+            <div class="leave_massage">
+                <div class="massage_leaver">买家留言</div>
+                <div class="massage_detail">
+                    <textarea class="wishContent" placeholder="（选填）填写内容已和卖家协商确认" maxlength="50"></textarea>
+                    <div class="wordsNum">0/50</div>
+                </div>
+            </div>
+            <!-- 留言板--end -->
+
+            <!-- orderConfirm底部 -->
+            <div class="orderConfirm_footer">
+                <div class="orderConfirm_total">合计
+                    <span style="font-size: 0.32rem;color:rgba(241,90,83,1);font-weight: 800;">￥523</span>
+                </div>
+                <div class="orderConfirm_btn">
+                    结算<span>(1)</span>
+                </div>
+            </div>
+            <!-- orderConfirm底部 --end -->
+        </div>
+    </div>
+
+</div>
+
+@@include('layout/footer/index.html')

@@ -1,0 +1,7 @@
+$(function () {
+    $('.login_click_items .items_list').click(function () {
+        $(this).css('background', 'rgba(0,0,0,0.08)')
+            .siblings()
+            .css('background', 'rgba(255,255,255,1)');
+    });
+})

@@ -1,0 +1,108 @@
+@@include('layout/layout/index.html', {
+"title": "八块钱商城",
+"header": true
+})
+<div id="seller_layout" class="layout-view">
+    <div class="orderDetail">
+        <div class="orderDetail_text">待付款</div>
+        <!-- 物流信息 -->
+        <div class="orderDetail_address">
+            <div class="orderDetail_address_top">
+                <div class="orderDetail_address_left">暂无物流信息</div>
+                <div class="orderDetail_address_right">
+                    <span></span>
+                </div>
+            </div>
+            <div class="orderDetail_address_null"></div>
+            <div class="orderDetail_address_message">
+                <div class="orderDetail_address_message_left">罗育咋</div>
+                <div class="orderDetail_address_message_right">
+                    18666862338
+                </div>
+            </div>
+            <div class="orderDetail_address_site">东莞市莞城区东纵路111号威尼斯广场写字楼一、二层</div>
+        </div>
+        <!-- 物流信息 --end-->
+
+        <!-- 待结算商品 -->
+        <div class="readyPay">
+            <span>待结算商品</span>
+        </div>
+        <div class="orderDetail_items">
+            <div class="orderDetail_items_store">
+                顾家家具旗舰店
+            </div>
+            <div class="orderDetail_items_main">
+                <div class="items_main_img">
+                    <img src="../../../images/jiaju.PNG" alt="">
+                </div>
+                <div class="items_main_text">
+                    <div class="items_main_title">顾家家具 定制家具椅子高端大气上档次</div>
+                    <div class="items_main_color">灰色</div>
+                    <div class="items_main_price">¥ 523<span
+                            style="font-size: 0.24rem;font-weight: 400;color:#999999;margin-left:0.12rem;">×1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="orderDetail_items_main">
+                <div class="items_main_img">
+                    <img src="../../../images/jiaju.PNG" alt="">
+                </div>
+                <div class="items_main_text">
+                    <div class="items_main_title">顾家家具 定制家具椅子高端大气上档次</div>
+                    <div class="items_main_color">灰色</div>
+                    <div class="items_main_price">¥ 523<span
+                            style="font-size: 0.24rem;font-weight: 400;color:#999999;margin-left:0.12rem;">×1</span>
+                    </div>
+                </div>
+            </div>
+            <div class="orderDetail_items_main_price">
+                <ul class="orderDetail_price_total">
+                    <li>商品总价</li>
+                    <li>￥1046</li>
+                </ul>
+                <ul class="orderDetail_coupons_use">
+                    <li>优惠券使用</li>
+                    <li>满30减1元</li>
+                </ul>
+                <ul class="orderDetail_shipping_fee">
+                    <li>运费（快递）</li>
+                    <li>￥10</li>
+                </ul>
+                <div class="orderDetail_order_total">
+                    <div>订单总价</div>
+                    <div style="color:rgba(241,90,83,1);">￥1055</div>
+                </div>
+                <!-- 侧边半圆 -->
+                <div class="sideDot_left"></div>
+                <div class="sideDot_right"></div>
+            </div>
+        </div>
+        <!-- 待结算商品 --end -->
+        <!-- 订单信息 -->
+        <div class="orderDetail_more">
+            <p class="orderDetail_more_title">订单信息</p>
+            <ul class="orderDetail_more_orderNum">
+                <li>订单号码</li>
+                <li>201906162479700114</li>
+            </ul>
+            <ul class="orderDetail_payment">
+                <li>支付方式</li>
+                <li>东莞银行快捷支付</li>
+            </ul>
+            <ul class="orderDetail_orderTime">
+                <li>下单时间</li>
+                <li>2019-06-13 12:05:39</li>
+            </ul>
+        </div>
+        <!-- 订单信息 --end -->
+        <!-- 底部 -->
+        <div class="orderDetail-footer">
+            <div>取消订单</div>
+            <div>立即支付</div>
+        </div>
+        <!-- 底部 --end -->
+    </div>
+</div>
+
+@@include('layout/footer/index.html')

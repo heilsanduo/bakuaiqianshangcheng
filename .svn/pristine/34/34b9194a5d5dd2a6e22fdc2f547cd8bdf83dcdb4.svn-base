@@ -1,0 +1,14 @@
+$(function () {
+    //选项卡
+    $('.mycoupons_title ul li').click(function () {
+        //点击当前的变高亮+排他
+        $(this).attr('class', 'active')
+            .siblings()
+            .attr('class', '');
+        //内容跟着出来
+        $('.mycoupons_cons .con').eq($(this).index())
+            .css('display', 'block')
+            .siblings()
+            .css('display', 'none');
+    });
+})

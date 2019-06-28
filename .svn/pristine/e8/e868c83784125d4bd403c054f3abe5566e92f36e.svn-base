@@ -1,0 +1,360 @@
+@import "../../../styles/common.less";
+
+.mycoupon-box {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+// 头部选项卡
+.mycoupon-box-top {
+	width: 6.86rem;
+	height: 1.24rem;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.mycoupon-box-top>div {
+	white-space: nowrap;
+	height: 0.44rem;
+	margin: 0 0.32rem 0 0;
+	font-size: 0.28rem;
+	font-weight: 400;
+	line-height: 0.4rem;
+	color: rgba(51, 51, 51, 1);
+}
+
+.mycoupon-box-top>span {
+	width: .44rem;
+	height: .44rem;
+	position: absolute;
+	right: 0;
+}
+
+// 点击时添加选中状态
+.mycoupon-active {
+	height: .44rem !important;
+	font-size: .32rem !important;
+	font-weight: 800 !important;
+	line-height: .44rem !important;
+	.yellowBottom();
+}
+
+// 优惠券
+.mycoupon-box-bottom {
+	width: 100%;
+	flex: 1;
+	overflow: auto;
+}
+
+.option {
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.option-box {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	overflow: auto;
+}
+
+.option-content {
+	width: 6.86rem;
+	height: 2.36rem;
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0 .08rem .32rem rgba(0, 0, 0, 0.08);
+	display: flex;
+	box-sizing: border-box;
+	border-radius: .12rem;
+	margin-bottom: .34rem;
+	overflow: hidden;
+}
+
+.option-content-left {
+	width: 5.42rem;
+	height: 100%;
+	border-radius: .12rem 0 0 .12rem;
+	display: flex;
+	padding: 0 0 .32rem .32rem;
+	box-sizing: border-box;
+	flex-direction: column;
+
+}
+
+.option-content-left-title {
+	width: 100%;
+	height: 1rem;
+	display: flex;
+	align-items: center;
+
+	.title-icon {
+		width: .36rem;
+		height: .36rem;
+		margin-right: .16rem;
+	}
+
+	.title-conten {
+		width: auto;
+		height: .36rem;
+		margin-right: .16rem;
+
+		font-size: .26rem;
+		font-weight: 800;
+		line-height: .36rem;
+		color: rgba(51, 51, 51, 1);
+		opacity: 1;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+	}
+
+	.title-entrance {
+		width: .32rem;
+		height: .32rem;
+	}
+}
+
+.option-content-left-bottom {
+	width: 100%;
+	flex: auto;
+	display: flex;
+}
+
+.option-content-left-bottom-img {
+	width: 1.04rem;
+	height: 1.04rem;
+	margin-right: .32rem;
+}
+
+.option-content-left-bottom-img img {
+	width: 100%;
+	height: 100%;
+}
+
+.option-content-left-bottom-right {
+	width: 3.6rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.right-price {
+	width: 100%;
+	height: .56rem;
+	display: flex;
+	box-sizing: border-box;
+
+	padding: 0.1rem 0 0 0;
+}
+
+.right-price .span1 {
+	width: auto;
+	height: .40rem;
+	font-size: .36rem;
+	font-weight: 800;
+	line-height: .36rem;
+	color: rgba(241, 90, 83, 1);
+}
+
+.right-price .span2 {
+	min-width: 2.26rem;
+	max-width: 2.4rem;
+	padding: 0 0 .10rem 0;
+	height: .34rem;
+	font-size: .24rem;
+	font-weight: 400;
+	line-height: .34rem;
+	text-align: center;
+	color: rgba(51, 51, 51, 1);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.right-price .span3 {
+	width: .34rem;
+	height: .34rem;
+	background: url(../../../images/option-ioc2.png)no-repeat;
+	background-size: 100%;
+	background-position: 70%;
+}
+
+.right-date {
+	width: 3.60rem;
+	height: .34rem;
+	font-size: .24rem;
+	font-weight: 400;
+	line-height: .36rem;
+	color: rgba(153, 153, 153, 1);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.option-content-right {
+	width: 1.44rem;
+	height: 100%;
+	background: #FFDE45;
+	border-radius: 0 .12rem .12rem 0;
+	font-size: .24rem;
+	font-weight: 800;
+	line-height: 2.36rem;
+	color: rgba(51, 51, 51, 1);
+	text-align: center;
+	position: relative;
+
+
+}
+
+.option-content-right-circle1 {
+	width: .4rem;
+	height: .4rem;
+	background: #f7f5f5;
+	position: absolute;
+	left: -0.18rem;
+	top: -0.18rem;
+	border-radius: 50%;
+}
+
+.option-content-right-circle2 {
+	width: .4rem;
+	height: .4rem;
+	background: #f3f3f3;
+	position: absolute;
+	left: -0.18rem;
+	bottom: -0.18rem;
+	border-radius: 50%;
+}
+
+.act {
+	background: rgb(238, 235, 235);
+}
+
+.popup1 {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 87;
+	display: none;
+}
+
+.popup {
+	width: 5.16rem;
+	height: auto;
+	background: rgba(0, 0, 0, 0.76);
+	border-radius: .12rem;
+	position: absolute;
+	z-index: 88;
+	top: 3.64rem;
+	display: none;
+	padding: 0 .48rem;
+	box-sizing: border-box;
+
+	>h2 {
+		width: auto;
+		height: 1.36rem;
+		font-size: .28rem;
+		font-weight: 800;
+		display: block;
+		line-height: 1.36rem;
+		color: rgba(255, 255, 255, 1);
+		text-align: center;
+	}
+
+	.popup-con {
+		width: auto;
+		min-height: .84rem;
+		max-height: 3rem;
+		overflow-y: auto;
+		font-size: .28rem;
+		font-weight: 400;
+		line-height: .42rem;
+		color: rgba(255, 255, 255, 1);
+	}
+
+	.popup-bot {
+		width: 100%;
+		height: 1.62rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		>div {
+			width: 1.84rem;
+			height: .66rem;
+			background: rgba(239, 239, 239, 1);
+			opacity: 1;
+			border-radius: 8px;
+			text-align: center;
+			font-size: .28rem;
+			font-weight: 800;
+			line-height: .66rem;
+			color: rgba(51, 51, 51, 1);
+
+		}
+	}
+
+	.popup-bot div:nth-child(2) {
+		background: #FFDE45;
+	}
+
+
+}
+
+.mycoupon-attention {
+	width: 5.16rem;
+	height: auto;
+	background: rgba(0, 0, 0, 0.76);
+	border-radius: .12rem;
+	position: absolute;
+	z-index: 88;
+	top: 3.64rem;
+	padding: 0 0.48rem 0.48rem 0.48rem;
+	box-sizing: border-box;
+	display: none;
+
+	>h2 {
+		width: auto;
+		height: 1.36rem;
+		font-size: .28rem;
+		font-weight: 800;
+		display: block;
+		line-height: 1.36rem;
+		color: rgba(255, 255, 255, 1);
+		text-align: center;
+		position: relative;
+
+		>span {
+			width: .28rem;
+			height: .28rem;
+			position: absolute;
+			right: -0.1rem;
+			top: .32rem;
+			background: url(../../../images/xx.png)no-repeat center center;
+		}
+	}
+
+	.mycoupon-attention-con {
+		width: auto;
+		min-height: 1.82rem;
+		max-height: 4rem;
+		font-size: .24rem;
+		font-weight: 400;
+		line-height: .36rem;
+		color: rgba(255, 255, 255, 1);
+		overflow-y: auto
+	}
+
+
+}

@@ -1,0 +1,74 @@
+<component src="layout/index.html" title="商家列表" search_header></component>
+
+<div id="seller_layout" class="layout-view seller-list-view">
+
+
+    <component src="seller/seller_list_menu/index.html"></component>
+
+    <div class="seller-list-box">
+
+
+        <div class="seller-list-nav">
+            <div class="seller-list-nav-icon">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/de220b867e860e82c372a31dec1e9e80.JPG" alt="">
+            </div>
+            <div class="seller-list-nav-content">
+                <div class="seller-list-nav-name"><span class="seller-name">苏宁易购（威尼斯广场店）</span><span class="seller-list-tags seller-dgbank-tags"></span><span class="seller-list-tags seller-coupon-tags"></span></div>
+                <div class="seller-list-nav-address">东莞市莞城区东纵路111号威尼斯广场写字楼一、二层</div>
+            </div>
+        </div>
+
+        <div class="seller-list-nav">
+            <div class="seller-list-nav-icon">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/de220b867e860e82c372a31dec1e9e80.JPG" alt="">
+            </div>
+            <div class="seller-list-nav-content">
+                <div class="seller-list-nav-name"><span class="seller-name">苏宁易购（威尼斯广场店）</span><span class="seller-list-tags seller-dgbank-tags"></span><span class="seller-list-tags seller-coupon-tags"></span></div>
+                <div class="seller-list-nav-address">东莞市莞城区东纵路111号威尼斯广场写字楼一、二层</div>
+            </div>
+        </div>
+        <div class="seller-list-nav">
+            <div class="seller-list-nav-icon">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/de220b867e860e82c372a31dec1e9e80.JPG" alt="">
+            </div>
+            <div class="seller-list-nav-content">
+                <div class="seller-list-nav-name"><span class="seller-name">苏宁易购（威尼斯广场店）</span><span class="seller-list-tags seller-dgbank-tags"></span><span class="seller-list-tags seller-coupon-tags"></span></div>
+                <div class="seller-list-nav-address">东莞市莞城区东纵路111号威尼斯广场写字楼一、二层</div>
+            </div>
+        </div>
+        <div class="seller-list-nav">
+            <div class="seller-list-nav-icon">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/de220b867e860e82c372a31dec1e9e80.JPG" alt="">
+            </div>
+            <div class="seller-list-nav-content">
+                <div class="seller-list-nav-name"><span class="seller-name">苏宁易购（威尼斯广场店）</span><span class="seller-list-tags seller-dgbank-tags"></span><span class="seller-list-tags seller-coupon-tags"></span></div>
+                <div class="seller-list-nav-address">东莞市莞城区东纵路111号威尼斯广场写字楼一、二层</div>
+            </div>
+        </div>
+        <div class="seller-list-nav">
+            <div class="seller-list-nav-icon">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/de220b867e860e82c372a31dec1e9e80.JPG" alt="">
+            </div>
+            <div class="seller-list-nav-content">
+                <div class="seller-list-nav-name"><span class="seller-name">苏宁易购（威尼斯广场店）</span><span class="seller-list-tags seller-dgbank-tags"></span><span class="seller-list-tags seller-coupon-tags"></span></div>
+                <div class="seller-list-nav-address">东莞市莞城区东纵路111号威尼斯广场写字楼一、二层</div>
+            </div>
+        </div>
+        <div class="seller-list-nav">
+            <div class="seller-list-nav-icon">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/de220b867e860e82c372a31dec1e9e80.JPG" alt="">
+            </div>
+            <div class="seller-list-nav-content">
+                <div class="seller-list-nav-name"><span class="seller-name">苏宁易购（威尼斯广场店）</span><span class="seller-list-tags seller-dgbank-tags"></span><span class="seller-list-tags seller-coupon-tags"></span></div>
+                <div class="seller-list-nav-address">东莞市莞城区东纵路111号威尼斯广场写字楼一、二层</div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<component src="common/tabbar/index.html" seller></component>
+<component src="footer/index.html"></component>
+

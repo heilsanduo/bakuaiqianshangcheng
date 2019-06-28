@@ -1,0 +1,97 @@
+@@include('layout/layout/index.html', {
+"title": "在线支付",
+"header": true,
+"weui": true
+})
+
+<div id="loan_layout" class="layout-view">
+
+    <div class="loan-swiper">
+        <img src="./images/test_987987.png" alt="">
+    </div>
+
+
+    <div class="loan-form">
+        <div class="loan-form-header">我要申请</div>
+        <div class="loan-form-item">
+            <input type="text" placeholder="请输入您的姓名">
+        </div>
+        <div class="loan-form-item">
+            <input type="text" placeholder="请输入您的姓名">
+        </div>
+        <div class="loan-form-item">
+            <div class="loan-form-picker">
+                <input type="text" id="picker-province" placeholder="省/市">
+                <div></div>
+            </div>
+            <div class="loan-form-picker">
+                <input type="text" id="picker-city" placeholder="市/地区">
+                <div></div>
+            </div>
+        </div>
+        <div class="loan-form-submit">一键预约办理</div>
+    </div>
+
+    <div class="loan-form">
+        <div class="loan-form-header">每月还款金额</div>
+        <div class="loan-form-nav">
+            <div>分期金额</div>
+            <input type="text">
+        </div>
+        <div class="loan-form-nav">
+            <div>分期期数</div>
+            <div class="loan-form-picker">
+                <input type="text" placeholder="请选择分期" id="picker-loan">
+                <div></div>
+            </div>
+        </div>
+        <div class="loan-form-count">一键预约办理</div>
+        <div class="loan-form-tip">每月还款 <span>00.00</span></div>
+        <div class="loan-form-countbox">
+            <span>手续费（元）：<i>00.00</i></span>
+            <span>本费合计（元）：<i>00.00</i></span>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+	((w, d) => {
+		$(document).ready(function (e) {
+			$("#picker-province").picker({
+				title: "请选择省份",
+				cols: [
+					{
+						textAlign: 'center',
+						values: ['广东省', '江西省', '湖南省', '湖北省', '河北省', '河南省', '辽宁省', '山西省']
+					}
+				]
+			});
+			$("#picker-city").picker({
+				title: "请选择城市",
+				cols: [
+					{
+						textAlign: 'center',
+						values: ['东莞', '深圳', '广州', '汕头', '揭阳', '珠海', '湛江', '惠州', '佛山']
+					}
+				]
+			});
+			$("#picker-loan").picker({
+				title: "请选择城市",
+				cols: [
+					{
+						textAlign: 'center',
+						values: ['12期/一年', '24期/两年', '36期/三年', '48期/四年', '60期/五年']
+					}
+				]
+			});
+		});
+	})(window, document)
+</script>
+
+
+@@include('layout/footer/index.html', {
+"weui": true
+})

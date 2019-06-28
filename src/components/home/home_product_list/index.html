@@ -1,0 +1,26 @@
+
+<!-- 首页 热门推荐 -->
+<div class="home-warp-box">
+    <div class="home-warp-box-header">
+        <div class="home-warp-box-title"><span class="home-product-icon"></span>热门推荐</div>
+        <div class="home-warp-box-des">隔壁老王家这么漂亮全因买了它…</div>
+    </div>
+    <div class="home-product-list">
+        @@for (var i = 0; i < 10; i++) {
+            <div class="home-product-item">
+                <div class="home-product-item-icon">
+                    <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-04-26/854dd3dba3a355e1f62638702f519ece.jpg" alt="">
+                </div>
+                <div class="home-product-item-content">
+                    <div class="home-product-item-name">顾家家具 定制家具椅子高端大气上档次</div>
+                    <div class="home-product-item-address">东莞</div>
+                    <div class="home-product-item-price">
+                        <span class="price">￥`+ i * i + 20 +`</span>
+                        <span class="buy">12人购买</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<!-- 首页 热门推荐 - end -->

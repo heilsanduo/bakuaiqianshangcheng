@@ -1,0 +1,76 @@
+@import "../../../styles/common.less";
+@import "../../../styles/main.less";
+
+
+
+
+
+// 列表
+.seller-product-list-scroll{
+  padding: 0 0.32rem 0.32rem 0.32rem;
+  overflow: hidden;
+  display:flex;
+  align-content: space-between;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.seller-product-nav{
+  flex:none;
+  width: 3.28rem;
+  height: 5.36rem;
+  border-radius: 0.2rem;
+  background-color:rgba(255,255,255,1);
+  box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+  display:flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 0.32rem;
+  .hover-white-class;
+}
+.seller-product-nav-icon{
+  width: 3.28rem;
+  height: 3.28rem;
+  flex:none;
+  .imgAll;
+}
+.seller-product-nav-box{
+  flex:auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.16rem;
+}
+.seller-product-nav-name{
+  width: 100%;
+  height: 0.72rem;
+  font-size: 0.26rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  .fontBreak(2, 0.36rem);
+}
+.seller-product-nav-location{
+  font-size: 0.24rem;
+  font-weight:400;
+  line-height: 0.36rem;
+  color:rgba(153,153,153,1);
+}
+.seller-product-nav-price{
+  width: 100%;
+  height: 0.44rem;
+  display:flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.seller-product-nav-price .price{
+  font-size: 0.32rem;
+  font-weight:800;
+  color:rgba(241,90,83,1);
+}
+.seller-product-nav-price .count{
+  font-size: 0.24rem;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}
+
+
+

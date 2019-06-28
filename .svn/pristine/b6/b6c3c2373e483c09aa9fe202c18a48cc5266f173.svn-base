@@ -1,0 +1,378 @@
+@import "../../../styles/common.less";
+@import "../../../styles/main.less";
+.groupBuy_detail{
+    width:100%;
+    height:100%;
+    .product-detail-swiper{
+        width: 100%;
+        height: 7.5rem;
+        overflow: hidden;
+        position:relative;
+    }
+    .group-detail-box{
+        width: 6.86rem;
+        height: 4.18rem;
+        background-color:rgba(255,255,255,1);
+        box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+        border-radius: 0.2rem;
+        margin: 0.16rem auto;
+        transform: translateY(-0.48rem);
+        position: relative;
+        z-index: 20;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    // 三人团
+    .groupBuy_people{
+        width:0.94rem;
+        height:0.5rem;
+        background:rgba(255,222,69,1);
+        border-radius:0 0 0.08rem 0.08rem;
+        position: absolute;
+        top:-0.25rem;
+        left: 0.32rem;
+        font-size: 0.24rem;
+        color:rgba(51,51,51,1);
+        font-weight:800;
+        text-align:center;
+        line-height:0.5rem;
+    }
+    .group-detail-price{
+        width: 100%;
+        height: 1.48rem;
+        background:rgba(241,90,83,1);
+        border-radius:0.2rem 0.2rem 0 0;
+        // padding: 0.16rem 0 0 0.32rem;
+        display:flex;
+        // align-items: center;
+    }
+    .group_detail_left{
+        flex:auto;
+        height: 1.48rem;
+    }
+    .groupBuy_price{
+        width:100%;
+        height:0.98rem;
+        display: flex;
+        align-items: center;
+        padding-left:0.32rem;
+        padding-top:0.32rem;
+        box-sizing: border-box;
+    }
+   .groupBuy_price .Price{
+       flex:1;
+        font-size: 0.48rem;
+        font-weight:bold;
+        color:rgba(255,255,255,1);
+    }
+    .groupBuy_price .Old-price{
+        flex:auto;
+        font-size: 0.24rem;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        margin-left: 0.16rem;
+        text-decoration: line-through;
+    }
+    .groupBuy_countdown{
+        width:100%;
+        height:0.5rem;
+        line-height: 0.5rem;
+        font-size:0.24rem;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        padding-left:0.32rem;
+        // padding-bottom:0.16rem;
+        box-sizing: border-box;
+    
+    }
+    .group_detail_right{
+        flex:1;
+        padding:0.4rem 0.32rem 0 0;
+        box-sizing:border-box;  
+        .groupBuy_speed{
+            width:2.4rem;
+            height:0.5rem;
+            line-height: 0.5rem;
+            text-align:center;
+            font-size:0.24rem;
+            color:rgba(241,90,83,1);
+            font-weight: 400;
+            background:linear-gradient(to right, rgba(255,222,69,1); 88%, rgba(255,222,69,0.3) 88%);
+            // opacity:0.5;
+            border-radius:0.26rem;
+        }
+    }
+    //   标题
+      .product-detail-des{
+        width: 100%;
+        height: 0.84rem;
+        font-size: 0.28rem;
+        font-weight:400;
+        color:rgba(51,51,51,1);
+        .fontBreak(2, 0.42rem);
+        padding-left:0.32rem;
+        box-sizing: border-box;
+      }
+      .product-detail-util{
+        width: 100%;
+        height: 0.42rem;
+        display:flex;
+        align-items: center;
+        padding-left:0.32rem;
+        box-sizing: border-box;
+      }
+      .product-detail-util span{
+        font-size: 0.24rem;
+        font-weight:400;
+        color:rgba(153,153,153,1);
+      }
+      .product-detail-attr{
+        width: 100%;
+        height: 0.84rem;
+        flex:none;
+        display:flex;
+        align-items: center;
+        border-top: 1px solid rgba(245,245,245,1);
+        font-size: 0.26rem;
+        font-weight:800;
+        color:rgba(51,51,51,1);
+        position: relative;
+        overflow: hidden;
+        padding: 0 0.16rem 0 0.32rem;
+        box-sizing: border-box;
+        &:active{
+          opacity: 0.8;
+        }
+      }
+      .product-detail-attr::before{
+        content:"";
+        width: 0.32rem;
+        height: 0.32rem;
+        display:inline-block;
+        position:absolute;
+        right: 0.16rem;
+        top: 50%;
+        transform: translateY(-50%);
+        .bgSet(0.24rem 0.24rem);
+        background-image: url("../images/more-icon.png");
+      }
+    //   拼团玩法
+    .groupBuy_rules{
+        width:6.86rem;
+        height:2.72rem;
+        background:rgba(255,255,255,1);
+        box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+        border-radius:0.2rem;
+        margin:0 auto;
+        padding:0.32rem 0 0 0.26rem;
+        box-sizing:border-box;
+    }
+    .groupBuy_rules_header{
+        width:100%;
+        height:0.92rem;
+        display:flex;
+        // align-items:center;
+        border-bottom:0.01rem solid rgb(247, 247, 247);
+    }
+    .groupBuy_rules_title{
+        flex:1;
+        font-size:0.32rem;
+        font-weight:800;
+        color:rgba(51,51,51,1);
+        >span{
+            .yellowBottom();
+        }
+    }
+    .groupBuy_rules_detail{
+        flex:auto;
+        font-size:0.24rem;
+        font-weight:400;
+        color:rgba(153,153,153,1);
+        text-align:right;
+        padding-top:0.1rem;
+        padding-right:0.32rem;
+        box-sizing:border-box;
+    }
+    .groupBuy_rules_main{
+        width:100%;
+        height:1.78rem;
+        display:flex;
+        align-items:center;
+        >li{
+            flex:1;
+            font-size: 0.26rem;
+            font-weight:400;
+            color:rgba(51,51,51,1);
+            display:flex;
+            box-sizing:border-box;
+        }
+        .groupBuy_dot{
+            display:inline-block;
+            width:0.36rem;
+            height:0.36rem;
+            background:rgba(255,222,69,1);
+            border-radius:50%;
+            text-align:center;
+        }
+        .groupBuy_rules_text{
+            flex:auto;
+            padding-left:0.14rem;
+            box-sizing:border-box;
+        }
+        .groupBuy_rules_arrows{
+            width:0.32rem;
+            height:0.32rem;
+            .bgSet();
+            background-image: url("../images/jiantou.png");
+            background-position-y: 0.06rem; 
+            box-sizing:border-box;
+                       
+            
+        }
+        .groupBuy_rules_others{
+            flex-direction: column;
+        }
+    }
+      // 店铺介绍
+      .product-detail-warp{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        padding: 0.32rem 0;
+      }
+      .product-detail-shop{
+        width: 6.86rem;
+        height: 5.76rem;
+        display:flex;
+        flex:auto;
+        flex-direction: column;
+        box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+        background-color:#fff;
+        padding: 0 0.32rem;
+        border-radius: 0.2rem;
+        margin:0 auto;
+      }
+      .product-detail-header{
+        width: 100%;
+        height: 1.08rem;
+        padding: 0 0.32rem;
+        flex:none;
+        display:flex;
+        align-items: center;
+        span{
+          .yellowBottom();
+        }
+      }
+      .product-detail-seller{
+        width: 100%;
+        height: 1.22rem;
+        display:flex;
+        align-items: center;
+        flex:none;
+        border-bottom: 1px solid rgba(245,245,245,1);
+        .product-detail-seller-icon{
+          width: 0.8rem;
+          height: 0.52rem;
+          flex:none;
+          .imgAll
+        }
+        .product-detail-seller-name{
+          flex:auto;
+          margin: 0 0.32rem;
+          height: 0.42rem;
+          font-size: 0.26rem;
+          font-weight:500;
+          color:rgba(51,51,51,1);
+          .fontBreak(1, 0.42rem);
+        }
+        .product-detail-seller-button{
+          .button-default;
+          width:1.52rem;
+          height: 0.66rem;
+        }
+      }
+      .product-detail-plist-header{
+        width: 100%;
+        padding: 0.24rem 0;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.24rem;
+        font-weight:800;
+        color:rgba(51,51,51,1);
+        span{
+          font-size: 0.24rem;
+          font-weight:800;
+          color:rgba(241,90,83,1);
+          position:relative;
+          padding-right: 0.48rem;
+          .hover-yellow-class;
+          &:before{
+            content:"";
+            width: 0.34rem;
+            height: 0.34rem;
+            .bgSet(0.28rem 0.28rem);
+            background-image: url("../images/more-red-icon.png");
+            position:absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+      // 店铺推荐商品
+    .product-detail-plist{
+        padding: 0.16rem 0 0 0;
+        width: 100%;
+        flex:auto;
+        display:flex;
+        justify-content: space-between;
+    }
+    .product-detail-pitem{
+        width: 1.86rem;
+        height: 3.3rem;
+        flex:none;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+      .product-detail-pitem > div{
+        width: 100%;
+        flex:none;
+    }
+    .product-detail-pitem-icon{
+        width: 186rem;
+        height: 1.86rem;
+        flex:none;
+        border-radius: 0.12rem;
+        overflow: hidden;
+        .imgAll;
+    }
+    .product-detail-pitem-name{
+        width: 100%;
+        height: 0.72rem;
+        font-size: 0.24rem;
+        font-weight:400;
+        color:rgba(51,51,51,1);
+        .fontBreak(2, 0.36rem);
+    }
+    .product-detail-pitem-price{
+        height: 0.4rem;
+        font-size: 0.28rem;
+        font-weight:600;
+        display:flex;
+        align-items: center;
+        color:rgba(241,90,83,1);
+    }
+    .product-detail-imgbox{
+        width: 100%;
+    }      
+}
+
+
+
+
+
+
+

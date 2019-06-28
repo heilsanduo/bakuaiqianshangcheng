@@ -1,0 +1,48 @@
+
+<!-- 首页 装修设计 -->
+<div class="home-warp-box">
+    <div class="home-warp-box-header">
+        <div class="home-warp-box-title"><span class=@@icon></span>@@title<span
+                class="home-warp-box-more">更多商家</span></div>
+        <div class="home-warp-box-des">@@des</div>
+    </div>
+    <div class="home-warp-box-body">
+        <div class="home-seller-item">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/c14b29fee2b3075f5113cff854745870.JPG"
+                 alt="">
+        </div>
+        <div class="home-seller-item">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/c14b29fee2b3075f5113cff854745870.JPG"
+                 alt="">
+        </div>
+        <div class="home-seller-item">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/c14b29fee2b3075f5113cff854745870.JPG"
+                 alt="">
+        </div>
+        <div class="home-seller-item">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/c14b29fee2b3075f5113cff854745870.JPG"
+                 alt="">
+        </div>
+        <div class="home-seller-item">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/c14b29fee2b3075f5113cff854745870.JPG"
+                 alt="">
+        </div>
+        <div class="home-seller-item">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/c14b29fee2b3075f5113cff854745870.JPG"
+                 alt="">
+        </div>
+        <div class="home-seller-item">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/c14b29fee2b3075f5113cff854745870.JPG"
+                 alt="">
+        </div>
+        <div class="home-seller-item">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/c14b29fee2b3075f5113cff854745870.JPG"
+                 alt="">
+        </div>
+        <div class="home-seller-item">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/seller_logo/c14b29fee2b3075f5113cff854745870.JPG"
+                 alt="">
+        </div>
+    </div>
+</div>
+<!-- 首页 装修设计 - end -->

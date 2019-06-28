@@ -1,0 +1,83 @@
+<div class="seller-footer">
+    <div class="seller-footer-nav">
+        <div class="seller-footer-tell"></div>
+        <span>电话</span>
+    </div>
+    <div class="seller-footer-nav">
+        <div class="seller-footer-collect"></div>
+        <span>收藏</span>
+    </div>
+    @@if (state === 'dg'){
+    <div class="seller-footer-menu">
+        <div class="seller-footer-item seller-footer-item-dg-left">
+            <span class="seller-footer-appointment">预约到店</span>
+        </div>
+        <div class="seller-footer-item seller-footer-item-dg-right">
+            <span class="seller-footer-pay">立即支付</span>
+        </div>
+    </div>
+    }
+    @@if(!state){
+    <div class="seller-footer-menu">
+        <div class="seller-footer-item seller-footer-item-left">
+            <span class="seller-footer-appointment">预约到店</span>
+        </div>
+        <div class="seller-footer-item seller-footer-item-right">
+            <span class="seller-footer-navigation">一键导航</span>
+        </div>
+    </div>
+    }
+</div>
+
+<!-- seller 预约时间 -->
+<div class="action-sheet">
+    <div class="action-sheet-mask"></div>
+    <div class="seller-home-appointment">
+        <div class="seller-home-appointment-close"></div>
+        <div class="seller-home-appointment-header">
+            <span>预约到店</span>
+        </div>
+        <div class="seller-home-appointment-item">
+            <input type="text" name="name" placeholder="请输入您的姓名">
+        </div>
+        <div class="seller-home-appointment-item">
+            <input type="text" name="phone" placeholder="请输入您的手机信息">
+        </div>
+        <div class="seller-home-appointment-item">
+            <input type="text" name="name" id="datetime-picker" placeholder="请选择您的到店时间">
+        </div>
+        <div class="seller-home-appointment-footer">
+            <div>确认预约</div>
+        </div>
+    </div>
+</div>
+
+<!-- seller 预约时间 - end -->
+
+<script>
+    ((w, d) => {
+        w.onload = e => {
+            $(".seller-footer-collect").on("click", function (e) {
+                $(this).toggleClass("seller-footer-collect-active")
+            });
+            $("#datetime-picker").datetimePicker({
+                yearSplit: '-',
+                monthSplit: '-',
+                dateSplit: '',
+            });
+
+            $(".seller-footer-appointment").on("click", function (e) {
+                $(".action-sheet").addClass("action-sheet-active")
+            });
+            $(".seller-home-appointment-close").on("click", function (e) {
+                $(".action-sheet").removeClass("action-sheet-active")
+            });
+            $(".action-sheet-mask").on("click", function (e) {
+                $(".action-sheet").removeClass("action-sheet-active")
+            });
+
+        }
+    })(window, document)
+
+
+</script>

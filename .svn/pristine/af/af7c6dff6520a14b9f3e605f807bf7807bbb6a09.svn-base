@@ -1,0 +1,38 @@
+@@include('layout/layout/index.html', {
+"title": "八块钱商城",
+"header": true
+})
+<div id="seller_layout" class="layout-view">
+    <div class="orderDetail">
+        <div class="orderDetail_text">待付款</div>
+        <!-- 物流信息 -->
+        <div class="orderDetail_address"></div>
+        <!-- 物流信息 --end-->
+
+        <!-- 待结算商品 -->
+        <div class="readyPay">
+            <span>待结算商品</span>
+        </div>
+        <div class="orderDetail_items">
+            <div class="orderDetail_items_store">
+                顾家家具旗舰店
+            </div>
+            <div class="orderDetail_items_main">
+                <div class="items_main_img">
+                    <img src="../../../images/jiaju.PNG" alt="">
+                </div>
+                <div class="items_main_text">
+                    <div class="items_main_title">顾家家具 定制家具椅子高端大气上档次</div>
+                    <div class="items_main_color">灰色</div>
+                    <div class="items_main_price">¥ 523<span
+                            style="font-size: 0.24rem;font-weight: 400;color:#999999;margin-left:0.12rem;">×1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 待结算商品 --end -->
+
+    </div>
+</div>
+
+@@include('layout/footer/index.html')

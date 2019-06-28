@@ -1,0 +1,227 @@
+@import "../../styles/common.less";
+@import "../../styles/main.less";
+
+#cart_layout{
+  display:flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.cart-scroll{
+  flex:auto;
+  width: 100%;
+  padding: 0 0.32rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cart-header{
+  width: 100%;
+  height: 1.52rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  transition:  all linear 0.2s;
+  padding:0 0.32rem;
+  flex: none;
+}
+.cart-header span{
+  font-size: 0.4rem;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+}
+.cart-header-setting{
+  width: 0.56rem;
+  height: 0.56rem;
+  .bgSet(0.44rem 0.44rem);
+  background-image: url("../images/header-setting-icon.png");
+}
+// 购物车单条
+.cart-item{
+  margin-bottom: 0.32rem;
+  background-color:#fff;
+  box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+.cart-item:first-child{
+  margin-top: 0.32rem;
+}
+.cart-item-seller{
+  width: 100%;
+  height: 0.84rem;
+  display:flex;
+  align-items: center;
+}
+.cart-item-seller-checkbox,.cart-item-product-checkbox{
+  margin:0 0.32rem;
+  flex:none;
+  .checkbox;
+}
+.cart-item-seller-name{
+  font-size: 0.24rem;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+  margin: 0 0.16rem;
+}
+.cart-item-shop-tags,.cart-item-more{
+  width: 0.36rem;
+  height: 0.36rem;
+  .bgSet(0.28rem 0.28rem);
+}
+.cart-item-shop-tags{
+  background-image: url("../images/cart-seller-icon.png");
+}
+.cart-item-more{
+  background-image: url("../images/more-icon.png");
+}
+.cart-item-product{
+  width: 100%;
+  height: 2rem;
+  padding-right: 0.32rem;
+  margin: 0.32rem 0;
+  display:flex;
+  align-items: center;
+  overflow: hidden;
+}
+.cart-item-product label{
+  flex: none;
+  width: 2.96rem;
+  height: 100%;
+  display:flex;
+  margin-right: 0.24rem;
+  align-items: center;
+}
+.cart-item-product-icon{
+  .imgAll;
+  width: 2rem;
+  height: 2rem;
+  flex:none;
+  border-radius: 0.12rem;
+}
+.cart-item-product-box{
+  flex:auto;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cart-item-product-name{
+  height: 0.72rem;
+  font-size: 0.26rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  .fontBreak(2, 0.36rem);
+}
+.cart-item-product-des{
+  width: 100%;
+  height: 0.32rem;
+  display:flex;
+  align-items: center;
+}
+.cart-item-product-des span{
+  font-size: 0.24rem;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  position:relative;
+}
+.cart-item-product-des span:last-child::before{
+  content:"";
+  width: 0.32rem;
+  height: 0.32rem;
+  background-image: url("../images/more-icon.png");
+  .bgSet(0.24rem 0.24rem);
+  display:inline-block;
+  position:absolute;
+  right: -0.32rem;
+  top:50%;
+  transform: translateY(-50%);
+}
+.cart-item-product-price{
+  width: 100%;
+  height: 0.44rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-item-product-price .price{
+  font-size: 0.32rem;
+  font-weight:800;
+  color:rgba(241,90,83,1);
+}
+// 购物车底部
+.cart-footer{
+  padding: 0.12rem 0.16rem;
+  flex:none;
+  width: 100%;
+  height: 0.98rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:#fff;
+  box-shadow:-0.1rem 0.08rem 0.32rem rgba(0,0,0,0.16);
+  position:relative;
+  z-index: 100;
+}
+.cart-footer-checkbox{
+  font-size: 0.26rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  display:flex;
+  align-items: center;
+}
+.cart-footer-checkbox input{
+  display:inline-block;
+  margin-right: 0.16rem;
+  .checkbox;
+}
+.cart-footer-price{
+  margin-left: auto;
+  font-size: 0.26rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  margin-right: 0.48rem;
+}
+.cart-footer-price span{
+  font-size: 0.32rem;
+  font-weight:800;
+  color:rgba(241,90,83,1);
+}
+.cart-footer-buy{
+  .button-default;
+  width: 2.1rem;
+  height: 0.74rem;
+  flex: none;
+}
+.cart-footer-menu{
+  width: 4.2rem;
+  height: 0.74rem;
+  display:flex;
+  border-radius: 0.08rem;
+  overflow: hidden;
+}
+.cart-footer-menu > div{
+  .hover-class;
+  width: 50%;
+  height: 0.74rem;
+  flex:none;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.26rem;
+  font-weight:800;
+}
+.cart-footer-collect{
+  background-color:rgba(255,222,69,1);
+  color:#333333;
+}
+.cart-footer-remove{
+  background-color:rgba(241,90,83,1);
+  color:#fff;
+}
+
+
+
+
+
+

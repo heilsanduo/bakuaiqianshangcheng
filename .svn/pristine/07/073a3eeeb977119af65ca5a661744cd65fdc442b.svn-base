@@ -1,0 +1,44 @@
+@import "../../../styles/common.less";
+// 注册页面
+.register{
+    width:100%;
+    height:100%;
+    .register_header{
+        width: 100%;
+        height: 5.52rem;
+        position:relative;
+        background-image:url("../images/register_bg.png");
+        .bgSet();
+       .register_text{
+            width:100%;
+            height:100%;
+          .register-text-h2{
+            width:0.4rem;
+            height:0.28rem;
+            font-size:0.4rem;
+            font-weight:800;
+            line-height:0.28rem;
+            color:rgba(51,51,51,1);
+          }
+          .register-text-new{
+            width:0.84rem;
+            height:0.17rem;
+            font-size:0.06rem;
+            font-weight:400;
+            line-height:0.17rem;
+            color:rgba(51,51,51,1);
+          }
+
+        }
+        .register_main{
+            position:absolute;
+            width:3.43rem;
+            height:3.38rem;
+            background:rgba(255,255,255,1);
+            box-shadow:0px 0.04rem 0.16rem rgba(0,0,0,0.08);
+            border-radius:0.1rem;
+        }
+    }
+}
+
+

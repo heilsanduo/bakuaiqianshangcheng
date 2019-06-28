@@ -1,0 +1,221 @@
+@import "../../../styles/common.less";
+#pay_layout{
+  padding: 0 0.32rem;
+  background-color:#fff;
+}
+.pay-message-box{
+  width: 6.68rem;
+  height: 4.16rem;
+  margin:0.4rem auto 0.8rem auto;
+  background-color:rgba(255,255,255,1);
+  box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+  border-radius: 0.12rem;
+}
+
+.pay-message-title{
+  width: 100%;
+  height: 0.92rem;
+  display:flex;
+  align-items: center;
+  padding: 0 0.32rem;
+}
+.pay-message-title span,
+.pay-order-box-header span{
+  .yellowBottom();
+}
+.pay-seller-box{
+  padding: 0 0.32rem 0.24rem 0.32rem;
+  display:flex;
+  align-items: stretch;
+  border-bottom: 2px solid rgba(245,245,245,1);
+}
+.pay-seller-icon{
+  flex:none;
+  width: 2rem;
+  height: 1.34rem;
+  overflow: hidden;
+  border-radius: 0.08rem;
+  margin-right: 0.32rem;
+  .imgAll;
+}
+.pay-seller-message{
+  display:flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.pay-seller-name{
+  font-size: 0.32rem;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+  .fontBreak(1, 0.44rem)
+}
+.pay-seller-address{
+  height:0.36rem;
+  font-size: 0.26rem;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  .fontBreak(2, 0.36rem)
+}
+.pay-account-box{
+  padding:0 0.32rem;
+  height: 0.74rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pay-account-box span{
+  font-size: 0.28rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.pay-amount-box{
+  width: 100%;
+  height: 0.88rem;
+  background-color:rgba(245,245,245,1);
+  border-radius: 0.12rem;
+  padding:0 0.32rem;
+  display:flex;
+  align-items: center;
+}
+.pay-amount-box input{
+  flex: auto;
+  -webkit-appearance: none;
+  border:0;
+  outline: none;
+  height: 0.44rem;
+  line-height: 0.44rem;
+  font-size: 0.28rem;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  background-color:transparent;
+}
+.pay-amount-box span{
+  font-size: 0.28rem;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  margin-left: 0.2rem;
+}
+.pay-amount-tip-box{
+  width: 100%;
+  height: 0.66rem;
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.24rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+// action-sheet
+.action-sheet{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left:0;
+  top:0;
+  z-index: -1000;
+  opacity: 0;
+  transition: all linear 0.4s;
+}
+.action-sheet-active{
+  z-index: 1000;
+  opacity: 1;
+  transition: all linear 0.1s;
+}
+.action-sheet-mask{
+  position:absolute;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0);
+  z-index: -100;
+  transition: all linear 0.2s;
+}
+.pay-order-box{
+  width: 100%;
+  height:6.8rem;
+  background-color:rgba(255,255,255,1);
+  border-radius: 0.2rem 0.2rem 0 0;
+  position:absolute;
+  left:0;
+  bottom:-8rem;
+  z-index: 200;
+  transition: all linear 0.2s;
+  display:flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.action-sheet-active .action-sheet-mask{
+  background-color:rgba(0,0,0,0.6);
+  z-index: 100;
+}
+.action-sheet-active .pay-order-box{
+  bottom: 0;
+}
+.pay-order-box-header,.pay-order-box-content,.pay-order-box-footer{
+  width: 100%;
+  flex:none;
+  padding: 0 0.32rem;
+}
+.pay-order-box-header,
+.pay-order-box-footer{
+  height: 0.92rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pay-order-box-header{
+  border-bottom:1px solid rgba(245,245,245,1);
+}
+.pay-order-box-footer{
+  height: 1.08rem;
+  border-top:0.02rem solid rgba(239,239,239,1);
+}
+.action-sheet-close{
+  width: 0.92rem;
+  height: 0.92rem;
+  .bgSet(0.44rem 0.44rem);
+  background-image: url("../images/close_black_icon.png");
+}
+.pay-order-box-content{
+  flex:auto;
+  padding:0 0.64rem;
+}
+.pay-order-money{
+  width: 100%;
+  height: 1.62rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.48rem;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+}
+.pay-order-money span{
+  display:flex;
+  align-items: baseline;
+}
+.pay-order-money i{
+  font-size: 0.28rem;
+  font-weight:800;
+  font-style: normal;
+  margin-left: 0.08rem;
+}
+.pay-order-item{
+  width: 100%;
+  height: 1.04rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.28rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  border-bottom: 1px solid rgba(245,245,245,1);
+}
+.pay-order-item:last-child{
+  border: 0;
+}
+.pay-order-item span{
+  color:rgba(153,153,153,1);
+}
+

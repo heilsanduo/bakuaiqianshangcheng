@@ -1,0 +1,234 @@
+@@include('layout/layout/index.html', {
+"title": "我的收藏",
+"header": true
+})
+
+<div class="mycollect-box">
+	<div class="mycollect-box-top" id="mycollect-box-top">
+		<div class="divs mycollect-active">产品</div>
+		<div class="divs">商家</div>
+	</div>
+	<div class="mycollect-box-bottom" id="mycollect-box-bottom">
+		<div class="option" style="display: block">
+			<div class="option-box">
+				<div class="option-content">
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								63人已收藏
+							</div>
+							<div class="option-content-middle-right-bottom">
+								￥523
+							</div>
+							<div class="option-payment">删除收藏</div>
+						</div>
+					</div>
+				</div>
+				<div class="option-content">
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								63人已收藏
+							</div>
+							<div class="option-content-middle-right-bottom">
+								￥523
+							</div>
+							<div class="option-payment">删除收藏</div>
+						</div>
+					</div>
+				</div>
+				<div class="option-content">
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								63人已收藏
+							</div>
+							<div class="option-content-middle-right-bottom">
+								￥523
+							</div>
+							<div class="option-payment">删除收藏</div>
+						</div>
+					</div>
+				</div>
+				<div class="option-content">
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								63人已收藏
+							</div>
+							<div class="option-content-middle-right-bottom">
+								￥523
+							</div>
+							<div class="option-payment">删除收藏</div>
+						</div>
+					</div>
+				</div>
+				<div class="option-content">
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								63人已收藏
+							</div>
+							<div class="option-content-middle-right-bottom">
+								￥523
+							</div>
+							<div class="option-payment">删除收藏</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="option">
+			<div class="option-box">
+				<div class="mycollect-merchant">
+					<div class="mycollect-merchant-left">
+						<img src="../../../images/ceshi.jpg" alt="">
+					</div>
+					<div class="mycollect-merchant-right">
+						<div class="mycollect-merchant-right-title">
+							苏宁易购（威尼斯广场店）
+						</div>
+						<div class="mycollect-merchant-right-site">
+							地址：东莞市莞城区东纵路111号威尼斯广场写字楼一、二层
+						</div>
+						<div class="mycollect-merchant-right-phone">
+							电话：18666862338
+						</div>
+						<div class="mycollect-merchant-right-delete">
+							删除收藏
+						</div>
+					</div>
+				</div>
+				<div class="mycollect-merchant">
+					<div class="mycollect-merchant-left">
+						<img src="../../../images/ceshi.jpg" alt="">
+					</div>
+					<div class="mycollect-merchant-right">
+						<div class="mycollect-merchant-right-title">
+							苏宁易购（威尼斯广场店）
+						</div>
+						<div class="mycollect-merchant-right-site">
+							地址：东莞市莞城区东纵路111号威尼斯广场写字楼一、二层
+						</div>
+						<div class="mycollect-merchant-right-phone">
+							电话：18666862338
+						</div>
+						<div class="mycollect-merchant-right-delete">
+							删除收藏
+						</div>
+					</div>
+				</div>
+				<div class="mycollect-merchant">
+					<div class="mycollect-merchant-left">
+						<img src="../../../images/ceshi.jpg" alt="">
+					</div>
+					<div class="mycollect-merchant-right">
+						<div class="mycollect-merchant-right-title">
+							苏宁易购（威尼斯广场店）
+						</div>
+						<div class="mycollect-merchant-right-site">
+							地址：东莞市莞城区东纵路111号威尼斯广场写字楼一、二层
+						</div>
+						<div class="mycollect-merchant-right-phone">
+							电话：18666862338
+						</div>
+						<div class="mycollect-merchant-right-delete">
+							删除收藏
+						</div>
+					</div>
+				</div>
+				<div class="mycollect-merchant">
+					<div class="mycollect-merchant-left">
+						<img src="../../../images/ceshi.jpg" alt="">
+					</div>
+					<div class="mycollect-merchant-right">
+						<div class="mycollect-merchant-right-title">
+							苏宁易购（威尼斯广场店）
+						</div>
+						<div class="mycollect-merchant-right-site">
+							地址：东莞市莞城区东纵路111号威尼斯广场写字楼一、二层
+						</div>
+						<div class="mycollect-merchant-right-phone">
+							电话：18666862338
+						</div>
+						<div class="mycollect-merchant-right-delete">
+							删除收藏
+						</div>
+					</div>
+				</div>
+				<div class="mycollect-merchant">
+					<div class="mycollect-merchant-left">
+						<img src="../../../images/ceshi.jpg" alt="">
+					</div>
+					<div class="mycollect-merchant-right">
+						<div class="mycollect-merchant-right-title">
+							苏宁易购（威尼斯广场店）
+						</div>
+						<div class="mycollect-merchant-right-site">
+							地址：东莞市莞城区东纵路111号威尼斯广场写字楼一、二层
+						</div>
+						<div class="mycollect-merchant-right-phone">
+							电话：18666862338
+						</div>
+						<div class="mycollect-merchant-right-delete">
+							删除收藏
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+@@include('layout/footer/index.html')
+<script>
+	$(function () {
+		//选项卡
+		$("#mycollect-box-top div").click(function () {
+			//点击当前的变高亮+排他
+			$(this)
+				.addClass("mycollect-active")
+				.siblings("div")
+				.removeClass("mycollect-active");
+			//内容跟着出来
+			$("#mycollect-box-bottom .option")
+				.eq($(this).index())
+				.css("display", "block")
+				.siblings()
+				.css("display", "none");
+		});
+	});
+
+</script>

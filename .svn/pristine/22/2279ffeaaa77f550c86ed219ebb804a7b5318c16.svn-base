@@ -1,0 +1,98 @@
+
+
+<div class="seller-list-menu">
+    <div class="seller-list-menu-nav seller-list-menu-more seller-list-menu-nav-active" data-target="classify">分类</div>
+    <div class="seller-list-menu-nav" data-target="area">区域</div>
+    <div class="seller-list-menu-nav" data-target="else">综合</div>
+</div>
+
+
+
+<div class="action-scroll action-scroll-classify">
+    <div class="seller-list-menu-mask"></div>
+    <div class="seller-list-menu-scroll">
+        <div class="seller-menu-classify">
+            <div class="seller-list-menu-item"><span>热门商家</span></div>
+            <div class="seller-list-menu-item"><span>装修设计</span></div>
+            <div class="seller-list-menu-item"><span>卫浴</span></div>
+            <div class="seller-list-menu-item"><span>建材城</span></div>
+            <div class="seller-list-menu-item"><span>净水器</span></div>
+            <div class="seller-list-menu-item"><span>热门商家</span></div>
+            <div class="seller-list-menu-item"><span>装修设计</span></div>
+            <div class="seller-list-menu-item"><span>卫浴</span></div>
+            <div class="seller-list-menu-item"><span>建材城</span></div>
+            <div class="seller-list-menu-item"><span>净水器</span></div>
+            <div class="seller-list-menu-item"><span>热门商家</span></div>
+            <div class="seller-list-menu-item"><span>装修设计</span></div>
+            <div class="seller-list-menu-item"><span>卫浴</span></div>
+            <div class="seller-list-menu-item"><span>建材城</span></div>
+            <div class="seller-list-menu-item"><span>净水器</span></div>
+        </div>
+    </div>
+</div>
+<div class="action-scroll action-scroll-area">
+    <div class="seller-list-menu-mask"></div>
+    <div class="seller-list-menu-scroll">
+        <div class="seller-menu-area">
+            <div class="seller-list-menu-scroll-left">
+                <div class="seller-list-menu-item"><span>全国</span></div>
+                <div class="seller-list-menu-item"><span>东莞</span></div>
+                <div class="seller-list-menu-item"><span>广州</span></div>
+                <div class="seller-list-menu-item"><span>惠州</span></div>
+                <div class="seller-list-menu-item"><span>佛山</span></div>
+                <div class="seller-list-menu-item"><span>深圳</span></div>
+                <div class="seller-list-menu-item"><span>香港</span></div>
+                <div class="seller-list-menu-item"><span>卫浴</span></div>
+                <div class="seller-list-menu-item"><span>建材</span></div>
+                <div class="seller-list-menu-item"><span>净水</span></div>
+                <div class="seller-list-menu-item"><span>热门</span></div>
+                <div class="seller-list-menu-item"><span>装修</span></div>
+                <div class="seller-list-menu-item"><span>卫浴</span></div>
+                <div class="seller-list-menu-item"><span>建材</span></div>
+                <div class="seller-list-menu-item"><span>净水</span></div>
+            </div>
+            <div class="seller-list-menu-scroll-right">
+                <div class="seller-list-menu-item"><span>热门商家</span></div>
+                <div class="seller-list-menu-item"><span>热门商家</span></div>
+                <div class="seller-list-menu-item"><span>热门商家</span></div>
+                <div class="seller-list-menu-item"><span>热门商家</span></div>
+                <div class="seller-list-menu-item"><span>热门商家</span></div>
+                <div class="seller-list-menu-item"><span>热门商家</span></div>
+                <div class="seller-list-menu-item"><span>热门商家</span></div>
+                <div class="seller-list-menu-item"><span>热门商家</span></div>
+                <div class="seller-list-menu-item"><span>热门商家</span></div>
+                <div class="seller-list-menu-item"><span>热门商家</span></div>
+                <div class="seller-list-menu-item"><span>热门商家</span></div>
+                <div class="seller-list-menu-item"><span>热门商家</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="action-scroll action-scroll-else">
+    <div class="seller-list-menu-mask"></div>
+    <div class="seller-list-menu-scroll">
+        ccccc
+    </div>
+</div>
+
+
+<script>
+	((w, d) => {
+		$(".seller-list-menu div").on("click", function(e){
+			$(".action-scroll").removeClass("action-scroll-active")
+			$(this).addClass("seller-list-menu-nav-active").siblings().removeClass("seller-list-menu-nav-active")
+			$(`.action-scroll-${e.target.dataset.target}`).addClass("action-scroll-active")
+		})
+		$(".seller-list-menu-mask").on("click", function(){
+			$(".action-scroll").removeClass("action-scroll-active")
+		})
+		$(".seller-list-menu-item").on("click", function(){
+			$(this).addClass("seller-list-menu-item-active").siblings().removeClass("seller-list-menu-item-active")
+		});
+	})(window, document)
+</script>
+
+
+
+
+

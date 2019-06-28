@@ -1,0 +1,116 @@
+@@include('layout/layout/index.html', {
+"title": "我的"
+})
+<div id="personal_layout" class="layout-view">
+
+    <div class="cart-header">
+        <span>我的</span>
+        <a href="./set.html">
+            <div class="cart-header-setting">
+                <img src="../../../images/header-setting-icon.png" alt="">
+            </div>
+        </a>
+    </div>
+
+    <div class="personal-center">
+        <div class="personal-icon">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-04-26/1077743821d4ef66bf61d151a3f75538.jpg"
+                alt="">
+        </div>
+        <span class="personal-nickname">咋咋小朋友</span>
+    </div>
+
+    <div class="personal-tabbox">
+        <div class="personal-tabbox-header">
+            <div class="personal-tabbox-header-active"><span>我的订单</span></div>
+            <div><span>我的积分商城</span></div>
+        </div>
+        <div class="personal-tabbox-body personal-tabbox-body-active">
+            <a href="./myorder.html">
+                <img src="./images/dingdan.png" alt="">
+                <span>全部订单</span>
+            </a>
+            <a href="###">
+                <img src="./images/quanbao.png" alt="">
+                <span>待付款</span>
+            </a>
+            <a href="###">
+                <i>2</i>
+                <img src="./images/fahuo.png" alt="">
+                <span>待发货</span>
+            </a>
+            <a href="###">
+                <img src="./images/shouhuo.png" alt="">
+                <span>待收货</span>
+            </a>
+            <a href="###">
+                <img src="./images/tunkuo.png" alt="">
+                <span>退款/售后</span>
+            </a>
+        </div>
+        <div class="personal-tabbox-body">
+            <a href="./myintegral.html">
+                <img src="./images/dingdan.png" alt="">
+                <span>全部订单</span>
+            </a>
+            <a href="./integral_particulars.html">
+                <img src="./images/quanbao.png" alt="">
+                <span>待付款</span>
+            </a>
+            <a href="###">
+                <img src="./images/fahuo.png" alt="">
+                <span>待发货</span>
+            </a>
+            <a href="###">
+                <img src="./images/shouhuo.png" alt="">
+                <span>待收货</span>
+            </a>
+            <a href="###">
+                <img src="./images/tunkuo.png" alt="">
+                <span>退款/售后</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="personal-menu">
+        <a href="./mycollect.html">
+            <div class="personal-menu-nav">
+                <span class="personal-menu-icon collect-icon"></span>
+                我的收藏
+            </div>
+        </a>
+        <div class="personal-menu-nav">
+            <span class="personal-menu-icon assemble-icon"></span>
+            我的拼团
+        </div>
+        <a href="./mycoupon.html">
+            <div class="personal-menu-nav">
+                <span class="personal-menu-icon coupon-icon"></span>
+                我的优惠券
+            </div>
+        </a>
+
+    </div>
+
+
+    <script>
+        ((w, d) => {
+            $(".personal-tabbox-header div").on("click", function (e) {
+                $(this).addClass("personal-tabbox-header-active").siblings().removeClass(
+                    "personal-tabbox-header-active")
+                $(".personal-tabbox-body").eq($(this).index()).addClass("personal-tabbox-body-active")
+                    .siblings().removeClass("personal-tabbox-body-active")
+            })
+            $('.personal-menu-nav').click(function () {
+                $(window).attr('location', './groupBuy_detail.html');
+            })
+        })(window, document)
+
+    </script>
+
+
+</div>
+@@include('layout/tabbar/index.html', {
+"page": "personal"
+})
+@@include('layout/footer/index.html')

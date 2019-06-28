@@ -1,0 +1,68 @@
+<component src="layout/index.html" title="八块钱商城" header></component>
+
+<div id="seller_layout" class="layout-view">
+    <div class="loginClick">
+        <div class="register_click">
+            注册并登录
+        </div>
+        <div class="login_click">
+            注册并登录
+        </div>
+        <div class="login_click_items clearfix">
+            <div class="items_list">
+                <div class="items_list_img">
+                    <img src="" alt="">
+                </div>
+                <div class="items_text">
+                    <div class="items_list_title">顾家家居 定制家具椅子高端大气上档次</div>
+                    <div class="item_address">东莞</div>
+                    <div class="item_others">
+                        <div class="item_price">¥ 523</div>
+                        <div class="item_buy">12人购买</div>
+                    </div>
+                </div>
+            </div>
+            <div class="items_list">
+                <div class="items_list_img">
+                    <img src="" alt="">
+                </div>
+                <div class="items_text">
+                    <div class="items_list_title">顾家家居 定制家具椅子高端大气上档次</div>
+                    <div class="item_address">东莞</div>
+                    <div class="item_others">
+                        <div class="item_price">¥ 523</div>
+                        <div class="item_buy">12人购买</div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="items_list">
+                <div class="items_list_img">
+                    <img src="" alt="">
+                </div>
+                <div class="items_text">
+                    <div class="items_list_title">顾家家居 定制家具椅子高端大气上档次</div>
+                    <div class="item_address">东莞</div>
+                    <div class="item_others">
+                        <div class="item_price">¥ 523</div>
+                        <div class="item_buy">12人购买</div>
+                    </div>
+                </div>
+            </div>
+            <div class="items_list">
+                <div class="items_list_img">
+                    <img src="" alt="">
+                </div>
+                <div class="items_text">
+                    <div class="items_list_title">顾家家居 定制家具椅子高端大气上档次</div>
+                    <div class="item_address">东莞</div>
+                    <div class="item_others">
+                        <div class="item_price">¥ 523</div>
+                        <div class="item_buy">12人购买</div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<component src="footer/index.html"></component>

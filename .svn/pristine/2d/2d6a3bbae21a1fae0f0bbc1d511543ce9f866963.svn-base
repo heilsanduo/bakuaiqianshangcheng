@@ -1,0 +1,12 @@
+<component src="layout/index.html" title="我的订单" header></component>
+<div class="myorder-box">
+    <div class="myorder-box-top" id="myorder-box-top">
+        <div class="active">全部订单</div>
+        <div>待付款</div>
+        <div>待发货</div>
+        <div>待收货</div>
+        <div>退款/售后</div>
+    </div>
+    <div class="myorder-box-bottom"></div>
+</div>
+<component src="footer/index.html"></component>

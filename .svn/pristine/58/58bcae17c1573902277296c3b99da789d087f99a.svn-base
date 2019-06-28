@@ -1,0 +1,12 @@
+<!-- 公用头部 -->
+
+<div class="header">
+    @@if(left){
+    <a href="javascript:history.go(-1);" class="header-left"></a>
+    }
+    <span class="header-center">@@title</span>
+    @@if(right){
+    <a class="header-right"></a>
+    }
+</div>
+

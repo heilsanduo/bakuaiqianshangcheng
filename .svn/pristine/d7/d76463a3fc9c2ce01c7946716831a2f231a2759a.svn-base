@@ -1,0 +1,127 @@
+$(function () {
+    //数据校验
+    let isokarr = []; //校验状态
+    $('#phoneLogin_num').blur(function () { //手机号校验
+        let val = $(this).val();
+        if (val) {
+            if ((/^1[34578]\d{9}$/.test(val))) { //正则是否通过
+                $('.phoneLogin_wrong_msg').css('display', 'none');
+                $('.phoneLogin_wrong_msg').css('background', '#FFDE45');
+                $.ajax({
+                    type: 'POST',
+                    url: '',
+                    data: `inter=checkphone&phone=${val}`,
+                    success: function (data) {
+                        let json = JSON.parse(data);
+                        isokarr[0] = true;
+                        // console.log('用户名验证成功', isokarr);
+                        $('.phone_bind_send_code').css('background', '#FFDE45');
+                        // 验证码 倒计时
+                        // var code = ""; //接收验证码   
+                        // $('#send_code').click(function () {
+                        //     var count = 60;
+                        //     var phone = $("#phone_num").val();//手机号码  
+                        //     var reg_phone = /^1[34578]\d{9}$/;
+                        //     if (!reg_phone.test(phone)) {   //验证手机是否符合格式
+                        //         $('.phone_wrong_msg').html('请输入正确的手机号');
+                        //     }
+                        //     //开始计时  
+                        //     $('#send_code').css('background', '#EFEFEF');
+                        //     $("#send_code").attr('disabled', 'disabled');
+                        //     $("#send_code").html("倒计时" + count + "秒");
+                        //     var timer = setInterval(function () {
+                        //         count--;
+                        //         $("#send_code").html("倒计时" + count + "秒");
+                        //         if (count == 0) {
+                        //             clearInterval(timer);
+                        //             $("#send_code").attr("disabled", false);//启用按钮  
+                        //             $('#send_code').css('background', '#FFDE45');
+                        //             $("#send_code").html("重新发送验证码");
+
+                        //             code = "";//清除验证码。如果不清除，过时间后，输入收到的验证码依然有效 
+                        //         }
+                        //     }, 1000);
+
+                        //     //向后台发送处理数据  
+                        //     $.ajax({
+                        //         type: "POST", //用POST方式传输  
+                        //         dataType: "text", //数据格式:JSON  
+                        //         url: '', //目标地址  
+                        //         data: "phone=" + phone + "&code=" + code,
+                        //         error: function (XMLHttpRequest, textStatus, errorThrown) { },
+                        //         success: function (msg) { }
+                        //     });
+                        // });
+
+
+                    }
+                })
+            } else {
+                $('.phoneLogin_wrong_msg').css({ 'display': 'block' });
+                $('.phoneLogin_wrong_msg').html('请输入正确的手机号');
+                isokarr[0] = false;
+            }
+        } else {
+            $('.phoneLogin_wrong_msg').css({ 'display': 'block' });
+            $('.phoneLogin_wrong_msg').html('请输入手机号');
+            isokarr[0] = false;
+        }
+
+    });
+
+    $('#phoneLogin_code').blur(function () { //验证码验证
+        let val = $(this).val();
+        if (val) {
+            $('.phoneLogin_code_wrong_msg').css('display', 'none');
+            $.ajax({ //验证验证码
+                type: 'POST',
+                url: '../api/user.php',
+                data: `m=checkcode&captcha=${val}`,
+                success: function (data) {
+                    let json = JSON.parse(data);
+                    if (json.code) { //验证码正确
+                        isokarr[1] = true;
+                        // console.log('验证码验证成功', isokarr);
+                        $('.phoneLogin_code_wrong_msg').css('display', 'none');
+                        $('.phoneLogin_code_wrong_msg').css('background', '#FFDE45');
+                    } else {
+                        $('.phoneLogin_code_wrong_msg').css({ 'display': 'block' });
+                        $('.phoneLogin_code_wrong_msg').html('验证码不正确');
+                        // isokarr[1] = false;
+                    }
+                }
+
+            })
+        } else {
+            $(this).val('');
+            $('.phoneLogin_code_wrong_msg').css({ 'display': 'block' });
+            $('.phoneLogin_code_wrong_msg').html('验证码不能为空');
+            isokarr[1] = false;
+        }
+    })
+
+    $('.phone_login_footer_now').click(function () {
+        if (isokarr.indexOf(false) < 0) { //如果通过验证
+            console.log(isokarr);
+            let phone_num = $('#phoneLogin_num').val();
+            $.ajax({
+                type: 'POST',
+                url: '../api/user.php',
+                data: `m=register&name=${phone_num}`,
+                success: function (data) {
+                    if (JSON.parse(data).code) { //登录成功
+                        location.href = '../index.html'
+                    } else {//登录失败
+                        return false;
+                    }
+                }
+            })
+        } else {
+            // return false;
+            $('.phoneLogin_code_wrong_msg').css({ 'display': 'block' });
+            $('.phoneLogin_code_wrong_msg').html('验证码不对');
+        }
+
+    })
+
+})

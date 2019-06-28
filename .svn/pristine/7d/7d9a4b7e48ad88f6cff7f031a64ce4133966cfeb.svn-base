@@ -1,0 +1,39 @@
+
+
+<div class="seller-footer">
+    <div class="seller-footer-nav">
+        <div class="seller-footer-tell"></div>
+        <span>电话</span>
+    </div>
+    <div class="seller-footer-nav">
+        <div class="seller-footer-collect"></div>
+        <span>收藏</span>
+    </div>
+    {{if dg}}
+    <div class="seller-footer-menu">
+        <div class="seller-footer-item seller-footer-item-dg-left">
+            <span class="seller-footer-appointment">预约到店</span>
+        </div>
+        <div class="seller-footer-item seller-footer-item-dg-right">
+            <span class="seller-footer-pay">立即支付</span>
+        </div>
+    </div>
+    {{else}}
+    <div class="seller-footer-menu">
+        <div class="seller-footer-item seller-footer-item-left">
+            <span class="seller-footer-appointment">预约到店</span>
+        </div>
+        <div class="seller-footer-item seller-footer-item-right">
+            <span class="seller-footer-navigation">一键导航</span>
+        </div>
+    </div>
+    {{/if}}
+</div>
+
+<script>
+    $(".seller-footer-collect").on("click", function (e) {
+        $(this).toggleClass("seller-footer-collect-active")
+    })
+
+</script>
+

@@ -1,0 +1,23 @@
+<component src="layout/index.html" title="八块钱商城" header></component>
+
+<div class="search_index">
+    <component src="search_others/search_other.html"></component>
+    <div class="search_new">
+        <div class="search_new_header">
+            <div class="search_new_title">
+                <h5>最近搜索</h5>
+                <div class="search_new_icons"></div>
+            </div>
+            <div class="search_remove"></div>
+        </div>
+        <ul class="search_new_detail">
+            <li>顾家家居瓷砖</li>
+            <li>马可波罗</li>
+            <li>顾家家居瓷砖</li>
+            <li>马可波罗</li>
+            <li>马可波罗</li>
+            <li>顾家家居瓷砖</li>
+        </ul>
+    </div>
+
+</div>

@@ -1,0 +1,35 @@
+
+<!-- 首页banner -->
+<div class="home-swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-05-25/375.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-05-25/375.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-05-25/375.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-05-25/375.jpg" alt="">
+        </div>
+    </div>
+    <div class="home-swiper-pagination"></div>
+</div>
+<!-- 首页banner - end -->
+
+<script>
+	((w, d) => {
+		w.onload = () => {
+			const banner = new Swiper('.home-swiper', {
+				direction: 'horizontal', // 垂直切换选项
+				loop: true,
+				autoplay: true,
+				pagination: {
+					el: '.home-swiper-pagination',
+				}
+			})
+		}
+	})(window, document)
+</script>

@@ -1,0 +1,129 @@
+@import "../../../styles/common.less";
+@import "../../../styles/main.less";
+#pay_select_layout{
+  padding: 0 0.32rem;
+}
+.pay-select-box{
+  width: 100%;
+  height:4.08rem;
+  background:rgba(255,255,255,1);
+  box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+  border-radius: 0.12rem;
+  margin: 0.32rem auto;
+}
+.pay-select-header{
+  width: 100%;
+  height: 0.92rem;
+  display:flex;
+  align-items: center;
+  padding: 0 0.32rem;
+  border-bottom: 1px solid rgba(245,245,245,1);
+}
+.pay-select-header span{
+  .yellowBottom();
+}
+.pay-select-price{
+  width: 100%;
+  height: 2.26rem;
+  display:flex;
+  flex-direction: column;
+  border-bottom: 1px solid rgba(245,245,245,1);
+}
+.pay-select-price > span{
+  flex: auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.48rem;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+}
+.pay-select-price .price{
+  display:flex;
+  align-items: flex-end;
+}
+.pay-select-price > span i{
+  font-style: normal;
+  font-size: 0.28rem;
+  margin-left: 0.08rem;
+  vertical-align: bottom;
+}
+.pay-select-price div,.pay-select-seller{
+  width: 100%;
+  height: 0.86rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.48rem;
+  flex:none;
+  font-size: 0.24rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+}
+.pay-select-price div span,.pay-select-seller span{
+  font-size: 0.24rem;
+  color:rgba(153,153,153,1);
+}
+// 列表
+.pay-select-list{
+  width: 100%;
+  margin: 0.32rem auto;
+  overflow: hidden;
+  padding: 0 0.32rem;
+}
+.pay-select-item{
+  width: 100%;
+  height: 1.08rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(245,245,245,1);
+}
+.pay-select-item-icon{
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-right: 0.32rem;
+  .imgAll;
+}
+.pay-select-item-name{
+  font-size: 0.28rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  margin-right: auto;
+}
+.pay-select-item-radio{
+  .checkbox;
+}
+.pay-select-submit{
+  .button-default;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

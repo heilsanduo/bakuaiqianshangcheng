@@ -1,0 +1,91 @@
+<component src="layout/index.html" title="八块钱网商城" header></component>
+<div class="background">
+    <div class="my_mine">
+        <div class="my">
+            <div class="my_left">我的</div>
+            <a href="./set.html" class="my_right"></a>
+        </div>
+        <div class="my_head">
+            <img src="" alt="">
+        </div>
+        <div class="my_nickname">咋咋小朋友</div>
+        <div class="my_order">
+            <div class="my_order_top" id="my_order_top">
+                <div class="my_order_top_left" id="order">
+                    我的订单
+                </div>
+                <div class="my_order_top_right " id="integral">
+                    我的积分订单
+                    <div class="shut"></div>
+                </div>
+            </div>
+            <div class="my_order_bottom">
+                <div class="my_order_bottom_dl">
+                    <div class="my_order_bottom_dt"><img src="../../../images/dingdan.png" alt=""></div>
+                    <div class="my_order_bottom_dd">全部订单</div>
+                </div>
+                <div class="my_order_bottom_dl">
+                    <div class="my_order_bottom_dt"><img src="../../../images/quanbao.png" alt=""></div>
+                    <div class="my_order_bottom_dd">待付款</div>
+                </div>
+                <div class="my_order_bottom_dl">
+                    <div class="my_order_bottom_dt"><img src="../../../images/shouhuo.png" alt=""></div>
+                    <div class="my_order_bottom_dd">待发货</div>
+                </div>
+                <div class="my_order_bottom_dl">
+                    <div class="my_order_bottom_dt"><img src="../../../images/fahuo.png" alt=""></div>
+                    <div class="my_order_bottom_dd">待收款</div>
+                </div>
+                <div class="my_order_bottom_dl">
+                    <div class="my_order_bottom_dt"><img src="../../../images/tunkuo.png" alt=""></div>
+                    <div class="my_order_bottom_dd">退款/售后</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="my_order2">
+            <div class="my_order2_box">
+                <div class="my_order2_box1">
+                    <div class="my_order2_box1_inc"><img src="../../../images/wode.png" alt=""></div>
+                </div>
+                <div class="my_order2_box2">
+                    我的收藏
+                </div>
+                <div class="my_order2_box3">
+                    <div class="my_order2_box3_inc"></div>
+                </div>
+            </div>
+            <div class="my_order2_box">
+                <div class="my_order2_box">
+                    <div class="my_order2_box1">
+                        <div class="my_order2_box1_inc"><img src="../../../images/pingtuang.png" alt=""></div>
+                    </div>
+                    <div class="my_order2_box2">
+                        我的拼团
+                    </div>
+                    <div class="my_order2_box3">
+                        <div class="my_order2_box3_inc"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="my_order2_box">
+                <div class="my_order2_box">
+                    <div class="my_order2_box1">
+                        <div class="my_order2_box1_inc"><img src="../../../images/my_youhui.png" alt=""></div>
+                    </div>
+                    <div class="my_order2_box2">
+                        我的优惠卷
+                    </div>
+                    <div class="my_order2_box3">
+                        <div class="my_order2_box3_inc"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<component src="footer/index.html"></component>
+<component src="common/tabbar/index.html"></component>

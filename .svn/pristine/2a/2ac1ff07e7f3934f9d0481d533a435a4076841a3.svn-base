@@ -1,0 +1,23 @@
+
+<!-- 首页热门头条 -->
+<div class="home-hot-box">
+    <div class="home-hot-box-header">
+        <div class="home-box-header-icon"></div>
+        <div class="home-box-header-tab"></div>
+        <div class="home-box-header-des">八块钱网平台上线啦哈哈哈哈哈哈～</div>
+    </div>
+    <div class="home-hot-box-body">
+        <div class="home-hot-box-body-left">
+            <img src="./images/home-test-1.png" alt="">
+        </div>
+        <div class="home-hot-box-body-right">
+            <div class="home-hot-box-body-right-top">
+                <img src="./images/home-test-2.png" alt="">
+            </div>
+            <div class="home-hot-box-body-right-bottom">
+                <img src="./images/home-test-3.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 首页热门头条 - end -->

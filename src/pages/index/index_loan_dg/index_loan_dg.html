@@ -1,0 +1,36 @@
+@@include('layout/layout/index.html', {
+    "title": "首页",
+    "weui": true,
+    "swiper": true
+})
+
+<div id="home_layout" class="layout-view">
+
+    @@include('home/home_search/index.html')
+
+    @@include('home/home_swiper/index.html')
+
+    @@include('home/home_menu/index.html')
+
+    @@include('home/home_headlines/index.html')
+
+    @@include('home/home_vip_seller/index.html')
+
+    @@include('home/home_activity/index.html')
+
+    @@include('home/home_product_list/index.html')
+
+    <div class="company-box">
+        <a href="###">粤ICP备15073814号-2</a>
+        <a href="###">Copyright © 八块钱网商城. All rights reserved.</a>
+    </div>
+</div>
+
+
+@@include('layout/tabbar/index.html', {
+"page": "index"
+})
+@@include('layout/footer/index.html', {
+"weui": true,
+"swiper": true
+})

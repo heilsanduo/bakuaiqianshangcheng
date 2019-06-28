@@ -1,0 +1,65 @@
+
+<!-- 首页菜单 -->
+<div class="home-menu">
+    <div class="home-menu-body">
+        <div class="home-menu-header">
+            <div class="home-menu-header-active">毛坯房</div>
+            <div>精装房</div>
+        </div>
+        <div class="home-menu-content home-menu-content-active">
+            <div class="home-menu-item">
+                <img src="./images/home-menu-1.png" alt="">
+                <span>瓷砖</span>
+            </div>
+            <div class="home-menu-item">
+                <img src="./images/home-menu-2.png" alt="">
+                <span>地板</span>
+            </div>
+            <div class="home-menu-item">
+                <img src="./images/home-menu-3.png" alt="">
+                <span>卫浴</span>
+            </div>
+            <div class="home-menu-item">
+                <img src="./images/home-menu-4.png" alt="">
+                <span>吊顶</span>
+            </div>
+            <div class="home-menu-item">
+                <img src="./images/home-menu-5.png" alt="">
+                <span>橱柜</span>
+            </div>
+        </div>
+        <div class="home-menu-content">
+            <div class="home-menu-item">
+                <img src="./images/home-menu-1.png" alt="">
+                <span>瓷砖11</span>
+            </div>
+            <div class="home-menu-item">
+                <img src="./images/home-menu-2.png" alt="">
+                <span>地板11</span>
+            </div>
+            <div class="home-menu-item">
+                <img src="./images/home-menu-3.png" alt="">
+                <span>卫浴11</span>
+            </div>
+            <div class="home-menu-item">
+                <img src="./images/home-menu-4.png" alt="">
+                <span>吊顶11</span>
+            </div>
+            <div class="home-menu-item">
+                <img src="./images/home-menu-5.png" alt="">
+                <span>橱柜11</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 首页菜单 - end -->
+
+<script>
+    ((w, d) => {
+        $(".home-menu-header > div").on('click', function(e){
+        	$(this).addClass("home-menu-header-active").siblings().removeClass("home-menu-header-active")
+            $(".home-menu-content").eq($(this).index()).addClass("home-menu-content-active").siblings().removeClass("home-menu-content-active")
+        })
+    })(window, document)
+
+</script>

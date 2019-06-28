@@ -1,0 +1,57 @@
+@@include('layout/layout/index.html', {
+"title": "八块钱商城",
+"header": true
+})
+
+<div id="seller_layout" class="layout-view">
+    <div class="login">
+        <!-- login头部 -->
+        <div class="login_text">
+            <div class="login-text-now">登录</div>
+            <p class="login-text-new">欢迎您回来~</p>
+        </div>
+        <!-- login主体 -->
+        <div class="login_main">
+            <form action="#">
+                <!-- login主体内容区 -->
+                <div class="login_main_content">
+                    <div class="login_main_phone">
+                        <h5 class="login_phone"><span>手机号码</span></h5>
+                        <div class="login_phone_num">
+                            <div class="login_phone_main_icons"></div>
+                            <input id="login_phone_num" type="tel" placeholder="请输入手机号码">
+                            <div class="login_phone_wrong_msg">请输入正确的手机号码</div>
+                        </div>
+
+                    </div>
+
+                    <div class="login_main_dbpassword">
+                        <h5 class="login_dbpassword"><span>密码</span></h5>
+                        <div class="login_dbpassword_num">
+                            <div class="login_password_code_icons"></div>
+                            <input id="login_psw" type="password" placeholder="请输入您的密码">
+                            <div class="login_password_wrong_msg">密码不正确</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- login主体底部 -->
+                <div class="login_footer">
+                    <div class="login_footer_text">
+                        <div class="login_footer_forget">
+                            忘记密码?
+                        </div>
+                        <div class="login_footer_new">注册新用户</div>
+                    </div>
+                    <div id="login_btn" class="login_footer_now">
+                        登录
+                    </div>
+                    <div class="login_footer_phone">
+                        <p class="login_phone_text">手机验证码快捷登录</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@@include('layout/footer/index.html')

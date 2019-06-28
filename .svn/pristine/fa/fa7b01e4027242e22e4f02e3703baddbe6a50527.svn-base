@@ -1,0 +1,47 @@
+@@include('layout/layout/index.html', {
+"title": "八块钱商城",
+"header": true
+})
+
+<div class="search_index">
+    @@include('search_others/index.html')
+    <!-- 最近搜索 -->
+    <div class="search_new">
+        <div class="search_new_header">
+            <div class="search_new_title">
+                <h5>最近搜索</h5>
+                <div class="search_new_icons"></div>
+            </div>
+            <div class="search_remove"></div>
+        </div>
+        <ul class="search_new_detail">
+            <li>顾家家居瓷砖</li>
+            <li>马可波罗</li>
+            <li>顾家家居瓷砖</li>
+            <li>马可波罗</li>
+            <li>马可波罗</li>
+            <li>顾家家居瓷砖</li>
+        </ul>
+    </div>
+    <!-- 热门搜索 -->
+    <div class="search_hot">
+        <div class="search_hot_header">
+            <div class="search_hot_title">
+                <h5>热门搜索</h5>
+                <div class="search_hot_icons"></div>
+            </div>
+        </div>
+        <ul class="search_hot_detail">
+            <li>顾家家居瓷砖</li>
+            <li class="active">顾家家居瓷砖</li>
+            <li>顾家家居瓷砖</li>
+            <li class="active">马可波罗</li>
+            <li>顾家家居瓷砖</li>
+            <li class="active">马可波罗</li>
+            <li>顾家</li>
+            <li>阿波罗</li>
+            <li class="active">马可波罗</li>
+            <li>顾家家居瓷砖</li>
+        </ul>
+    </div>
+</div>

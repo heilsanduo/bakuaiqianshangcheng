@@ -1,0 +1,245 @@
+@@include('layout/layout/index.html', { "title": "我的优惠卷", "header": true })
+
+
+<div class="mycoupon-box">
+    <div class="mycoupon-box-top" id="mycoupon-box-top">
+        <div>未使用</div>
+        <div>已使用</div>
+        <div>已过期</div>
+        <div class="mycoupon-active">全部</div>
+        <span><img src="../../../images/mycoupon-set.png" alt=""></span>
+    </div>
+    <div class="mycoupon-box-bottom" id="mycoupon-box-bottom">
+        <div class="option">
+            1
+        </div>
+        <div class="option">
+            2
+        </div>
+        <div class="option">
+            3
+        </div>
+        <div class="option" style="display: block">
+            <div class="option-box" id="option-box">
+                <!-- 优惠券开始 -->
+                <div class="option-content">
+                    <div class="option-content-left">
+                        <div class="option-content-left-title">
+                            <div class="title-icon">
+                                <img src="../../../images/cart-seller-icon.png" alt="">
+                            </div>
+                            <div class="title-conten">
+                                苏宁易购（威尼斯广场店)
+                            </div>
+                            <div class="title-entrance">
+                                <img src="../../../images/option-ioc2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="option-content-left-bottom">
+                            <div class="option-content-left-bottom-img">
+                                <img src="../../../images/jiaju.PNG" alt="">
+                            </div>
+                            <div class="option-content-left-bottom-right">
+                                <div class="right-price">
+                                    <span class="span1">¥500</span>
+                                    <span class="span2">（满¥10000可使用）</span>
+                                    <span class="span3"></span>
+                                </div>
+                                <div class="right-date">
+                                    有效期：2018.12.09-2019.02.18
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-content-right" id="option-content-right">立即使用
+                        <div class="option-content-right-circle1"></div>
+                        <div class="option-content-right-circle2"></div>
+
+                    </div>
+                </div>
+                <!-- 优惠券结束 -->
+                <!-- 弹窗开始 -->
+                <div class="popup1" id="popup1"></div>
+                <div class="popup" id="popup">
+                    <h2>温馨提示</h2>
+                    <div class="popup-con">
+                        请确认您是否要使用，一经确认将无法撤销！
+                    </div>
+                    <div class="popup-bot">
+                        <div id="cancel">取消</div>
+                        <div id="affirm">确认</div>
+                    </div>
+                </div>
+                <div class="mycoupon-attention" id="mycoupon-attention">
+                    <h2>优惠券注意事项
+                        <span id="mycoupon-attention-iocn"></span>
+                    </h2>
+                    <div class="mycoupon-attention-con">1.特价商品和线上商品不可使用；2.此类券限用一张，且不与其他券重叠使用重叠使用； 3.特价商品和线上商品不可使用；4.此类券限用一张，且不与其他券重叠使用重叠使用。
+                    </div>
+
+                </div>
+                <!-- 弹窗结束 -->
+                <!-- 以下都是模板 -->
+                <div class="option-content">
+                    <div class="option-content-left">
+                        <div class="option-content-left-title">
+                            <div class="title-icon">
+                                <img src="../../../images/cart-seller-icon.png" alt="">
+                            </div>
+                            <div class="title-conten">
+                                苏宁易购（威尼斯广场店）
+                            </div>
+                            <div class="title-entrance">
+                                <img src="../../../images/option-ioc2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="option-content-left-bottom">
+                            <div class="option-content-left-bottom-img">
+                                <img src="../../../images/jiaju.PNG" alt="">
+                            </div>
+                            <div class="option-content-left-bottom-right">
+                                <div class="right-price">
+                                    <span class="span1">¥500</span>
+                                    <span class="span2">（满¥10000可使用）</span>
+                                    <span class="span3"></span>
+                                </div>
+                                <div class="right-date">
+                                    有效期：2018.12.09-2019.02.18
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-content-right">立即使用
+                        <div class="option-content-right-circle1"></div>
+                        <div class="option-content-right-circle2"></div>
+                    </div>
+                </div>
+
+                <div class="option-content">
+                    <div class="option-content-left">
+                        <div class="option-content-left-title">
+                            <div class="title-icon">
+                                <img src="../../../images/cart-seller-icon.png" alt="">
+                            </div>
+                            <div class="title-conten">
+                                苏宁易购（威尼斯广场店）
+                            </div>
+                            <div class="title-entrance">
+                                <img src="../../../images/option-ioc2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="option-content-left-bottom">
+                            <div class="option-content-left-bottom-img">
+                                <img src="../../../images/jiaju.PNG" alt="">
+                            </div>
+                            <div class="option-content-left-bottom-right">
+                                <div class="right-price">
+                                    <span class="span1">¥500</span>
+                                    <span class="span2">（满¥10000可使用）</span>
+                                    <span class="span3"></span>
+                                </div>
+                                <div class="right-date">
+                                    有效期：2018.12.09-2019.02.18
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-content-right act">已使用
+                        <div class="option-content-right-circle1"></div>
+                        <div class="option-content-right-circle2"></div>
+                    </div>
+                </div>
+
+                <div class="option-content">
+                    <div class="option-content-left">
+                        <div class="option-content-left-title">
+                            <div class="title-icon">
+                                <img src="../../../images/cart-seller-icon.png" alt="">
+                            </div>
+                            <div class="title-conten">
+                                苏宁易购（威尼斯广场店）
+                            </div>
+                            <div class="title-entrance">
+                                <img src="../../../images/option-ioc2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="option-content-left-bottom">
+                            <div class="option-content-left-bottom-img">
+                                <img src="../../../images/jiaju.PNG" alt="">
+                            </div>
+                            <div class="option-content-left-bottom-right">
+                                <div class="right-price">
+                                    <span class="span1">¥500</span>
+                                    <span class="span2">（满¥10000可使用）</span>
+                                    <span class="span3"></span>
+                                </div>
+                                <div class="right-date">
+                                    有效期：2018.12.09-2019.02.18
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-content-right act">已过期
+                        <div class="option-content-right-circle1"></div>
+                        <div class="option-content-right-circle2"></div>
+                    </div>
+                </div>
+
+                <div class="option-content">
+                    <div class="option-content-left">
+                        <div class="option-content-left-title">
+                            <div class="title-icon">
+                                <img src="../../../images/cart-seller-icon.png" alt="">
+                            </div>
+                            <div class="title-conten">
+                                苏宁易购（威尼斯广场店）
+                            </div>
+                            <div class="title-entrance">
+                                <img src="../../../images/option-ioc2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="option-content-left-bottom">
+                            <div class="option-content-left-bottom-img">
+                                <img src="../../../images/jiaju.PNG" alt="">
+                            </div>
+                            <div class="option-content-left-bottom-right">
+                                <div class="right-price">
+                                    <span class="span1">¥500</span>
+                                    <span class="span2">（满¥10000可使用）</span>
+                                    <span class="span3"></span>
+                                </div>
+                                <div class="right-date">
+                                    有效期：2018.12.09-2019.02.18
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="option-content-right">立即使用
+                        <div class="option-content-right-circle1"></div>
+                        <div class="option-content-right-circle2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('layout/footer/index.html')
+<script>
+    $(function() {
+        //选项卡
+        $("#mycoupon-box-top div").click(function() {
+            //点击当前的变高亮+排他
+            $(this)
+                .addClass("mycoupon-active")
+                .siblings("div")
+                .removeClass("mycoupon-active");
+            //内容跟着出来
+            $("#mycoupon-box-bottom .option")
+                .eq($(this).index())
+                .css("display", "block")
+                .siblings()
+                .css("display", "none");
+        });
+    });
+</script>

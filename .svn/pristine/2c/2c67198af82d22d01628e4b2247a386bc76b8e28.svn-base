@@ -1,0 +1,45 @@
+
+<!-- 首页 搜索栏 -->
+<div class="home-search-box">
+    <div class="home-search-address">东莞</div>
+    <div class="home-search-content">
+        <input type="search" name="search">
+        <span class="search-placeholder">请输入商品关键字</span>
+        <span class="search-icon"></span>
+    </div>
+</div>
+<!-- 首页 搜索栏 - end -->
+
+<script>
+	((w, d) => {
+		const TOPS = 200;
+		/**
+         * 监听内容块滚动操作搜索栏
+		 */
+		$("#home_layout").on('scroll', function (e) {
+			$(".home-search-box").css({
+				backgroundColor: `rgba(255,255,255, ${e.target.scrollTop / TOPS * 100}%)`,
+				boxShadow: `0 0.08rem 0.32rem rgba(0,0,0,${e.target.scrollTop / TOPS * 100 * 0.08}%)`
+			})
+			$(".home-search-content").css({
+				backgroundColor: `rgba(245,245,245, ${e.target.scrollTop / TOPS * 100 + 40}%)`
+			})
+			$(".search-icon").css({
+				opacity: `${e.target.scrollTop / TOPS}`
+			})
+			$(".search-placeholder").css({
+				color: e.target.scrollTop <= 50 ? `rgba(255, 255, 255, 1)` : `rgba(51, 51, 51, ${e.target.scrollTop / TOPS * 100}%)`
+			})
+			$(".home-search-address").css({
+				width: `${e.target.scrollTop >= TOPS ? (1 - e.target.scrollTop / TOPS) : 1}rem`,
+				paddingLeft: `${e.target.scrollTop >= TOPS ? 0 : 0.4}rem`
+			})
+		})
+		$(".home-search-content input").focus(function (e) {
+			$(".search-placeholder").hide()
+		})
+		$(".home-search-content input").blur(function (e) {
+			$(".search-placeholder").show()
+		})
+	})(window, document)
+</script>

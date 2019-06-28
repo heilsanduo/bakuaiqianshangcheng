@@ -1,0 +1,46 @@
+<component src="layout/index.html" title="八块钱商城" header></component>
+
+<div id="seller_layout" class="layout-view">
+    <div class="phone_login">
+        <div class="phone_login_text">
+            <div class="phone_login-text-now">登录</div>
+            <p class="phone_login-text-new">欢迎您回来~</p>
+        </div>
+        <div class="phone_login_main">
+            <form method="post" action="#">
+                <div class="phone_login_content">
+                    <div class="phone_login_main_phone">
+                        <h5 class="phone_login_phone">手机号码</h5>
+                        <div class="phone_login_phone_num">
+                            <div class="phone_login_main_icons"></div>
+                            <input id="phoneLogin_num" type="tel" placeholder="请输入手机号码">
+                            <div class="phoneLogin_wrong_msg">请输入正确的手机号码</div>
+                        </div>
+
+                    </div>
+
+                    <div class="phone_login_main_code">
+                        <h5 class="phone_login_code">验证码</h5>
+                        <div class="phone_login_code_num">
+                            <div class="phone_login_code_icons"></div>
+                            <input id="phoneLogin_code" type="number" placeholder="请输入验证码">
+                            <button id="phoneLogin_send_code" class="phone_login_send_code">获取验证码</button>
+                            <div class="phoneLogin_code_wrong_msg">验证码不正确</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="phone_login_footer">
+                    <div class="phone_login_footer_now">
+                        登录
+                    </div>
+                    <div class="phone_login_footer_phone">
+                        <p class="phone_login_phone_text">账号密码登录</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<component src="footer/index.html"></component>

@@ -1,0 +1,88 @@
+
+@@include('layout/layout/index.html', {
+"title": "在线支付",
+"header": true
+})
+
+<div id="pay_select_layout" class="layout-view">
+
+    <div class="pay-select-box">
+        <div class="pay-select-header"><span>支付详情</span></div>
+        <div class="pay-select-price">
+            <span><span class="price">100,200,000 <i>元</i></span></span>
+            <div>大写金额<span>壹亿零贰拾万元</span></div>
+        </div>
+        <div class="pay-select-seller">
+            收款商户<span>诺贝尔瓷砖有限公司（东莞）</span>
+        </div>
+    </div>
+    <div class="pay-select-list">
+
+        <label class="pay-select-item">
+            <div class="pay-select-item-icon">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/f444f5483b1950f8276ab44261d5ff69.png" alt="">
+            </div>
+            <div class="pay-select-item-name">微信支付</div>
+            <input name="pay_state" type="radio" class="pay-select-item-radio" />
+        </label>
+        <label class="pay-select-item">
+            <div class="pay-select-item-icon">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/f444f5483b1950f8276ab44261d5ff69.png" alt="">
+            </div>
+            <div class="pay-select-item-name">支付宝支付</div>
+            <input name="pay_state" type="radio" class="pay-select-item-radio" />
+        </label>
+        <label class="pay-select-item">
+            <div class="pay-select-item-icon">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/f444f5483b1950f8276ab44261d5ff69.png" alt="">
+            </div>
+            <div class="pay-select-item-name">东莞银行支付</div>
+            <input name="pay_state" type="radio" class="pay-select-item-radio" />
+        </label>
+        <label class="pay-select-item">
+            <div class="pay-select-item-icon">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/f444f5483b1950f8276ab44261d5ff69.png" alt="">
+            </div>
+            <div class="pay-select-item-name">免费支付</div>
+            <input name="pay_state" type="radio" class="pay-select-item-radio" />
+        </label>
+
+    </div>
+
+    <div class="pay-select-submit">确认支付</div>
+
+</div>
+
+
+@@include('layout/footer/index.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

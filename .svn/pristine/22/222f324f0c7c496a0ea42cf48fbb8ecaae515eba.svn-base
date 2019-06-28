@@ -1,0 +1,48 @@
+@import "../../../styles/common.less";
+
+.mycoupon-box {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.mycoupon-box-top {
+	width: 6.86rem;
+	height: 1.24rem;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.mycoupon-box-top>div {
+	white-space: nowrap;
+	height: 0.44rem;
+	margin: 0 0.32rem 0 0;
+	font-size: 0.28rem;
+	font-weight: 400;
+	line-height: 0.4rem;
+	color: rgba(51, 51, 51, 1);
+}
+
+.mycoupon-box-top>span {
+	width: .44rem;
+	height: .44rem;
+	position: absolute;
+	right: 0;
+}
+
+.mycoupon-active {
+	height: .44rem !important;
+	font-size: .32rem !important;
+	font-weight: 800 !important;
+	line-height: .44rem !important;
+	.yellowBottom();
+}
+
+.option {
+	width: 100%;
+	height: 100%;
+	display: none;
+}

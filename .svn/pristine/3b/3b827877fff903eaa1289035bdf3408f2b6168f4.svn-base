@@ -1,0 +1,44 @@
+@import "../../../styles/common.less";
+.pay-state-box{
+  width: 100%;
+  height:3.94rem;
+  background:rgba(255,255,255,1);
+  box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+  border-radius: 0.12rem;
+  margin: 0.32rem auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.64rem 0;
+}
+.pay-state-icon{
+  width: 1.56rem;
+  height: 1.56rem;
+  .bgSet();
+}
+.pay-state-success{
+  background-image: url("../images/pay_success_icon.png");
+}
+.pay-state-fail{
+  background-image: url("../images/pay_fail_icon.png");
+}
+.pay-state-title{
+  height: 0.44rem;
+  font-size: 0.32rem;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+  margin: 0.24rem auto 0.08rem auto;
+}
+.pay-state-des{
+  height:0.34rem;
+  font-size: 0.24rem;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+}
+.pay-success-button{
+  margin:0.32rem auto;
+}
+
+
+

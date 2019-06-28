@@ -1,0 +1,21 @@
+<component src="layout/index.html" title="商家首页"></component>
+
+<div id="seller_map_layout" class="layout-view">
+    <div class="seller-map-back"></div>
+    <div class="seller-map-content"></div>
+    <div class="seller-map-footer">
+        <div class="seller-map-box">
+            <div class="seller-map-icon"></div>
+            <div class="seller-map-warp">
+                <div class="seller-map-name">诺贝尔瓷砖（东莞旗舰店）</div>
+                <div class="seller-map-address">东莞市东纵大道愉景威尼斯广场A栋1080号</div>
+            </div>
+        </div>
+        <div class="seller-map-btn">查看路线</div>
+    </div>
+
+</div>
+
+
+<component src="footer/index.html" swiper weui></component>
+

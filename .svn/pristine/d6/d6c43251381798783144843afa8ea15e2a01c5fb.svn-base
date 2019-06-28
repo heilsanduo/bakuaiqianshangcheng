@@ -1,0 +1,69 @@
+@import "../../../styles/common.less";
+.home-vip-box{
+  width: 100%;
+  padding: 0.28rem 0;
+}
+.home-vip-box .home-warp-box-header{
+  padding:0.24rem 0.32rem 0 0.32rem;
+}
+.vip-seller-box{
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  display:flex;
+  overflow-x: scroll;
+}
+.vip-seller-scroll{
+  padding:0.24rem 0.32rem 0.24rem 0;
+  display:flex;
+}
+.home-vip-seller-item{
+  margin-left: 0.32rem;
+  width: 2.6rem;
+  height: 4.1rem;
+  box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+  border-radius: 0.2rem;
+  background-color:#fff;
+  display:flex;
+  flex-direction: column;
+  overflow: hidden;
+  float:left;
+  flex:none;
+  position:relative;
+  z-index: 1;
+}
+.home-vip-seller-icon{
+  flex:none;
+  width: 100%;
+  height: 2.6rem;
+  .imgAll;
+}
+.home-vip-seller-content{
+  flex:auto;
+  padding:0.16rem;
+}
+.home-vip-seller-name{
+  font-size:0.26rem;
+  height: 0.36rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  .fontBreak(1, 0.36rem);
+}
+.home-vip-seller-footer{
+  padding-top: 0.16rem;
+  height: 0.82rem;
+}
+.home-vip-seller-footer .button-default{
+  height: 100%;
+  font-size: 0.24rem;
+}
+
+
+
+
+
+
+
+
+
+
+

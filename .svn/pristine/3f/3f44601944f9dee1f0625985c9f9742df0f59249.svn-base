@@ -1,0 +1,159 @@
+@@include('layout/layout/index.html', {
+"title": "确认订单",
+"header": true,
+"weui":true
+})
+<div class="layout-view">
+    <div class="orderConfirm">
+        <!-- orderConfirm内容区 -->
+        <div class="orderConfirm_content">
+            <!-- 收货人 -->
+            <div class="orderConfirm_detail">
+                <div class="orderConfirm_consignee">收货人: 罗运佳</div>
+                <div class="orderConfirm_address">
+                    <p class="orderConfirm_address_text">地址：东莞市莞城区东纵路111号威尼斯广场写字楼一、二层</p>
+                </div>
+                <div class="orderConfirm_others">
+                    <div class="orderConfirm_phone">电话：18666862338</div>
+                    <div class="orderConfirm_edit">编辑地址</div>
+                </div>
+                <div class="orderConfirm_dashed"></div>
+            </div>
+
+            <!-- 收货人 --end -->
+
+            <!-- 待结算商品 -->
+            <div class="orderConfirm_readyPay">
+                <span>待结算商品</span>
+            </div>
+            <div class="orderConfirm_items">
+                <div class="orderConfirm_items_store">
+                    顾家家具旗舰店
+                </div>
+                <div class="orderConfirm_items_main">
+                    <div class="orderConfirm_items_main_img">
+                        <img src="../../../images/jiaju.PNG" alt="">
+                    </div>
+                    <div class="orderConfirm_items_main_text">
+                        <div class="orderConfirm_items_main_title">顾家家具 定制家具椅子高端大气上档次</div>
+                        <div class="orderConfirm_items_main_color">灰色</div>
+                        <div class="orderConfirm_items_main_price">¥ 523<span
+                                style="font-size: 0.24rem;font-weight: 400;color:#999999;margin-left:0.12rem;">×1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="orderConfirm_items_main">
+                    <div class="orderConfirm_items_main_img">
+                        <img src="../../../images/jiaju.PNG" alt="">
+                    </div>
+                    <div class="orderConfirm_items_main_text">
+                        <div class="orderConfirm_items_main_title">顾家家具 定制家具椅子高端大气上档次</div>
+                        <div class="orderConfirm_items_main_color">灰色</div>
+                        <div class="orderConfirm_items_main_price">¥ 523<span
+                                style="font-size: 0.24rem;font-weight: 400;color:#999999;margin-left:0.12rem;">×1</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 有优惠券 -->
+                <div class="orderConfirm_items_coupons">
+                    <div class="orderConfirm_items_coupons_title">优惠券领取</div>
+                    <div class="orderConfirm_items_coupons_arrows"></div>
+                </div>
+                <!-- 有优惠券 --end-->
+            </div>
+            <!-- 待结算商品 --end -->
+
+            <!-- 留言板 -->
+            <div class="orderConfirm_leave_massage">
+                <div class="orderConfirm_massage_leaver">买家留言</div>
+                <div class="orderConfirm_massage_detail">
+                    <textarea class="orderConfirm_wishContent" placeholder="（选填）填写内容已和卖家协商确认" maxlength="50"></textarea>
+                    <div class="orderConfirm_wordsNum">0/50</div>
+                </div>
+            </div>
+            <!-- 留言板--end -->
+
+            <!-- orderConfirm底部 -->
+            <div class="orderConfirm_footer">
+                <div class="orderConfirm_total">合计
+                    <span style="font-size: 0.32rem;color:rgba(241,90,83,1);font-weight: 800;">￥523</span>
+                </div>
+                <div class="orderConfirm_btn">
+                    结算<span>(1)</span>
+                </div>
+            </div>
+            <!-- orderConfirm底部 --end -->
+        </div>
+        <!-- 弹窗 -->
+        <div class="orderConfirm_coupons_popup">
+            <div class="orderConfirm_coupons_popup-mask"></div>
+            <div class="orderConfirm_coupons_popup_content">
+                <div class="orderConfirm_coupons_popup_content-close"></div>
+                <ul class="orderConfirm_coupons_popup_list">
+                    <li class="orderConfirm_coupons_popup_unused">
+                        <div class="orderConfirm_coupons_popup_text">不使用优惠</div>
+                        <div class="orderConfirm_coupons_popup_btn"></div>
+                    </li>
+                    <li>满500减10元</li>
+                    <li style="border-bottom:none">满500减20元</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@@include('layout/footer/index.html')
+<script>
+    ((w, d) => {
+        $(document).ready(function () {
+            //封装一个限制字数方法
+            var checkStrLengths = function (str, maxLength) {
+                var maxLength = maxLength;
+                var result = 0;
+                if (str && str.length > maxLength) {
+                    result = maxLength;
+                } else {
+                    result = str.length;
+
+                }
+                return result;
+            }
+            //监听输入 
+            $(".orderConfirm_wishContent").on('input propertychange', function () {
+                //获取输入内容 
+                var userDesc = $(this).val();
+                //判断字数 
+                var len;
+                if (userDesc) {
+                    len = checkStrLengths(userDesc, 50);
+                } else {
+                    len = 0
+                }
+                //显示字数 
+                $(".orderConfirm_wordsNum").html(len + '/50');
+            });
+
+            // 没有优惠券的时候 删除 .orderConfirm_items_coupons
+
+
+            // 点击 优惠券领取时,显示弹窗
+            $(".orderConfirm_items_coupons").click(function () {
+                $(".orderConfirm_coupons_popup").css("display", "block");
+            })
+            $(".orderConfirm_coupons_popup-mask").click(function () {
+                $(".orderConfirm_coupons_popup").css("display", "none");
+            })
+            $(".orderConfirm_coupons_popup_content-close").click(function () {
+                $(".orderConfirm_coupons_popup").css("display", "none");
+            });
+            // 点击 编辑地址
+            $('.orderConfirm_edit').click(function () {
+                $(window).attr('location', './address_edit.html');
+            })
+
+        })
+    })(window, document)
+
+</script>

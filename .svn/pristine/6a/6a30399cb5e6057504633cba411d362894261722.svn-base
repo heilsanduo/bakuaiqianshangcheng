@@ -1,0 +1,16 @@
+
+<div class="seller-toast">
+    <div class="seller-toast-box">
+        <div class="seller-toast-icon"></div>
+        <div class="seller-toast-message"></div>
+    </div>
+</div>
+
+<script>
+    ((w, d) => {
+    	w.onload = e => {
+				    // $(".seller-toast-messgae").text('提示信息')
+				    // $(".seller-toast").addClass("seller-toast-active")
+        }
+    })(window, document)
+</script>

@@ -1,0 +1,38 @@
+
+@@include('layout/layout/index.html', {
+"title": "我的优惠卷",
+"header": true
+})
+
+
+<div class="mycoupon-box">
+	<div class="mycoupon-box-top" id="mycoupon-box-top">
+		<div class="mycoupon-active">未使用</div>
+		<div>已使用</div>
+		<div>已过期</div>
+		<div>全部</div>
+		<div><img src="../../../images/mycoupon-set.png" alt=""></div>
+	</div>
+</div>
+
+<script>
+	$(function () {
+		//选项卡
+		$("#mycoupon-box-top div").click(function () {
+			//点击当前的变高亮+排他
+			$(this)
+				.addClass("mycoupon-active")
+				.siblings("div")
+				.removeClass("mycoupon-active");
+			//内容跟着出来
+			$("#mycoupon-box-bottom .option")
+				.eq($(this).index())
+				.css("display", "block")
+				.siblings()
+				.css("display", "none");
+		});
+	});
+
+</script>
+
+@@include('layout/footer/index.html')

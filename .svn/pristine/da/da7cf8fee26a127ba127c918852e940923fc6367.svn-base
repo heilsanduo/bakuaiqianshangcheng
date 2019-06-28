@@ -1,0 +1,44 @@
+<component src="layout/index.html" title="八块钱商城" header></component>
+
+<div id="seller_layout" class="layout-view">
+    <div class="login">
+        <div class="login_header">
+            <div class="login_text">
+                <div class="login-text-now">登录</div>
+                <p class="login-text-new">欢迎您回来~</p>
+            </div>
+            <div class="login_main">
+                <div class="login_main_phone">
+                    <h5 class="login_phone">手机号码</h5>
+                    <div class="login_phone_num">
+                        <input type="tel" placeholder="请输入手机号码">
+                    </div>
+
+                </div>
+
+                <div class="login_main_dbpassword">
+                    <h5 class="login_dbpassword">密码</h5>
+                    <div class="login_dbpassword_num">
+                        <input type="password" placeholder="请输入您的密码">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login_footer">
+            <div class="login_footer_text">
+                <div class="login_footer_forget">
+                    忘记密码?
+                </div>
+                <div class="login_footer_new">注册新用户</div>
+            </div>
+            <div class="login_footer_now">
+                登录
+            </div>
+            <div class="login_footer_phone">
+                <p class="login_phone_text">手机验证码快捷登录</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<component src="footer/index.html"></component>

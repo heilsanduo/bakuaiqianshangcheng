@@ -1,0 +1,39 @@
+
+@@include('layout/layout/index.html', {
+    "title": "单人沙发",
+    "header": true
+})
+
+<div id="seller_product_list_layout" class="layout-view">
+
+    @@include("seller/seller_product_menu/index.html")
+
+
+    <div class="seller-product-list-scroll">
+
+        @@for (var i = 0; i < 10; i++) {
+        <div class="seller-product-nav">
+            <div class="seller-product-nav-icon">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-15/d80da4ff96f168957a07be9e6fbbe2d8.jpg" alt="">
+            </div>
+            <div class="seller-product-nav-box">
+                <div class="seller-product-nav-name">产品名字</div>
+                <div class="seller-product-nav-location">东莞</div>
+                <div class="seller-product-nav-price"><span class="price">￥523</span><span class="count">12人购买</span></div>
+            </div>
+        </div>
+        }
+
+
+    </div>
+
+</div>
+
+<script>
+	$(".seller-product-list-nav").on("click", function (e) {
+		$(this).addClass("seller-product-list-nav-active").siblings().removeClass("seller-product-list-nav-active")
+	});
+</script>
+
+@@include('layout/footer/index.html')
+

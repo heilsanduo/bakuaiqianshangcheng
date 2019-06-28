@@ -1,0 +1,32 @@
+@import "../../../styles/common.less";
+.header{
+  width: 100%;
+  height: 1rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+  background-color:#fff;
+  box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+}
+.header-left,
+.header-right{
+  width: 1rem;
+  height: 1rem;
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  .bgSet(0.32rem 0.32rem);
+}
+.header-left{
+  background-image: url("../images/header_back_black_icon.png");
+  left:0;
+}
+.header-right{
+  right: 0;
+}
+.header-center{
+  font-size: 0.32rem;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+}

@@ -1,0 +1,19 @@
+<component src="layout/index.html" title="支付成功" header></component>
+
+<div id="pay_layout" class="layout-view">
+
+    <div class="pay-state-box">
+        <div class="pay-state-icon pay-state-success"></div>
+        <div class="pay-state-title">支付失败</div>
+        <div class="pay-state-des">您可以在<我的订单>中查询订单</div>
+    </div>
+    <div class="pay-success-button button-default">查看订单</div>
+    <div class="pay-success-button button-white">返回首页</div>
+
+</div>
+
+<component src="footer/index.html"></component>
+
+<script>
+
+</script>

@@ -1,0 +1,6 @@
+$(function () {
+	$("#myorder-box-top div").click(function () {
+		let index = $(this).index();
+		$(this).addClass("active").siblings("div").removeClass("active");
+	})
+})

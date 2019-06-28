@@ -1,0 +1,59 @@
+@@include('layout/layout/index.html', { "title": "设置", "header": true })
+<div id="seller_layout" class="layout-view">
+    <!-- 大盒子 -->
+    <div class="set">
+        <!-- 接近头部部分box -->
+        <div class="set-top">
+            <!-- 头像 -->
+            <div class="set-head ">
+                <div class="set-head-left">头像</div>
+                <div class="set-head-cen">
+                    <div class="set-head-cen-head">
+                        <img src="../../../images/ceshi.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="set-head-right"></div>
+            </div>
+            <!-- 昵称 -->
+            <div class="set-nickname">
+                <div class="set-nickname-left">昵称</div>
+                <div class="set-nickname-cen">咋咋小朋友</div>
+                <div class="set-nickname-right"></div>
+            </div>
+            <!-- 地址 -->
+            <div class="set-site" id="set-site">
+                <div class="set-site-left">收获地址</div>
+                <div class="set-site-cen">管理</div>
+                <div class="set-site-right"></div>
+            </div>
+            <div class="set-site" id="set-reset">
+                <div class="set-site-left">密码重置</div>
+                <div class="set-site-cen">设置</div>
+                <div class="set-site-right"></div>
+            </div>
+        </div>
+        <!-- 接近头部部分box end -->
+        <div class="set-bottom">
+            <div class="set-bottom-left">关于商城</div>
+            <div class="set-bottom-cen"></div>
+            <div class="set-bottom-right"></div>
+        </div>
+        <div class="set-logout">退出登录</div>
+    </div>
+</div>
+
+@@include('layout/footer/index.html')
+<script>
+    $(function () {
+        $(".set-logout").click(function () {
+            $(window).attr("location", "./login_click.html");
+        });
+        $("#set-site").click(function () {
+            $(window).attr("location", "./address_manager.html");
+        });
+        $("#set-reset").click(function () {
+            $(window).attr("location", "./set-reset.html");
+        });
+    });
+
+</script>

@@ -1,0 +1,123 @@
+@@include('layout/layout/index.html', {
+"title": "八块钱商城",
+"header": false,
+"weui":true
+})
+<div id="seller_layout" class="layout-view">
+    <div class="address_manager">
+        <!-- address_manager -->
+        <div class="address_manager_fixed">
+            <div class="address_manager_header">
+                <div class="address_manager_back"></div>
+                <div class="address_manager_title">管理地址</div>
+            </div>
+        </div>
+        <!-- address_manager内容区 -->
+        <div class="address_manager_content">
+            <ul class="address_manager_list">
+                <li>
+                    <div class="address_manager_icon"></div>
+                    <div class="address_manager_text">
+                        <div class="address_manager_textT">
+                            <div class="address_manager_name">罗运佳</div>
+                            <div class="address_manager_phone">18666862338</div>
+                            <div class="address_manager_first"></div>
+                        </div>
+                        <div class="address_manager_textB">
+                            <div class="address_manager_more">
+                                东莞市莞城区东纵路111号威尼斯广场写字楼一、二层
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address_manager_edit">编辑地址</div>
+                </li>
+                <li>
+                    <div class="address_manager_icon"></div>
+                    <div class="address_manager_text">
+                        <div class="address_manager_textT">
+                            <div class="address_manager_name">罗运佳</div>
+                            <div class="address_manager_phone">18666862338</div>
+                        </div>
+                        <div class="address_manager_textB">
+                            <div class="address_manager_more">
+                                东莞市莞城区东纵路111号威尼斯广场写字楼一、二层
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address_manager_edit">编辑地址</div>
+                </li>
+                <li>
+                    <div class="address_manager_icon"></div>
+                    <div class="address_manager_text">
+                        <div class="address_manager_textT">
+                            <div class="address_manager_name">罗运佳</div>
+                            <div class="address_manager_phone">18666862338</div>
+                        </div>
+                        <div class="address_manager_textB">
+                            <div class="address_manager_more">
+                                东莞市莞城区东纵路111号威尼斯广场写字楼一、二层
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address_manager_edit">编辑地址</div>
+                </li>
+                <li>
+                    <div class="address_manager_icon"></div>
+                    <div class="address_manager_text">
+                        <div class="address_manager_textT">
+                            <div class="address_manager_name">罗运佳</div>
+                            <div class="address_manager_phone">18666862338</div>
+                        </div>
+                        <div class="address_manager_textB">
+                            <div class="address_manager_more">
+                                东莞市莞城区东纵路111号威尼斯广场写字楼一、二层
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address_manager_edit">编辑地址</div>
+                </li>
+                <li>
+                    <div class="address_manager_icon"></div>
+                    <div class="address_manager_text">
+                        <div class="address_manager_textT">
+                            <div class="address_manager_name">罗运佳</div>
+                            <div class="address_manager_phone">18666862338</div>
+                        </div>
+                        <div class="address_manager_textB">
+                            <div class="address_manager_more">
+                                东莞市莞城区东纵路111号威尼斯广场写字楼一、二层
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address_manager_edit">编辑地址</div>
+                </li>
+                <li>
+                    <div class="address_manager_icon"></div>
+                    <div class="address_manager_text">
+                        <div class="address_manager_textT">
+                            <div class="address_manager_name">罗运佳</div>
+                            <div class="address_manager_phone">18666862338</div>
+                        </div>
+                        <div class="address_manager_textB">
+                            <div class="address_manager_more">
+                                东莞市莞城区东纵路111号威尼斯广场写字楼一、二层
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address_manager_edit">编辑地址</div>
+                </li>
+            </ul>
+        </div>
+        <!-- address_manager底部 -->
+        <div class="address_manager_footer">
+            <div class="address_manager_btn">添加新地址</div>
+        </div>
+    </div>
+</div>
+
+
+
+@@include('layout/footer/index.html',{
+"weui":true,
+"citypicker": true
+})

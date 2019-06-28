@@ -1,0 +1,324 @@
+<component src="layout/index.html" title="购物车" weui></component>
+
+<div id="cart_layout" class="layout-view">
+
+    <div class="cart-header">
+        <span>购物车</span>
+        <div class="cart-header-setting">
+            <span></span>
+        </div>
+    </div>
+
+    <script>
+		((w, d) => {
+			$(".cart-header-setting").on("click", function (e) {
+				$(".cart-item-seller-checkbox").prop("checked", false)
+				$(".cart-item-product-checkbox").prop("checked", false)
+				$(".cart-footer-checkbox input[type=checked]").prop("checked", false)
+                $(".cart-header-setting").html($(".cart-footer-buy").length ? `完成` : `<span></span>`)
+				$(".cart-footer").html($(".cart-footer-buy").length ? `
+                    <label class="cart-footer-checkbox"><input type="checkbox"/>全选</label>
+                    <div class="cart-footer-menu">
+                        <div class="cart-footer-collect">移入购物车</div>
+                        <div class="cart-footer-remove">删除</div>
+                    </div>
+                ` : `
+                    <label class="cart-footer-checkbox"><input type="checkbox"/>全选</label>
+                    <div class="cart-footer-price">合计:<span>￥0</span></div>
+                    <div class="cart-footer-buy">结算 <span>(0)</span></div>
+                `)
+			});
+		})(window, document)
+    </script>
+
+    <div class="cart-scroll">
+
+        <div class="cart-item">
+            <div class="cart-item-seller">
+                <input type="checkbox" class="cart-item-seller-checkbox"/>
+                <span class="cart-item-shop-tags"></span>
+                <div class="cart-item-seller-name">顾家家具旗舰店</div>
+                <span class="cart-item-more"></span>
+            </div>
+            <div class="cart-item-product">
+                <label>
+                    <input type="checkbox" class="cart-item-product-checkbox"/>
+                    <div class="cart-item-product-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/f444f5483b1950f8276ab44261d5ff69.png"
+                             alt="">
+                    </div>
+                </label>
+                <div class="cart-item-product-box">
+                    <div class="cart-item-product-name">顾家家具 定制家具椅子高端大气上档次</div>
+                    <div class="cart-item-product-des"><span>灰色</span></div>
+                    <div class="cart-item-product-price">
+                        <span class="price">￥<span>532</span></span>
+                        <div class="weui-count">
+                            <a class="weui-count__btn weui-count__decrease"></a>
+                            <input class="weui-count__number" type="number" value="1"/>
+                            <a class="weui-count__btn weui-count__increase"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-item-product">
+                <label>
+                    <input type="checkbox" class="cart-item-product-checkbox"/>
+                    <div class="cart-item-product-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/f444f5483b1950f8276ab44261d5ff69.png"
+                             alt="">
+                    </div>
+                </label>
+                <div class="cart-item-product-box">
+                    <div class="cart-item-product-name">顾家家具 定制家具椅子高端大气上档次</div>
+                    <div class="cart-item-product-des"><span>灰色</span></div>
+                    <div class="cart-item-product-price">
+                        <span class="price">￥<span>532</span></span>
+                        <div class="weui-count">
+                            <a class="weui-count__btn weui-count__decrease"></a>
+                            <input class="weui-count__number" type="number" value="1"/>
+                            <a class="weui-count__btn weui-count__increase"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <div class="cart-item-seller">
+                <input type="checkbox" class="cart-item-seller-checkbox"/>
+                <span class="cart-item-shop-tags"></span>
+                <div class="cart-item-seller-name">顾家家具旗舰店</div>
+                <span class="cart-item-more"></span>
+            </div>
+            <div class="cart-item-product">
+                <label>
+                    <input type="checkbox" class="cart-item-product-checkbox"/>
+                    <div class="cart-item-product-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/f444f5483b1950f8276ab44261d5ff69.png"
+                             alt="">
+                    </div>
+                </label>
+                <div class="cart-item-product-box">
+                    <div class="cart-item-product-name">顾家家具 定制家具椅子高端大气上档次</div>
+                    <div class="cart-item-product-des"><span>灰色</span></div>
+                    <div class="cart-item-product-price">
+                        <span class="price">￥<span>5382</span></span>
+                        <div class="weui-count">
+                            <a class="weui-count__btn weui-count__decrease"></a>
+                            <input class="weui-count__number" type="number" value="1"/>
+                            <a class="weui-count__btn weui-count__increase"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <div class="cart-item-seller">
+                <input type="checkbox" class="cart-item-seller-checkbox"/>
+                <span class="cart-item-shop-tags"></span>
+                <div class="cart-item-seller-name">顾家家具旗舰店</div>
+                <span class="cart-item-more"></span>
+            </div>
+            <div class="cart-item-product">
+                <label>
+                    <input type="checkbox" class="cart-item-product-checkbox"/>
+                    <div class="cart-item-product-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/f444f5483b1950f8276ab44261d5ff69.png"
+                             alt="">
+                    </div>
+                </label>
+                <div class="cart-item-product-box">
+                    <div class="cart-item-product-name">顾家家具 定制家具椅子高端大气上档次</div>
+                    <div class="cart-item-product-des"><span>灰色</span></div>
+                    <div class="cart-item-product-price">
+                        <span class="price">￥<span>5382</span></span>
+                        <div class="weui-count">
+                            <a class="weui-count__btn weui-count__decrease"></a>
+                            <input class="weui-count__number" type="number" value="1"/>
+                            <a class="weui-count__btn weui-count__increase"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <div class="cart-item-seller">
+                <input type="checkbox" class="cart-item-seller-checkbox"/>
+                <span class="cart-item-shop-tags"></span>
+                <div class="cart-item-seller-name">顾家家具旗舰店</div>
+                <span class="cart-item-more"></span>
+            </div>
+            <div class="cart-item-product">
+                <label>
+                    <input type="checkbox" class="cart-item-product-checkbox"/>
+                    <div class="cart-item-product-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/f444f5483b1950f8276ab44261d5ff69.png"
+                             alt="">
+                    </div>
+                </label>
+                <div class="cart-item-product-box">
+                    <div class="cart-item-product-name">顾家家具 定制家具椅子高端大气上档次</div>
+                    <div class="cart-item-product-des"><span>灰色</span></div>
+                    <div class="cart-item-product-price">
+                        <span class="price">￥<span>5382</span></span>
+                        <div class="weui-count">
+                            <a class="weui-count__btn weui-count__decrease"></a>
+                            <input class="weui-count__number" type="number" value="1"/>
+                            <a class="weui-count__btn weui-count__increase"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <div class="cart-item-seller">
+                <input type="checkbox" class="cart-item-seller-checkbox"/>
+                <span class="cart-item-shop-tags"></span>
+                <div class="cart-item-seller-name">顾家家具旗舰店</div>
+                <span class="cart-item-more"></span>
+            </div>
+            <div class="cart-item-product">
+                <label>
+                    <input type="checkbox" class="cart-item-product-checkbox"/>
+                    <div class="cart-item-product-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/f444f5483b1950f8276ab44261d5ff69.png"
+                             alt="">
+                    </div>
+                </label>
+                <div class="cart-item-product-box">
+                    <div class="cart-item-product-name">顾家家具 定制家具椅子高端大气上档次</div>
+                    <div class="cart-item-product-des"><span>灰色</span></div>
+                    <div class="cart-item-product-price">
+                        <span class="price">￥<span>5382</span></span>
+                        <div class="weui-count">
+                            <a class="weui-count__btn weui-count__decrease"></a>
+                            <input class="weui-count__number" type="number" value="1"/>
+                            <a class="weui-count__btn weui-count__increase"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <div class="cart-item-seller">
+                <input type="checkbox" class="cart-item-seller-checkbox"/>
+                <span class="cart-item-shop-tags"></span>
+                <div class="cart-item-seller-name">顾家家具旗舰店</div>
+                <span class="cart-item-more"></span>
+            </div>
+            <div class="cart-item-product">
+                <label>
+                    <input type="checkbox" class="cart-item-product-checkbox"/>
+                    <div class="cart-item-product-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/f444f5483b1950f8276ab44261d5ff69.png"
+                             alt="">
+                    </div>
+                </label>
+                <div class="cart-item-product-box">
+                    <div class="cart-item-product-name">顾家家具 定制家具椅子高端大气上档次</div>
+                    <div class="cart-item-product-des"><span>灰色</span></div>
+                    <div class="cart-item-product-price">
+                        <span class="price">￥<span>5382</span></span>
+                        <div class="weui-count">
+                            <a class="weui-count__btn weui-count__decrease"></a>
+                            <input class="weui-count__number" type="number" value="1"/>
+                            <a class="weui-count__btn weui-count__increase"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="cart-footer">
+        <label class="cart-footer-checkbox"><input type="checkbox"/>全选</label>
+        <div class="cart-footer-price">合计:<span>￥0</span></div>
+        <div class="cart-footer-buy">结算 <span>(0)</span></div>
+    </div>
+
+    <script>
+        ((w, d) => {
+        	$(".cart-footer").on("click", ".cart-footer-remove", function (e) {
+        		// 移除购物车操作  =>  需要调接口返回成功有如下操作
+		        $(".cart-item-product-checkbox:checked").parents(".cart-item-product").remove()
+                $(".cart-item").map(function(){
+                    if($(this).find(".cart-item-product-checkbox").length === 0){
+                    	$(this).remove()
+                    }
+                });
+		        w.util.toast('删除成功')
+	        });
+        	const TOPS = 80;
+        	$(".cart-scroll").on("scroll", function (e) {
+                $(".cart-header").css({
+                    height: `${e.target.scrollTop >= TOPS ? 1 : 1.52}rem`,
+                    boxShadow: `0 0.08rem 0.32rem rgba(0, 0, 0, ${e.target.scrollTop >= TOPS ? 0.08 : 0})`
+                })
+	        });
+
+        })(window, document)
+    </script>
+
+</div>
+
+<script>
+	((w, d) => {
+		let countAmout = function () {
+			let val = 0
+			let _all = 0
+			$(".cart-item-product-checkbox:checked").map(function (index, item) {
+				let _price = parseFloat($(this).parents(".cart-item-product").find(".price span").eq(0).text());
+				let _num = parseFloat($(this).parents(".cart-item-product").find(".weui-count__number").eq(0).val());
+				val += _price * _num
+				_all += _num
+			});
+			$(".cart-footer-buy span").text(`(${_all})`)
+			$(".cart-footer-price span").text(`￥${val}`)
+		};
+
+		$(".cart-item-product-checkbox").on("change", function (e) {
+			$(this).parents(".cart-item").find(".cart-item-seller-checkbox").eq(0).prop("checked", $(this).parents(".cart-item").find(".cart-item-product-checkbox").length === $(this).parents(".cart-item").find(".cart-item-product-checkbox:checked").length)
+			$(".cart-footer-checkbox input[type=checkbox]").eq(0).prop("checked", $(".cart-item-seller-checkbox:checked").length === $(".cart-item-seller-checkbox").length)
+			countAmout()
+		});
+
+		$(".cart-item-seller-checkbox").on("change", function (e) {
+			$(this).parents(".cart-item").find(".cart-item-product-checkbox").prop("checked", $(this).is(":checked"))
+			$(".cart-footer-checkbox input[type=checkbox]").eq(0).prop("checked", $(".cart-item-seller-checkbox:checked").length === $(".cart-item-seller-checkbox").length)
+			countAmout()
+		});
+
+		$(".cart-footer").eq(0).on("change", 'input[type=checkbox]', function (e) {
+			$(".cart-item-seller-checkbox").prop("checked", $(this).is(":checked"))
+			$(".cart-item-product-checkbox").prop("checked", $(this).is(":checked"))
+			countAmout()
+		});
+
+		var MAX = 99, MIN = 1;
+		$('.weui-count__decrease').click(function (e) {
+			var $input = $(e.currentTarget).parent().find('.weui-count__number');
+			var number = parseInt($input.val() || "0") - 1
+			if (number < MIN) number = MIN;
+			$input.val(number)
+			countAmout()
+		});
+		$('.weui-count__increase').click(function (e) {
+			var $input = $(e.currentTarget).parent().find('.weui-count__number');
+			var number = parseInt($input.val() || "0") + 1
+			if (number > MAX) number = MAX;
+			$input.val(number)
+			countAmout()
+		});
+
+	})(window, document)
+</script>
+
+
+<component src="common/tabbar/index.html" cart></component>
+<component src="footer/index.html" weui></component>

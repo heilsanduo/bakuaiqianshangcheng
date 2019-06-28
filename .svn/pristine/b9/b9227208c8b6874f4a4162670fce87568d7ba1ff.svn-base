@@ -1,0 +1,207 @@
+@import "../../../styles/common.less";
+
+#personal_layout{
+  position:relative;
+}
+#personal_layout:before{
+  content:"";
+  width: 7.5rem;
+  height: 5.52rem;
+  position:absolute;
+  left:0;
+  top:0;
+  .bgSet(100% 100%);
+  background-image: url("../images/register_bg.png");
+}
+.cart-header{
+  z-index: 10;
+  position:relative;
+}
+.personal-center{
+  width: 100%;
+  height: 3rem;
+  position:relative;
+  z-index: 10;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.personal-icon{
+  width: 1.48rem;
+  height: 1.48rem;
+  border-radius: 50%;
+  border:2px solid #fff;
+  .imgAll;
+}
+.personal-nickname{
+  margin-top: 0.16rem;
+  height: 0.4rem;
+  font-size: 0.28rem;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+}
+// 切换
+.personal-tabbox{
+  width: 6.86rem;
+  height:2.34rem;
+  background-color:rgba(255,255,255,1);
+  border-radius: 0.2rem;
+  box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+  margin: 0 auto;
+  position:relative;
+  overflow: hidden;
+  z-index: 10;
+  display:flex;
+  flex-direction: column;
+}
+.personal-tabbox-header{
+  width: 100%;
+  height: 0.74rem;
+  flex:none;
+  background:linear-gradient(to bottom, #EFEFEF, #FFF);
+}
+.personal-tabbox-header > div{
+  float:left;
+  width: 50%;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#EFEFEF;
+  .hover-class;
+  span{
+    font-size: 0.28rem;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+  }
+}
+.personal-tabbox-header > div:first-child{
+  border-radius: 0.2rem 0.2rem 0.2rem 0;
+}
+.personal-tabbox-header > div:last-child{
+  border-radius: 0.2rem 0.2rem 0 0.2rem;
+}
+.personal-tabbox-header .personal-tabbox-header-active{
+  background-color:#fff !important;
+  border-radius: 0.2rem 0.2rem 0 0;
+  span{
+    .yellowBottom();
+  }
+}
+.personal-tabbox-body{
+  flex:auto;
+  width: 100%;
+  height: 100%;
+  display:none;
+  align-items: center;
+  justify-content: space-between;
+  a{
+    width: 20%;
+    flex:none;
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position:relative;
+    i{
+      content: attr(count);
+      display: flex;
+      align-items: center;
+      font-style: normal;
+      justify-content: center;
+      width: 0.34rem;
+      height: 0.34rem;
+      font-size: 0.24rem;
+      color:#fff;
+      border-radius: 50%;
+      background-color:rgba(241,90,83,1);
+      position:absolute;
+      right:0.28rem;
+      top:0.16rem;
+      z-index: 100;
+    }
+    .hover-white-class;
+  }
+  img{
+    width: 0.48rem;
+    height: 0.48rem;
+  }
+  span{
+    margin-top: 0.16rem;
+    font-size: 0.24rem;
+    font-weight:400;
+    line-height: 0.36rem;
+    color:rgba(51,51,51,1);
+  }
+}
+.personal-tabbox-body-active{
+  display:flex;
+}
+// 菜单
+.personal-menu{
+  width: 6.86rem;
+  margin: 0.64rem auto;
+  background-color:rgba(255,255,255,1);
+  box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+.personal-menu-nav{
+  width: 100%;
+  height: 0.98rem;
+  display:flex;
+  align-items: center;
+  padding: 0 0.32rem;
+  position:relative;
+  font-size: 0.26rem;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  .hover-white-class;
+}
+.personal-menu-nav:before{
+  content:"";
+  width: 0.32rem;
+  height: 0.32rem;
+  position:absolute;
+  right: 0.32rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display:inline-block;
+  .bgSet();
+  background-image: url("../images/jiantou.png");
+}
+.personal-menu-icon{
+  width: 0.32rem;
+  height: 0.32rem;
+  display:inline-block;
+  margin-right: 0.42rem;
+  .bgSet();
+}
+.collect-icon{
+  background-image: url("../images/wode.png");
+}
+.assemble-icon{
+  background-image: url("../images/pingtuang.png");
+}
+.coupon-icon{
+  background-image: url("../images/my_youhui.png");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

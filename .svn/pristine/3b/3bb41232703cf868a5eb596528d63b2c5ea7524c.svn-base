@@ -1,0 +1,147 @@
+@import "../../../styles/common.less";
+
+.integral-box {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+// 头部选项卡
+.integral-box-top {
+	width: 6.86rem;
+	height: 1.24rem;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.integral-box-top>div {
+	white-space: nowrap;
+	height: 0.44rem;
+	margin: 0 0.32rem 0 0;
+	font-size: 0.28rem;
+	font-weight: 400;
+	line-height: 0.4rem;
+	color: rgba(51, 51, 51, 1);
+}
+
+.integral-box-top>span {
+	width: .44rem;
+	height: .44rem;
+	position: absolute;
+	right: 0;
+}
+
+// 点击时添加选中状态
+.integral-active {
+	height: .44rem !important;
+	font-size: .32rem !important;
+	font-weight: 800 !important;
+	line-height: .44rem !important;
+	.yellowBottom();
+}
+
+// 积分底部
+.integral-box-bottom {
+	width: 100%;
+	flex: 1;
+	overflow: auto;
+}
+
+.option {
+	width: 100%;
+	height: auto;
+	display: none;
+}
+
+// 盒子包裹大盒子
+.option-lists {
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+// 盒子内容区
+.option-list {
+	width: 3.28rem;
+	height: 5.64rem;
+	margin: 0 0 .32rem .32rem;
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0 .08rem .32rem rgba(0, 0, 0, 0.08);
+	border-radius: .20rem;
+	display: flex;
+	flex-direction: column;
+	.hover-class()
+}
+
+.option-list-img {
+	width: 3.28rem;
+	height: 3.28rem;
+	background: rgba(0, 0, 0, 0);
+	border-radius: .20rem .20rem 0 0;
+}
+
+.option-list-img img {
+	width: 100%;
+	height: 100%;
+	border-radius: .20rem .20rem 0 0;
+}
+
+.option-list-bottom {
+	width: 100%;
+	flex: auto;
+	box-sizing: border-box;
+	padding: .16rem;
+}
+
+.option-list-bottom-title {
+	max-width: 3rem;
+	height: .73rem;
+	font-size: .26rem;
+	font-weight: 400;
+	color: rgba(51, 51, 51, 1);
+	text-align: left;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
+.option-list-bottom-integral {
+	width: 100%;
+	height: .60rem;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+
+	>span:nth-child(1) {
+		font-size: .32rem;
+		font-weight: 800;
+		line-height: .36rem;
+		color: rgba(241, 90, 83, 1);
+		margin: 0 .08rem 0 0;
+	}
+
+	>span:nth-child(2) {
+		font-size: .24rem;
+		font-weight: 400;
+		line-height: .34rem;
+		color: rgba(153, 153, 153, 1);
+	}
+}
+
+.option-list-bottom-button {
+	width: 100%;
+	height: .66rem;
+	background: rgba(255, 222, 69, 1);
+	opacity: 1;
+	border-radius: .12rem;
+	font-size: .24rem;
+	font-weight: 800;
+	line-height: .66rem;
+	text-align: center;
+	color: rgba(51, 51, 51, 1);
+}

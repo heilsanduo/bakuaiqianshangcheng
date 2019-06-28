@@ -1,0 +1,138 @@
+@@include('layout/layout/index.html', {
+"title": "我的收藏",
+"header": true
+})
+
+<div class="myorder-box">
+	<div class="myorder-box-top" id="myorder-box-top">
+		<div class="divs myorder-active">产品</div>
+		<div class="divs">商家</div>
+	</div>
+	<div class="myorder-box-bottom" id="myorder-box-bottom">
+		<div class="option" style="display: block">
+			<div class="option-box">
+				<div class="option-content">
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								63人已收藏
+							</div>
+							<div class="option-content-middle-right-bottom">
+								￥523
+							</div>
+							<div class="option-payment">删除收藏</div>
+						</div>
+					</div>
+				</div>
+				<div class="option-content">
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								63人已收藏
+							</div>
+							<div class="option-content-middle-right-bottom">
+								￥523
+							</div>
+							<div class="option-payment">删除收藏</div>
+						</div>
+					</div>
+				</div>
+				<div class="option-content">
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								63人已收藏
+							</div>
+							<div class="option-content-middle-right-bottom">
+								￥523
+							</div>
+							<div class="option-payment">删除收藏</div>
+						</div>
+					</div>
+				</div>
+				<div class="option-content">
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								63人已收藏
+							</div>
+							<div class="option-content-middle-right-bottom">
+								￥523
+							</div>
+							<div class="option-payment">删除收藏</div>
+						</div>
+					</div>
+				</div>
+				<div class="option-content">
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top">
+								顾家家具 定制家具椅子高端大气上档次
+							</div>
+							<div class="option-content-middle-right-middle">
+								63人已收藏
+							</div>
+							<div class="option-content-middle-right-bottom">
+								￥523
+							</div>
+							<div class="option-payment">删除收藏</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="option">
+			<div class="option-box">
+				<div class="option-content">
+					<div class="option-content-middle">
+						<div class="option-content-middle-left">
+							<img src="../../../images/ceshi.jpg" alt="" />
+						</div>
+						<div class="option-content-middle-right">
+							<div class="option-content-middle-right-top merchanttop">
+								苏宁易购（威尼斯广场店）
+							</div>
+							<div class="option-content-middle-right-middle">
+								63人已收藏
+							</div>
+							<div class="option-content-middle-right-bottom">
+								￥523
+							</div>
+							<div class="option-payment">删除收藏</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+@@include('layout/footer/index.html')

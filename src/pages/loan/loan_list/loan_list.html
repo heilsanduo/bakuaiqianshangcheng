@@ -1,0 +1,30 @@
+@@include('layout/layout/index.html', {
+"title": "在线支付",
+"header": true
+})
+
+<div id="loan_layout" class="layout-view">
+
+    <div class="loan-swiper">
+        <img src="./images/test_987987.png" alt="">
+    </div>
+
+    @@for (var i = 0; i < 3; i++) {
+        @@include('loan/loan_item/index.html')
+    }
+
+
+</div>
+
+
+
+<script>
+	((w, d) => {
+		$(document).ready(function (e) {
+
+		});
+	})(window, document)
+</script>
+
+
+@@include('layout/footer/index.html')

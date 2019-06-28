@@ -1,0 +1,121 @@
+@@include('layout/layout/index.html', { "title": "积分商城", "header": true })
+
+
+<div class="integral-box">
+	<div class="integral-box-top" id="integral-box-top">
+		<div class="integral-active">新品推荐</div>
+		<div>好货上新</div>
+		<span><img src="../../../images/search1.png" alt=""></span>
+	</div>
+	<div class="integral-box-bottom" id="integral-box-bottom">
+		<div class="option" style="display: block">
+			<div class="option-lists">
+				<div class="option-list">
+					<div class="option-list-img"><img src="../../images/ceshi.jpg" alt=""></div>
+					<div class="option-list-bottom">
+						<div class="option-list-bottom-title">顾家家具 定制家具椅子高端大气上档次顾家家具 定制家具椅子高端大气上档次</div>
+						<div class="option-list-bottom-integral">
+							<span>3000积分</span>
+							<span>¥1000</span>
+						</div>
+						<div class="option-list-bottom-button">立即兑换</div>
+					</div>
+				</div>
+				<div class="option-list">
+					<div class="option-list-img"><img src="../../images/ceshi.jpg" alt=""></div>
+					<div class="option-list-bottom">
+						<div class="option-list-bottom-title">顾家家具 定制家具椅子高端大气上档次顾家家具 定制家具椅子高端大气上档次</div>
+						<div class="option-list-bottom-integral">
+							<span>3000积分</span>
+							<span>¥1000</span>
+						</div>
+						<div class="option-list-bottom-button">立即兑换</div>
+					</div>
+				</div>
+				<div class="option-list">
+					<div class="option-list-img"><img src="../../images/ceshi.jpg" alt=""></div>
+					<div class="option-list-bottom">
+						<div class="option-list-bottom-title">顾家家具 定制家具椅子高端大气上档次顾家家具 定制家具椅子高端大气上档次</div>
+						<div class="option-list-bottom-integral">
+							<span>3000积分</span>
+							<span>¥1000</span>
+						</div>
+						<div class="option-list-bottom-button">立即兑换</div>
+					</div>
+				</div>
+				<div class="option-list">
+					<div class="option-list-img"><img src="../../images/ceshi.jpg" alt=""></div>
+					<div class="option-list-bottom">
+						<div class="option-list-bottom-title">顾家家具 定制家具椅子高端大气上档次顾家家具 定制家具椅子高端大气上档次</div>
+						<div class="option-list-bottom-integral">
+							<span>3000积分</span>
+							<span>¥1000</span>
+						</div>
+						<div class="option-list-bottom-button">立即兑换</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="option">
+			<div class="option-lists">
+				<div class="option-list">
+					<div class="option-list-img"><img src="../../images/ceshi.jpg" alt=""></div>
+					<div class="option-list-bottom">
+						<div class="option-list-bottom-title">顾家家具 定制家具椅子高端大气上档次顾家家具 定制家具椅子高端大气上档次</div>
+						<div class="option-list-bottom-integral">
+							<span>3000积分</span>
+							<span>¥1000</span>
+						</div>
+						<div class="option-list-bottom-button">立即兑换</div>
+					</div>
+				</div>
+				<div class="option-list">
+					<div class="option-list-img"><img src="../../images/ceshi.jpg" alt=""></div>
+					<div class="option-list-bottom">
+						<div class="option-list-bottom-title">顾家家具 定制家具椅子高端大气上档次顾家家具 定制家具椅子高端大气上档次</div>
+						<div class="option-list-bottom-integral">
+							<span>3000积分</span>
+							<span>¥1000</span>
+						</div>
+						<div class="option-list-bottom-button">立即兑换</div>
+					</div>
+				</div>
+				<div class="option-list">
+					<div class="option-list-img"><img src="../../images/ceshi.jpg" alt=""></div>
+					<div class="option-list-bottom">
+						<div class="option-list-bottom-title">顾家家具 定制家具椅子高端大气上档次顾家家具 定制家具椅子高端大气上档次</div>
+						<div class="option-list-bottom-integral">
+							<span>3000积分</span>
+							<span>¥1000</span>
+						</div>
+						<div class="option-list-bottom-button">立即兑换</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+@@include('layout/footer/index.html')
+<script>
+	$(function () {
+		//选项卡
+		$("#integral-box-top div").click(function () {
+			//点击当前的变高亮+排他
+			$(this)
+				.addClass("integral-active")
+				.siblings("div")
+				.removeClass("integral-active");
+			//内容跟着出来
+			$("#integral-box-bottom .option")
+				.eq($(this).index())
+				.css("display", "block")
+				.siblings()
+				.css("display", "none");
+		});
+	});
+
+</script>

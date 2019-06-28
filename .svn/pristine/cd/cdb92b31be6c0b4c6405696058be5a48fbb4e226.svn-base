@@ -1,0 +1,130 @@
+<component src="layout/index.html" title="商品详情" swiper weui></component>
+
+<div id="product_detail_layout" class="layout-view">
+    <!-- 商品详情的头部  -->
+    <div class="seller-home-header">
+        <div class="seller-home-header-back">
+            <span></span>
+        </div>
+        <div class="seller-home-header-title">商品名字</div>
+        <div class="seller-home-header-share">
+            <span></span>
+        </div>
+    </div>
+    <!-- 商品详情的头部 - end -->
+
+    <div class="product-detail-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+        </div>
+        <div class="home-swiper-pagination"></div>
+    </div>
+
+    <!-- 商品信息 -->
+    <div class="product-detail-box">
+        <div class="product-detail-price"><span class="price">￥3000</span><span class="old-price">原价￥1000</span></div>
+        <div class="product-detail-des">顾家家具 定制家具椅子高端大气上档次顾家家具 定制家具椅子高端大气上档次顾家家具 </div>
+        <div class="product-detail-util"><span>月销5笔</span></div>
+        <div class="product-detail-attr">请选择规格</div>
+    </div>
+    <!-- 商品信息 - end -->
+
+    <!-- 店铺介绍 -->
+    <div class="product-detail-warp">
+        <div class="product-detail-header"><span>店铺介绍</span></div>
+        <div class="product-detail-shop">
+            <div class="product-detail-seller">
+                <div class="product-detail-seller-icon">
+                    <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+                </div>
+                <div class="product-detail-seller-name">诺贝尔瓷砖（东莞旗舰店）</div>
+                <div class="product-detail-seller-button">进店</div>
+            </div>
+            <div class="product-detail-plist-header">店铺推荐<span>全部宝贝</span></div>
+            <div class="product-detail-plist">
+                <!-- 推荐商品 -->
+                <div class="product-detail-pitem">
+                    <div class="product-detail-pitem-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+                    </div>
+                    <div class="product-detail-pitem-name">顾家家具 定制家具椅子高端大气上档次定制家具椅子高端大气上档次</div>
+                    <div class="product-detail-pitem-price">￥523</div>
+                </div>
+                <!-- 推荐商品 - end  -->
+                <!-- 推荐商品 -->
+                <div class="product-detail-pitem">
+                    <div class="product-detail-pitem-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+                    </div>
+                    <div class="product-detail-pitem-name">顾家家具 定制家具椅子高端大气上档次定制家具椅子高端大气上档次</div>
+                    <div class="product-detail-pitem-price">￥523</div>
+                </div>
+                <!-- 推荐商品 - end  -->
+                <!-- 推荐商品 -->
+                <div class="product-detail-pitem">
+                    <div class="product-detail-pitem-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+                    </div>
+                    <div class="product-detail-pitem-name">顾家家具 定制家具椅子高端大气上档次定制家具椅子高端大气上档次</div>
+                    <div class="product-detail-pitem-price">￥523</div>
+                </div>
+                <!-- 推荐商品 - end  -->
+            </div>
+        </div>
+    </div>
+    <!-- 店铺介绍 - end -->
+
+    <!-- 商品详情 -->
+    <div class="product-detail-header"><span>商品详情</span></div>
+    <!--<img src="http://www.xiehome.com/uploads/images/201904/15563617006HSyJu.jpeg" class="product-detail-imgbox" />-->
+    <!--<img src="http://www.xiehome.com/uploads/images/201904/15563617006HSyJu.jpeg" class="product-detail-imgbox" />-->
+    <!--<img src="http://www.xiehome.com/uploads/images/201904/15563617006HSyJu.jpeg" class="product-detail-imgbox" />-->
+    <!--<img src="http://www.xiehome.com/uploads/images/201904/15563617006HSyJu.jpeg" class="product-detail-imgbox" />-->
+    <!-- 商品详情 - end -->
+
+</div>
+
+<script>
+    ((w, d) => {
+
+	    const TOPS = 200;
+	    $(document).ready(function () {
+		    const producrBanner = new Swiper('.product-detail-swiper', {
+			    direction: 'horizontal', // 垂直切换选项
+			    loop: true, // 循环模式选项
+			    pagination: '.home-swiper-pagination',
+		    })
+		    $("#product_detail_layout").on("scroll", function(e){
+			    $(".seller-home-header").css({
+				    backgroundColor: `rgba(255,255,255, ${e.target.scrollTop / TOPS * 100}%)`,
+				    boxShadow: `0 0.08rem 0.32rem rgba(0,0,0,${e.target.scrollTop / TOPS * 100 * 0.08}%)`
+			    });
+			    $(".seller-home-header-title").css({
+				    opacity: `${e.target.scrollTop / TOPS}`
+			    });
+			    $(".seller-home-header-back span").css({
+				    backgroundImage: `url("${e.target.scrollTop > TOPS ? './images/header_back_black_icon.png' : './images/seller_home_header_back_icon.png'}")`,
+				    backgroundColor: `rgba(0,0,0, ${e.target.scrollTop > TOPS ? '0' : (0.16 - e.target.scrollTop / TOPS)})`
+			    })
+		    });
+	    })
+    })(window, document)
+</script>
+
+<component src="product/product_footer/index.html"></component>
+<component src="footer/index.html" swiper weui></component>
+

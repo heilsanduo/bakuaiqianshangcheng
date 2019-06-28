@@ -1,0 +1,182 @@
+
+@@include('layout/layout/index.html', {
+    "title": "商品详情",
+    "swiper": true,
+    "weui": true
+})
+
+<div id="product_detail_layout" class="layout-view">
+    <!-- 商品详情的头部  -->
+    <div class="seller-home-header">
+        <div class="seller-home-header-back">
+            <span></span>
+        </div>
+        <div class="seller-home-header-title">商品名字</div>
+        <div class="seller-home-header-share">
+            <span></span>
+        </div>
+    </div>
+    <!-- 商品详情的头部 - end -->
+
+    <div class="product-detail-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+        </div>
+        <div class="home-swiper-pagination"></div>
+    </div>
+
+    <!-- 商品信息 -->
+    <div class="product-detail-box">
+        <div class="product-detail-price"><span class="price">￥3000</span><span class="old-price">原价￥1000</span> <div class="coupon">领取优惠券</div></div>
+        <div class="product-detail-des">顾家家具 定制家具椅子高端大气上档次顾家家具 定制家具椅子高端大气上档次顾家家具 </div>
+        <div class="product-detail-util"><span>月销5笔</span></div>
+        <div class="product-detail-attr">请选择规格</div>
+    </div>
+    <!-- 商品信息 - end -->
+
+    <!-- 店铺介绍 -->
+    <div class="product-detail-warp">
+        <div class="product-detail-header"><span>店铺介绍</span></div>
+        <div class="product-detail-shop">
+            <div class="product-detail-seller">
+                <div class="product-detail-seller-icon">
+                    <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+                </div>
+                <div class="product-detail-seller-name">诺贝尔瓷砖（东莞旗舰店）</div>
+                <div class="product-detail-seller-button">进店</div>
+            </div>
+            <div class="product-detail-plist-header">店铺推荐<span>全部宝贝</span></div>
+            <div class="product-detail-plist">
+                <!-- 推荐商品 -->
+                <div class="product-detail-pitem">
+                    <div class="product-detail-pitem-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+                    </div>
+                    <div class="product-detail-pitem-name">顾家家具 定制家具椅子高端大气上档次定制家具椅子高端大气上档次</div>
+                    <div class="product-detail-pitem-price">￥523</div>
+                </div>
+                <!-- 推荐商品 - end  -->
+                <!-- 推荐商品 -->
+                <div class="product-detail-pitem">
+                    <div class="product-detail-pitem-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+                    </div>
+                    <div class="product-detail-pitem-name">顾家家具 定制家具椅子高端大气上档次定制家具椅子高端大气上档次</div>
+                    <div class="product-detail-pitem-price">￥523</div>
+                </div>
+                <!-- 推荐商品 - end  -->
+                <!-- 推荐商品 -->
+                <div class="product-detail-pitem">
+                    <div class="product-detail-pitem-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+                    </div>
+                    <div class="product-detail-pitem-name">顾家家具 定制家具椅子高端大气上档次定制家具椅子高端大气上档次</div>
+                    <div class="product-detail-pitem-price">￥523</div>
+                </div>
+                <!-- 推荐商品 - end  -->
+            </div>
+        </div>
+    </div>
+    <!-- 店铺介绍 - end -->
+
+    <!-- 商品详情 -->
+    <div class="product-detail-header"><span>商品详情</span></div>
+    <!-- 商品详情 - end -->
+
+</div>
+
+<!-- 优惠券 -->
+<div class="action-sheet-coupon">
+    <div class="action-sheet-coupon-mask"></div>
+    <div class="product-detail-coupon-list">
+        <div class="product-detail-coupon-header">
+            <span>优惠券</span>
+            <div class="product-detail-home-appointment-close"></div>
+        </div>
+        <div class="product-detail-coupon-scroll">
+
+            @@for (var i = 0; i < 10; i++) {
+                @@include('coupon/coupon_item/index.html')
+            }
+
+        </div>
+        <div class="product-detail-coupon-footer">
+            <div>确认</div>
+        </div>
+    </div>
+</div>
+<div class="coupon-message-layout">
+    <div class="coupon-message-box">
+        <div class="coupon-message-box-close"></div>
+        <div class="coupon-message-box-header">优惠券注意事项</div>
+        <div class="coupon-message-box-body">1.特价商品和线上商品不可使用；2.此类券限用一张，且不与其他券重叠使用重叠使用；3.特价商品和线上商品不可使用；4.此类券限用一张，且不与其他券重叠使用重叠使用。</div>
+    </div>
+</div>
+<!-- 优惠券 - end -->
+
+<script>
+    ((w, d) => {
+
+	    const TOPS = 200;
+	    $(document).ready(function () {
+		    const producrBanner = new Swiper('.product-detail-swiper', {
+			    direction: 'horizontal', // 垂直切换选项
+			    loop: true, // 循环模式选项
+			    pagination: '.home-swiper-pagination',
+		    })
+		    $("#product_detail_layout").on("scroll", function(e){
+			    $(".seller-home-header").css({
+				    backgroundColor: `rgba(255,255,255, ${e.target.scrollTop / TOPS * 100}%)`,
+				    boxShadow: `0 0.08rem 0.32rem rgba(0,0,0,${e.target.scrollTop / TOPS * 100 * 0.08}%)`
+			    });
+			    $(".seller-home-header-title").css({
+				    opacity: `${e.target.scrollTop / TOPS}`
+			    });
+			    $(".seller-home-header-back span").css({
+				    backgroundImage: `url("${e.target.scrollTop > TOPS ? './images/header_back_black_icon.png' : './images/seller_home_header_back_icon.png'}")`,
+				    backgroundColor: `rgba(0,0,0, ${e.target.scrollTop > TOPS ? '0' : (0.16 - e.target.scrollTop / TOPS)})`
+			    })
+		    });
+		    $(".product-detail-price .coupon").on("click", function (e) {
+			    $(".action-sheet-coupon").addClass("action-sheet-coupon-active")
+		    });
+		    $(".coupon-item-des span").on("click", function (e) {
+                $(".coupon-message-layout").addClass("coupon-message-layout-active")
+		    });
+		    $(".coupon-message-box-close").on("click", function (e) {
+			    $(".coupon-message-layout").removeClass("coupon-message-layout-active")
+		    });
+		    $(".product-detail-home-appointment-close").on("click", function (e) {
+			    $(".action-sheet-coupon").removeClass("action-sheet-coupon-active")
+		    });
+		    $(".action-sheet-coupon-mask").on("click", function (e) {
+			    $(".action-sheet-coupon").removeClass("action-sheet-coupon-active")
+		    });
+		    $(".product-detail-coupon-footer div").on("click", function (e) {
+			    $(".action-sheet-coupon").removeClass("action-sheet-coupon-active")
+		    });
+	    })
+    })(window, document)
+</script>
+
+
+@@include('product/product_footer/index.html')
+@@include('layout/footer/index.html', {
+    "swiper": true,
+    "weui": true
+})
+

@@ -1,0 +1,165 @@
+@import "../../../styles/common.less";
+// 手机绑定页面
+.phone_bind {
+    width: 100%;
+    height: 100%;
+    background: url("../images/login_bg.png") no-repeat;
+    background-size: 100% 4.48rem;
+// phone_bind头部
+    .phone_bind_text {
+        width: 100%;
+        height: 2.18rem;
+        padding-top: 0.48rem;
+        padding-left: 0.32rem;
+        box-sizing: border-box;
+    }
+    .phone_bind-text-now {
+        width: 100%;
+        height: 0.56rem;
+        font-size: 0.4rem;
+        font-weight: 800;
+        line-height: 0.56rem;
+        color: rgba(51, 51, 51, 1);
+    }
+
+    .phone_bind-text-now::before {
+        content: "";
+        display: inline-block;
+        width: 0.32rem;
+        height: 0.32rem;
+        .bgSet();
+        background-image: url("../images/login-left-arrows.png");
+    }
+
+    .phone_bind-text-new {
+        width: 100%;
+        height: 0.34rem;
+        font-size: 0.24rem;
+        font-weight: 400;
+        line-height: 0.34rem;
+        color: rgba(51, 51, 51, 1);
+    }
+// phone_bind主体
+    .phone_bind_main {
+        width: 100%;
+        height: 10.5rem;
+        padding-left: 0.32rem;
+        box-sizing: border-box;
+// phone_bind主体内容区
+        .phone_bind_content {
+            width: 6.86rem;
+            height: 3.76rem;
+            padding-left: 0.32rem;
+            padding-top: 0.48rem;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 0.08rem 0.32rem rgba(0, 0, 0, 0.08);
+            border-radius: 0.2rem;
+        }
+        .phone_bind_main_phone,
+        .phone_bind_main_code {
+            width: 100%;
+            height: 1.16rem;
+            margin-bottom: 0.38rem;
+        }
+        .phone_bind_phone,
+        .phone_bind_code {
+            width: 100%;
+            height: 0.44rem;
+            font-size: 0.32rem;
+            font-weight: 800;
+            // line-height:0.42rem;
+            color: rgba(51, 51, 51, 1);
+            >span{
+                .yellowBottom();
+            }
+        }
+
+        .phone_bind_phone_num,
+        .phone_bind_code_num {
+            width: 6.2rem;
+            height: 0.72rem;
+            background: rgba(255, 255, 255, 1);
+            border-bottom: 0.02rem solid rgba(245, 245, 245, 1);
+            position: relative;
+
+            >input {
+                width: 100%;
+                line-height: 0.72rem;
+                background: none;
+                outline: none;
+                border: 0px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            .phoneBind_wrong_msg {
+                width: .3.66rem;
+                height: 0.5rem;
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 0.15rem;
+                color: red;
+                // border:0.01rem solid #F15A53;
+                // border-radius:0.2rem;
+                text-align: center;
+                line-height: 0.5rem;
+                display: none;
+            }
+        }
+        // phone_bind_send_code
+
+        .phone_bind_send_code {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 2.16rem;
+            height: 0.72rem;
+            font-size: 0.24rem;
+            background: rgba(239, 239, 239, 1);
+            border-radius: 0.08rem;
+            text-align: center;
+            font-weight: 800;
+            line-height: 0.72rem;
+        }
+
+        .phoneBind_code_wrong_msg {
+            width: .3.66rem;
+            height: 0.5rem;
+            position: absolute;
+            right: 2.48rem;
+            top: -0.39rem;
+            font-size: 0.15rem;
+            color: red;
+            // border:0.01rem solid #F15A53;
+            // border-radius:0.2rem;
+            text-align: center;
+            line-height: 0.5rem;
+            display: none;
+        }
+// phone_bind主体底部
+        .phone_bind_footer {
+            width: 100%;
+            height: 4.04rem;
+            padding-top: 0.64rem;
+            box-sizing: border-box;          
+        }
+        .phone_bind_footer_now {
+            width: 6.86rem;
+            height: 0.84rem;
+            background: rgba(239, 239, 239, 1);
+            border-radius: 0.12rem;
+            font-size: 0.26rem;
+            text-align: center;
+            line-height: 0.84rem;
+            color: rgba(51, 51, 51, 1);
+            font-weight: 800;
+
+        }
+    }
+
+}
+
+

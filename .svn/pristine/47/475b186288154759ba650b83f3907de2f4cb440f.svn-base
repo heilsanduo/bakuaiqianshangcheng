@@ -1,0 +1,57 @@
+<component src="layout/index.html" title="商品详情" swiper></component>
+
+<div id="product_detail_layout" class="layout-view">
+
+    <div class="product-detail-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-03-13/6d049c8b766036351982f75cffb44fb9.png" alt="">
+            </div>
+        </div>
+        <div class="home-swiper-pagination"></div>
+    </div>
+
+    <div class="product-detail-box">
+        <div class="product-detail-price"><span class="price">￥3000</span><span class="old-price">原价￥1000</span></div>
+        <div class="product-detail-des">顾家家具 定制家具椅子高端大气上档次顾家家具 定制家具椅子高端大气上档次顾家家具 </div>
+        <div class="product-detail-util"><span>月销5笔</span></div>
+        <div class="product-detail-attr"></div>
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+<script>
+    ((w, d) => {
+
+	    $(document).ready(function () {
+		    const producrBanner = new Swiper('.product-detail-swiper', {
+			    direction: 'horizontal', // 垂直切换选项
+			    loop: true, // 循环模式选项
+			    pagination: '.home-swiper-pagination',
+		    })
+	    })
+    })(window, document)
+</script>
+
+<component src="footer/index.html" swiper weui></component>
+

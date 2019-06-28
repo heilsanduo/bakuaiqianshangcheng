@@ -1,0 +1,99 @@
+@import "../../../styles/common.less";
+.loginClick{
+    width:100%;
+    height:100%;
+    .register_click{
+        margin:1.44rem auto;
+        margin-bottom: 0.4rem;
+    }
+    .login_click{
+        margin:0 auto;
+        margin-bottom: 1.44rem;
+    }
+    .register_click,.login_click{
+        width:6.86rem;
+        height:0.84rem;
+        background:@bgC;
+        border-radius:0.12rem;
+        font-size: 0.26rem;
+        text-align:center;
+        line-height:0.84rem;
+        color:rgba(51,51,51,1);
+        font-weight:800;
+       
+    }
+    // 商品list
+    .login_click_items{
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        padding:0 0.32rem;
+        box-sizing:border-box;
+    }
+    .login_items_list{
+        width:3.28rem;
+        height:5.36rem;
+        background:rgba(255,255,255,1);
+        box-shadow:0 0.08rem 0.32rem rgba(0,0,0,0.08);
+        border-radius:0.2rem;
+        margin-bottom:0.32rem; 
+        .hover-white-class;  
+    }
+    .items_list_img{
+        width:3.28rem;
+        height:3.28rem;
+        background:rgba(0,0,0,0);
+        border-radius:0.2rem 0.2rem 0 0;
+        // border:0.01rem solid #ccc;
+        >img{
+            display:inline-block;
+            width:3.28rem;
+            height:3.28rem;
+            border-radius:0.2rem 0.2rem 0 0;
+        }
+    }
+    .items_text{
+        padding:0.16rem 0.16rem 0 0.16rem;
+        box-sizing:border-box;
+        .items_list_title{
+            width:100%;
+            height:0.8rem;
+            font-size:0.26rem;
+            font-weight:400;
+            color:rgba(51,51,51,1);
+        }
+        .item_address{
+            width:100%;
+            height:0.34rem;
+            font-size:0.24rem;
+            font-weight:400;
+            color:rgba(153,153,153,1);
+        }
+        .item_others{
+            width: 100%;;
+            height:0.8rem;
+            display:flex;
+            // justify-content: center;
+            align-items:center;
+       
+        }
+        .item_price{
+            flex:1;
+            justify-content: flex-start;
+            font-size:0.32rem;
+            font-weight:800;
+            color:rgba(241,90,83,1);
+        }
+       .item_buy{
+            flex:1;
+           text-align:right;
+            font-size:0.24rem;
+            font-weight:400;
+            color:rgba(153,153,153,1);
+        }
+
+    }
+   
+}

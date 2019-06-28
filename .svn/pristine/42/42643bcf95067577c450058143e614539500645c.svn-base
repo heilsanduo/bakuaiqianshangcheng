@@ -1,0 +1,68 @@
+@@include('layout/layout/index.html', {
+"title": "八块钱商城",
+"header": false
+})
+<div id="seller_layout" class="layout-view">
+    <div class="register">
+        <div class="register_text">
+            <div class="register-text-now">注册</div>
+            <p class="register-text-new">新用户欢迎您~</p>
+        </div>
+        <div class="register_main">
+            <form method="post" action="#">
+                <div class="register_content">
+                    <div class="register_main_phone">
+                        <h5 class="register_phone"><span>手机号码</span></h5>
+                        <div class="register_phone_num">
+                            <input id="phoneNum" type="tel" placeholder="请输入手机号码">
+                            <div id="phone_wrong_msg" class="register_phone_wrong_msg">请输入正确的手机号码</div>
+                        </div>
+                    </div>
+                    <div class="register_main_code">
+                        <h5 class="register_code"><span>验证码</span></h5>
+                        <div class="register_code_num">
+                            <input id="phoneCode" type="number" placeholder="请输入验证码">
+                            <button type="button" id="btnSendCode" class="register_send_code">获取验证码</button>
+                            <div id="code_wrong_msg" class="register_code_wrong_msg">验证码不正确</div>
+                        </div>
+                    </div>
+                    <div class="register_main_password">
+                        <h5 class="register_password"><span>设置密码</span></h5>
+                        <div class="register_password_num">
+                            <input id="password_num" type="password" placeholder="请设置密码">
+                            <div id="password_wrong_msg" class="register_password_wrong_msg">请设置密码长度6-20位,英文字母组合</div>
+                        </div>
+                    </div>
+                    <div class="register_main_dbpassword">
+                        <h5 class="register_dbpassword"><span>确认密码</span></h5>
+                        <div class="register_dbpassword_num">
+                            <input id="dbPassword" type="password" placeholder="请确认密码">
+                            <div id="dbpsw_wrong_msg" class="register_dbpsw_wrong_msg">密码不一致</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="register_footer">
+                    <div class="register_footer_text">
+                        <div class="register_footer_icon">
+                            <input id="choose" class="agree_or_not" type="checkbox">
+                            <label for="choose" class="register_footer_checked">我已阅读并同意</label>
+                        </div>
+                        <div class="register_footer_file">《注册协议》</div>
+                        <div class="register_footer_login">已有账号登录</div>
+                    </div>
+                    <div id="register_btn" class="register_footer_now"> 注册并登录</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@@include('layout/footer/index.html')
+<script>
+    $(function () {
+        $('.register_footer_login').click(function () {
+            $(window).attr('location', './login.html');
+        })
+    })
+
+</script>

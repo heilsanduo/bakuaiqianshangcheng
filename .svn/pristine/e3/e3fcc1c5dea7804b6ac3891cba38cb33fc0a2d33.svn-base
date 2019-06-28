@@ -1,0 +1,252 @@
+@@include('layout/layout/index.html', {
+"title": "商家首页",
+"swiper": true,
+"weui": true
+})
+
+<div id="seller_layout" class="layout-view">
+
+    <div class="seller-home-header">
+        <div class="seller-home-header-back">
+            <span></span>
+        </div>
+        <div class="seller-home-header-title">诺贝尔瓷砖（东莞旗舰店）</div>
+        <div class="seller-home-header-share">
+            <span></span>
+        </div>
+    </div>
+
+    <div class="seller-home-banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="http://www.xiehome.com/m_second_v/image/seller_active_home_bg.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://www.xiehome.com/m_second_v/image/seller_active_home_bg.png" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="http://www.xiehome.com/m_second_v/image/seller_active_home_bg.png" alt="">
+            </div>
+        </div>
+        <div class="home-swiper-pagination"></div>
+    </div>
+
+    <div class="seller-home-content">
+        <div class="seller-home-content-box">
+            <div class="seller-home-logo">
+                <img src="http://www.xiehome.com/m_second_v/image/seller_active_home_bg.png" alt="">
+            </div>
+            <div class="seller-home-message">
+                <div class="seller-home-name">诺贝尔瓷砖（东莞旗舰店）</div>
+                <div class="seller-home-tell">电话: <span class="seller-home-tell-icon"></span>0769-86261234</div>
+            </div>
+        </div>
+        <div class="seller-home-address">
+            <div>
+                <span>东莞市东纵大道愉景威尼斯广场A栋1080号</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 优惠券 -->
+    <div class="seller-home-warp-box">
+        <div class="seller-home-warp-header">
+            <span class="seller-home-warp-header-title">优惠活动</span>
+        </div>
+        <div class="seller-home-warp-content">
+
+            <div class="seller-home-coupon-nav">
+                <div class="seller-home-coupon-left">
+                    <div class="seller-home-coupon-name">
+                        <span class="price">￥500</span>
+                        <span class="info">（满¥10000可使用）</span>
+                        <span class="coupon-tags"></span>
+                    </div>
+                    <div class="seller-home-coupon-date">有效期：2018.12.09-2019.02.18</div>
+                    <div class="seller-home-coupon-more"><span>查看说明</span></div>
+                </div>
+                <div class="seller-home-coupon-right">立即领取</div>
+            </div>
+            <div class="seller-home-coupon-nav">
+                <div class="seller-home-coupon-left">
+                    <div class="seller-home-coupon-name">
+                        <span class="price">￥500</span>
+                        <span class="info">（满¥10000可使用）</span>
+                        <span class="coupon-tags"></span>
+                    </div>
+                    <div class="seller-home-coupon-date">有效期：2018.12.09-2019.02.18</div>
+                    <div class="seller-home-coupon-more"><span>查看说明</span></div>
+                </div>
+                <div class="seller-home-coupon-right">立即领取</div>
+            </div>
+            <div class="seller-home-coupon-nav">
+                <div class="seller-home-coupon-left">
+                    <div class="seller-home-coupon-name">
+                        <span class="price">￥500</span>
+                        <span class="info">（满¥10000可使用）</span>
+                        <span class="coupon-tags"></span>
+                    </div>
+                    <div class="seller-home-coupon-date">有效期：2018.12.09-2019.02.18</div>
+                    <div class="seller-home-coupon-more"><span>查看说明</span></div>
+                </div>
+                <div class="seller-home-coupon-right">立即领取</div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- 优惠券 - end -->
+
+    <!-- 装修案例 -->
+    <div class="seller-home-warp-box">
+        <div class="seller-home-warp-header">
+            <span class="seller-home-warp-header-title">装修案例</span>
+            <span class="seller-home-warp-header-more">更多案例</span>
+        </div>
+        <div class="seller-home-warp-content">
+            <div class="seller-design-list">
+
+                <div class="seller-design-item">
+                    <div class="seller-design-icon">
+                        <img src="http://www.xiehome.com/m_second_v/image/seller_active_home_bg.png" alt="">
+                    </div>
+                    <div class="seller-design-name">115㎡三居馨现代装</div>
+                </div>
+                <div class="seller-design-item">
+                    <div class="seller-design-icon">
+                        <img src="http://www.xiehome.com/m_second_v/image/seller_active_home_bg.png" alt="">
+                    </div>
+                    <div class="seller-design-name">115㎡三居馨现代装</div>
+                </div>
+                <div class="seller-design-item">
+                    <div class="seller-design-icon">
+                        <img src="http://www.xiehome.com/m_second_v/image/seller_active_home_bg.png" alt="">
+                    </div>
+                    <div class="seller-design-name">115㎡三居馨现代装</div>
+                </div>
+                <div class="seller-design-item">
+                    <div class="seller-design-icon">
+                        <img src="http://www.xiehome.com/m_second_v/image/seller_active_home_bg.png" alt="">
+                    </div>
+                    <div class="seller-design-name">115㎡三居馨现代装</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 装修案例 - end -->
+
+    <!-- 热门推荐 -->
+    <div class="seller-home-warp-box">
+        <div class="seller-home-warp-header">
+            <span class="seller-home-warp-header-title">热门推荐</span>
+            <span class="seller-home-warp-header-more">更多商品</span>
+        </div>
+        <div class="seller-home-warp-content">
+            <div class="seller-home-product-list">
+
+                <div class="seller-home-product-item">
+                    <div class="seller-home-product-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-04-26/1077743821d4ef66bf61d151a3f75538.jpg"
+                            alt="">
+                    </div>
+                    <div class="seller-home-product-content">
+                        <div class="seller-home-product-name">顾家家具 定制家具椅子高端大气上档次</div>
+                        <div class="seller-home-product-tip">63人已购买</div>
+                        <div class="seller-home-product-des">
+                            <span class="price">￥8</span>
+                            <span class="buy">立即购买</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="seller-home-product-item">
+                    <div class="seller-home-product-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-04-26/1077743821d4ef66bf61d151a3f75538.jpg"
+                            alt="">
+                    </div>
+                    <div class="seller-home-product-content">
+                        <div class="seller-home-product-name">顾家家具 定制家具椅子高端大气上档次</div>
+                        <div class="seller-home-product-tip">63人已购买</div>
+                        <div class="seller-home-product-des">
+                            <span class="price">￥8</span>
+                            <span class="buy">立即购买</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="seller-home-product-item">
+                    <div class="seller-home-product-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-04-26/1077743821d4ef66bf61d151a3f75538.jpg"
+                            alt="">
+                    </div>
+                    <div class="seller-home-product-content">
+                        <div class="seller-home-product-name">顾家家具 定制家具椅子高端大气上档次</div>
+                        <div class="seller-home-product-tip">63人已购买</div>
+                        <div class="seller-home-product-des">
+                            <span class="price">￥8</span>
+                            <span class="buy">立即购买</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="seller-home-product-item">
+                    <div class="seller-home-product-icon">
+                        <img src="http://bkqwmall.oss-cn-shenzhen.aliyuncs.com/images/2019-04-26/1077743821d4ef66bf61d151a3f75538.jpg"
+                            alt="">
+                    </div>
+                    <div class="seller-home-product-content">
+                        <div class="seller-home-product-name">顾家家具 定制家具椅子高端大气上档次</div>
+                        <div class="seller-home-product-tip">63人已购买</div>
+                        <div class="seller-home-product-des">
+                            <span class="price">￥8</span>
+                            <span class="buy">立即购买</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 热门推荐 - end -->
+
+
+</div>
+
+<script>
+    ((w, d) => {
+
+        setTimeout(() => {
+            $.messageBox({ title: '提示信息' })
+        }, 3000)
+        const TOPS = 200;
+        $(document).ready(function () {
+            const sellerBanner = new Swiper('.seller-home-banner', {
+                direction: 'horizontal', // 垂直切换选项
+                loop: true, // 循环模式选项
+                autoplay: 3000,
+                // 如果需要分页器
+                pagination: '.home-swiper-pagination'
+            });
+        });
+        $("#seller_layout").on("scroll", function (e) {
+            $(".seller-home-header").css({
+                backgroundColor: `rgba(255,255,255, ${e.target.scrollTop / TOPS * 100}%)`,
+                boxShadow: `0 0.08rem 0.32rem rgba(0,0,0,${e.target.scrollTop >= TOPS ? '8' : (e.target.scrollTop / TOPS * 100 * 0.08)}%)`
+            });
+            $(".seller-home-header-title").css({
+                opacity: `${e.target.scrollTop / TOPS}`
+            });
+            $(".seller-home-header-back span").css({
+                backgroundImage: `url("${e.target.scrollTop > TOPS ? './images/header_back_black_icon.png' : './images/seller_home_header_back_icon.png'}")`,
+                backgroundColor: `rgba(0,0,0, ${e.target.scrollTop > TOPS ? '0' : (0.16 - e.target.scrollTop / TOPS)})`
+            })
+        });
+    })(window, document)
+</script>
+
+
+@@include('seller/seller_footer/index.html', {
+"state": "dg"
+})
+@@include('layout/footer/index.html', {
+"swiper": true,
+"weui": true
+})

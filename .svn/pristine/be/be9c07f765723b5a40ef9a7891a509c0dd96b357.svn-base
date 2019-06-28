@@ -1,0 +1,37 @@
+@@include('layout/layout/index.html', {
+"title": "设置",
+"header": true
+})
+<div id="seller_layout" class="layout-view">
+    <div class="set">
+        <div class="set-top">
+            <div class="set-head ">
+                <div class="set-head-left">头像</div>
+                <div class="set-head-cen">
+                    <div class="set-head-cen-head">
+                        <img src="../../../images/ceshi.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="set-head-right"></div>
+            </div>
+            <div class="set-nickname">
+                <div class="set-nickname-left">昵称</div>
+                <div class="set-nickname-cen">咋咋小朋友</div>
+                <div class="set-nickname-right"></div>
+            </div>
+            <div class="set-site">
+                <div class="set-site-left">收获地址</div>
+                <div class="set-site-cen">管理</div>
+                <div class="set-site-right"></div>
+            </div>
+        </div>
+        <div class="set-bottom">
+            <div class="set-bottom-left">关于商城</div>
+            <div class="set-bottom-cen"></div>
+            <div class="set-bottom-right"></div>
+        </div>
+        <div class="set-logout">退出登录</div>
+    </div>
+</div>
+
+@@include('layout/footer/index.html')

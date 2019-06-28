@@ -1,0 +1,24 @@
+<component src="layout/index.html" title="首页" swiper></component>
+
+<div id="home_layout" class="layout-view">
+
+    <component src="home/home_search/index.html"></component>
+
+    <component src="home/home_swiper/index.html"></component>
+
+    <component src="home/home_menu/index.html"></component>
+
+    <component src="home/home_headlines/index.html"></component>
+
+    <component src="home/home_warp_box/index.html" title="装修设计" des="专业商家为您提供创意房屋装修设计方案" icon="home-design-icon"></component>
+
+    <component src="home/home_warp_box/index.html" title="家居建材" des="海量本土商家为您提供优质家居建材" icon="home-material-icon"></component>
+
+    <component src="home/home_activity/index.html"></component>
+
+    <component src="home/home_product_list/index.html"></component>
+
+</div>
+
+<component src="common/tabbar/index.html" index></component>
+<component src="footer/index.html" swiper></component>

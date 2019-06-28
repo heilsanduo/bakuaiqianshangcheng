@@ -1,0 +1,178 @@
+@bgC: #FFDE45;
+
+/* Home params*/
+@HomePadding: 0.28rem 0.32rem;
+
+.hover-class {
+  transition: all linear 0.1s;
+  cursor: pointer;
+  -webkit-user-select: none;
+  outline: none;
+
+  &:active {
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  img {
+    z-index: 10;
+  }
+}
+
+.hover-white-class {
+  transition: all linear 0.1s;
+  cursor: pointer;
+  -webkit-user-select: none;
+  outline: none;
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.08);
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &>* {
+    z-index: 10;
+  }
+}
+
+.hover-yellow-class {
+  transition: all linear 0.1s;
+  cursor: pointer;
+  -webkit-user-select: none;
+  outline: none;
+
+  &:active {
+    background-color: #EBCD40;
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &>* {
+    z-index: 10;
+  }
+}
+
+.hover-red-class {
+  transition: all linear 0.1s;
+  cursor: pointer;
+  -webkit-user-select: none;
+  outline: none;
+
+  &:active {
+    background-color: #DE534C;
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &>* {
+    z-index: 10;
+  }
+}
+
+.fontBreak(@line: 1; @lineHeight: 0.24rem) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line;
+  line-height: @lineHeight;
+}
+
+.bgSet(@size: cover) {
+  background-position: center center;
+  background-size: @size;
+  background-repeat: no-repeat;
+}
+
+.imgAll {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+
+  &>img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.yellowBottom(@fontSize: 0.32rem; @fontWeight: 800; @color: rgba(51, 51, 51, 1)) {
+  position: relative;
+  font-size: @fontSize;
+  font-weight: @fontWeight;
+  color: @color;
+  z-index: 1;
+  transition: all linear 0.2s;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 0.08rem;
+    display: inline-block;
+    background-color: rgba(255, 222, 69, 1);
+    position: absolute;
+    left: 0;
+    bottom: 0.04rem;
+    z-index: -2;
+  }
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  outline: none;
+  width: 0.32rem;
+  height: 0.32rem;
+  background-color: rgba(239, 239, 239, 1);
+  border: 0.16rem solid rgba(239, 239, 239, 1);
+  border-radius: 50%;
+  transition: all linear 0.2s;
+
+  &:checked {
+    border: 0.1rem solid #FFDE45;
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+
+// 清除浮动
+.clearfix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  height: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+// 单行文本溢出显示省略号
+.one-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 多行文本溢出显示省略号
+.more-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+//  text-overflow: -o-ellipsis-lastline;
+//   line-clamp: 2;
+
+}

@@ -1,0 +1,69 @@
+@@include('layout/layout/index.html', {
+"title": "八块钱商城",
+"header": true,
+"weui":true
+})
+<div id="seller_layout" class="layout-view">
+    <div class="address_edit">
+        <!-- address_edit -->
+        <div class="address_edit_header">
+            <div class="address_edit_back"></div>
+            <div class="address_edit_title">编辑地址</div>
+        </div>
+        <!-- address_edit内容区 -->
+        <div class="address_edit_content">
+            <ul class="address_edit_list">
+                <li>
+                    <div class="address_edit_consignee">收货人</div>
+                    <input class="address_edit_name" type="text" placeholder="请输入收件人">
+                </li>
+                <li>
+                    <div class="address_edit_phone">手机号码</div>
+                    <input class="address_edit_num" type="tel" placeholder="手机号码">
+                </li>
+                <li>
+                    <div class="address_edit_address">地址</div>
+                    <input type="text" id='city-picker' value="浙江省 杭州市 拱墅区" />
+                </li>
+                <li style="border-top:0.02rem solid rgba(245,245,245,1);height:1.48rem">
+                    <textarea class="address_edit_others"></textarea>
+                </li>
+            </ul>
+            <div class="address_edit_default">
+                <div class="address_edit_setDefault">设置为默认地址</div>
+                <div class="address_edit_btn">
+                    <div class="address_edit_dot"></div>
+                </div>
+            </div>
+            <div class="address_delet">删除地址</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    ((w, d) => {
+        $(document).ready(function () {
+            $("#city-picker").cityPicker({
+                title: "请选择收货地址"
+            });
+            // 选择默认地址 按钮
+            let isok = true;
+            $('.address_edit_btn').click(function () {
+                if (isok) {
+                    $(this).css('background', '#4DD964');
+                    $(".address_edit_dot").css('float', 'right');
+                } else {
+                    $(this).css('background', '#EFEFEF');
+                    $(".address_edit_dot").css('float', 'left');
+                }
+                isok = !isok;
+            });
+        })
+    })(window, document)
+
+</script>
+
+@@include('layout/footer/index.html',{
+"weui":true,
+"citypicker": true
+})

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>{{title}}</title>
+    {{if weui}}
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="css/jquery-weui.min.css">
+    {{/if}}
+    <link rel="stylesheet" href="css/main.min.css">
+    {{if swiper}}
+    <link rel="stylesheet" href="css/swiper.min.css">
+    {{/if}}
+    <script src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+
+        {{if header}}
+        <component src="common/header/index.html" left></component>
+        {{/if}}
+        {{if search_header}}
+        <component src="common/search_header/index.html"></component>
+        {{/if}}
+
+

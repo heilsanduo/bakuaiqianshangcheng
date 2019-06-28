@@ -1,0 +1,45 @@
+<component src="layout/index.html" title="公司介绍" header></component>
+
+<div id="seller_detail_layout" class="layout-view">
+    <div class="seller-detail-content">
+        <div class="seller-detail-box">
+            <div class="seller-detail-icon"></div>
+            <div class="seller-detail-warp">
+                <div class="seller-detail-name">诺贝尔瓷砖（东莞旗舰店）</div>
+                <div class="seller-detail-tell">电话 <span class="seller-detail-tell-icon"></span>0769-86261234</div>
+            </div>
+        </div>
+        <div class="seller-detail-message">
+            阿波罗的核心竞争力-产能、品质、研发
+
+            阿波罗在广州有15万平米(相当于225亩地)的生产基地，自动流水线作业，拥有电子、五金模具与冲压，塑料模具，注塑、机械加工、按摩浴缸、蒸汽房生产等十大生产部门。年产能可达人民币20亿以上。
+
+            阿波罗自主研发、自主生产。资深工程师，做出创新设计;意大利板材生产线，生产出专业复合板材;高温成型炉加热，打造优美、精致造型。
+
+            阿波罗核心竞争力——市场口碑
+
+            中国卫浴十大品牌
+
+            中国五金协会副理事长单位
+
+            中国淋浴房理事长单位
+
+            中国名牌产品
+
+            中国驰名商标
+
+            产品不仅畅销国内，还远销至世界各地!
+
+            阿波罗的核心竞争力-物流配送、售后安装服务
+
+            阿波罗拥有专业、高效率的物流配送队伍，保证配送及时，运输安全，产品完整性保持良好。
+
+            公司售后部门全程跟进项目完成情况，包括产品的安装和项目的验收，有问题及时反馈，为顾客提供放心、贴心的服务。
+
+        </div>
+    </div>
+
+</div>
+
+<component src="footer/index.html"></component>
+
